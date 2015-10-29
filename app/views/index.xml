@@ -1,5 +1,5 @@
 <Alloy>
   <Window>
-    <Label>Hello, World</Label>
+    <Label text="L('loadingMessage')"/>
   </Window>
 </Alloy>

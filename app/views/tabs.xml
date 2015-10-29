@@ -1,0 +1,9 @@
+<Alloy>
+  <TabGroup>
+    <Tab id="tab1" title="Hey 1">
+      <Window id="win1" title="Window #1">
+        <Label>Hello, world</Label>
+      </Window>
+    </Tab>
+  </TabGroup>
+</Alloy>
