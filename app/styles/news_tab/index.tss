@@ -1,0 +1,7 @@
+'Tab': {
+  title: L('newsTabTitle'),
+  icon: '/images/tab.png'
+}
+'Window': {
+  title: L('newsWindowTitle')
+}

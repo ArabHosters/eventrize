@@ -1,0 +1,7 @@
+<Alloy>
+  <Tab>
+    <Window>
+      <Label>Hello, I'm news tab</Label>
+    </Window>
+  </Tab>
+</Alloy>
