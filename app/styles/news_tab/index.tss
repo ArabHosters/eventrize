@@ -1,7 +1,27 @@
 'Tab': {
-  title: L('newsTabTitle'),
-  icon: '/images/tab.png'
+	title: L( 'newsTabTitle'),
+	icon: '/images/tab.png'
 }
 'Window': {
-  title: L('newsWindowTitle')
+	title: L( 'newsWindowTitle')
 }
+"#image":{
+	width: 70,
+	height: 70,
+	left: 5,
+	top: 5,
+	bottom: 5
+}
+'#title':{
+	top: 5,
+	left: 80
+}
+'#shortDesc':{
+	top: 5,
+	left: 80
+}
+'#date':{
+	top: 5,
+	right: 5
+}
+

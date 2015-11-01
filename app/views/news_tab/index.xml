@@ -1,7 +1,34 @@
 <Alloy>
-  <Tab>
-    <Window>
-      <Label>Hello, I'm news tab</Label>
-    </Window>
-  </Tab>
+	<Tab>
+		<Window>
+			<ListView id="list" defaultItemTemplate="template1">
+				<Templates>
+					<ItemTemplate name="template1">
+						<ImageView bindId="image" id="image"/>
+						<View id="v1" layout="vertical">
+							<Label bindId="title" id="title"/>
+							<Label bindId="shortDesc" id="shortDesc"/>
+							<Label bindId="date" id="date"/>
+						</View>
+					</ItemTemplate>
+				</Templates>
+				<ListSection>
+					<ListItem image:image="/images/Default.png"
+					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+					<ListItem image:image="/images/Default.png"
+					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+					<ListItem image:image="/images/Default.png"
+					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+					<ListItem image:image="/images/Default.png"
+					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+					<ListItem image:image="/images/Default.png"
+					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+					<ListItem image:image="/images/Default.png"
+					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+					<ListItem image:image="/images/Default.png"
+					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+				</ListSection>
+			</ListView>
+		</Window>
+	</Tab>
 </Alloy>
