@@ -1,4 +1,5 @@
 <Alloy>
+	<Collection src="news"/>
 	<Tab>
 		<Window>
 			<ListView id="list" defaultItemTemplate="template1">
@@ -12,21 +13,9 @@
 						</View>
 					</ItemTemplate>
 				</Templates>
-				<ListSection>
-					<ListItem image:image="/images/Default.png"
-					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
-					<ListItem image:image="/images/Default.png"
-					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
-					<ListItem image:image="/images/Default.png"
-					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
-					<ListItem image:image="/images/Default.png"
-					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
-					<ListItem image:image="/images/Default.png"
-					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
-					<ListItem image:image="/images/Default.png"
-					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
-					<ListItem image:image="/images/Default.png"
-					title:text="Title" shortDesc:text="ShortDesc"date:text="Date" />
+				<ListSection dataCollection="news">
+					<ListItem image:image="{image}"
+					title:text="{title}" shortDesc:text="{short_desc}" date:text="{date}" />
 				</ListSection>
 			</ListView>
 		</Window>

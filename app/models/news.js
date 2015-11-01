@@ -7,15 +7,18 @@ exports.definition = {
       "title": "TEXT",
       "content": "TEXT",
       "thumbnail": "TEXT",
-      "thumbnail_full": "TEXT"
+      "thumbnail_full": "TEXT",
+      "image":"TEXT",
+      "short_desc":"TEXT"
+      
     },
-    "URL": Alloy.CFG.api.baseurl + Alloy.CFG.wpJson + 'news',
+    //"URL": Alloy.CFG.api.baseurl + Alloy.CFG.wpJson + 'news',
     "debug": 1, //debug mode enabled
     //"parentNode": "posts",
     adapter: {
-      "type": "restapi",
+      "type": "sql",
       "idAttribute": "id",
-      "collection_name": "post"
+      "collection_name": "news"
     }
   },
   extendModel: function(Model) {
