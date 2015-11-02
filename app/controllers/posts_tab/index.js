@@ -2,9 +2,10 @@ var args = arguments[0] || {};
 
 //implement pull to refresh
 function myRefresher(e) {
-	setTimeout(function(){
-		e.hide();
-	}, 3000);
+	Alloy.Collections.posts.fetch({
+		success : e.hide,
+		error : e.hide
+	});
 }
 
 $.ptr.refresh();
@@ -14,7 +15,7 @@ function myLoader(e) {
 	Alloy.Collections.posts.fetch({
 		// whatever your sync adapter needs to fetch the next page
 		data : {
-			offset : ln
+			//offset : ln
 		},
 		// don't reset the collection, but add to it
 		add : true,

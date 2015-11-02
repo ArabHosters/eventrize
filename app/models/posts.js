@@ -7,8 +7,7 @@ exports.definition = {
 			title : "TEXT",
 			content : "TEXT",
 			excerpt : "TEXT",
-			featured_image : "TEXT",
-			menu_order : "INTEGER"
+			featured_image : "TEXT"
 		},
 		URL : Alloy.CFG.baseurl + Alloy.CFG.api.service + 'posts?_embed',
 		debug : 1,
