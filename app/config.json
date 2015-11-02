@@ -1,12 +1,19 @@
 {
   "global": {
-    "tabs": [
-      "news"
-    ]
+    "api": {
+      "service": "wp-json/wp/v2/"
+    },
+    "tabs": ["news"]
   },
-  "env:development": {},
-  "env:test": {},
-  "env:production": {},
+  "env:development": {
+    "baseurl": "http://demo.wp-api.org/"
+  },
+  "env:test": {
+    "baseurl": "http://demo.wp-api.org/"
+  },
+  "env:production": {
+    "baseurl": "http://app.eventrize.com/"
+  },
   "os:android": {},
   "os:blackberry": {},
   "os:ios": {},
