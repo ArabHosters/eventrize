@@ -1,27 +1,36 @@
-'Tab': {
-	title: L( 'postsTabTitle'),
-	icon: '/images/tab.png'
+'Tab' : {
+  title: L('postsTabTitle'),
+  icon: '/images/tab.png'
 }
-'Window': {
-	title: L( 'postsWindowTitle')
+'Window' : {
+  title: L('postsWindowTitle')
 }
-"#image":{
-	width: 70,
-	height: 70,
-	left: 5,
-	top: 5,
-	bottom: 5
+'ListItem' : {
+  height: 105
 }
-'#title':{
-	top: 5,
-	left: 80
+'#image' : {
+  width: 70,
+  height: 70,
+  left: 5,
+  top: 5,
+  bottom: 5
 }
-'#shortDesc':{
-	top: 5,
-	left: 80
+'#title' : {
+  top: 5,
+  left: 80,
+  height: 25
 }
-'#date':{
-	top: 5,
-	right: 5
+'#shortDesc' : {
+  left: 80,
+  height: 55,
+  font: {
+    size: 12
+  }
 }
-
+'#date' : {
+  right: 5,
+  color: 'gray',
+  font: {
+    size: 10
+  }
+}
