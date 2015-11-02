@@ -1,0 +1,12 @@
+'Tab' : {
+  title: L('moreTabTitle'),
+  icon: '/images/tab.png'
+}
+'Window' : {
+  title: L('moreWindowTitle')
+}
+'ListItem' : {
+  color: '#000000',
+  height: 40,
+  image: '/images/tab.png'
+}

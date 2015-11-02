@@ -2,6 +2,8 @@
   <string name="loadingMessage">Loading...</string>
   <string name="postsTabTitle">News</string>
   <string name="postsWindowTitle">New</string>
+  <string name="moreTabTitle">More</string>
+  <string name="moreWindowTitle">More</string>
   <string name="isTap">Tap to load more...</string>
   <string name="isDone">No more to load...</string>
   <string name="isError">Tap to try again...</string>

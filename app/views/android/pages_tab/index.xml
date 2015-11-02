@@ -1,0 +1,12 @@
+<Alloy>
+  <Collection src="pages"/>
+  <Tab>
+    <Window>
+      <ListView onItemclick="onItemClick">
+        <ListSection dataCollection="pages">
+          <ListItem title="{title}"/>
+        </ListSection>
+      </ListView>
+    </Window>
+  </Tab>
+</Alloy>

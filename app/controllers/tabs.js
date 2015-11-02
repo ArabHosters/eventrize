@@ -24,4 +24,6 @@ if (OS_IOS) {
       });
     }
   });
+} else if (OS_ANDROID) {
+  $.tabs.addTab(Alloy.createController("pages_tab/index").getView());
 }
