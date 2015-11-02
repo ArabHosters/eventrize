@@ -16,8 +16,8 @@ exports.definition = {
 		parentNode : function(data) {
 			_.each(data, function(value, key) {
 				data[key].title = value.title.rendered;
-				data[key].excerpt = value.excerpt.rendered;
-				data[key].content = value.content.rendered;
+				data[key].excerpt = value.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, '');
+				data[key].content = value.content.rendered.replace(/<(?:.|\n)*?>/gm, '');
 
 				// Get images url from _embedded tag
 				if (data[key].featured_image > 0) {
