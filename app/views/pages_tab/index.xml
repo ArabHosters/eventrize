@@ -1,0 +1,5 @@
+<Alloy>
+  <Tab>
+    <Require src="news_tab/post"/>
+  </Tab>
+</Alloy>
