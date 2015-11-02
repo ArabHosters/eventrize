@@ -1,5 +1,5 @@
 <Alloy>
-	<Collection src="news"/>
+	<Collection src="posts"/>
 	<Tab>
 		<Window>
 			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="myRefresher">
@@ -16,7 +16,7 @@
 							</View>
 						</ItemTemplate>
 					</Templates>
-					<ListSection dataCollection="news">
+					<ListSection dataCollection="posts">
 						<ListItem image:image="{image}"
 						title:text="{title}" shortDesc:text="{short_desc}" date:text="{date}" />
 					</ListSection>

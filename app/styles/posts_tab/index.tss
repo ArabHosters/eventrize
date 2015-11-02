@@ -1,9 +1,9 @@
 'Tab': {
-	title: L( 'newsTabTitle'),
+	title: L( 'postsTabTitle'),
 	icon: '/images/tab.png'
 }
 'Window': {
-	title: L( 'newsWindowTitle')
+	title: L( 'postsWindowTitle')
 }
 "#image":{
 	width: 70,

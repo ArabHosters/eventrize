@@ -10,8 +10,8 @@ function myRefresher(e) {
 $.ptr.refresh();
 
 function myLoader(e) {
-	var ln = Alloy.Collections.news.models.length;
-	Alloy.Collections.news.fetch({
+	var ln = Alloy.Collections.posts.models.length;
+	Alloy.Collections.posts.fetch({
 		// whatever your sync adapter needs to fetch the next page
 		data : {
 			offset : ln

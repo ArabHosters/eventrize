@@ -3,7 +3,7 @@
     "api": {
       "service": "wp-json/wp/v2/"
     },
-    "tabs": ["news"]
+    "tabs": ["posts"]
   },
   "env:development": {
     "baseurl": "http://demo.wp-api.org/"
