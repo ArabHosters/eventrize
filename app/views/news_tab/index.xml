@@ -2,6 +2,7 @@
 	<Collection src="news"/>
 	<Tab>
 		<Window>
+			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="myRefresher">
 			<ListView id="list" defaultItemTemplate="template1">
 				<Templates>
 					<ItemTemplate name="template1">
@@ -18,6 +19,7 @@
 					title:text="{title}" shortDesc:text="{short_desc}" date:text="{date}" />
 				</ListSection>
 			</ListView>
+			</Widget>
 		</Window>
 	</Tab>
 </Alloy>

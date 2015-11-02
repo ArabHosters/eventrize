@@ -1,6 +1,8 @@
 {
   "global": {
-    "tabs": ["news"]
+    "tabs": [
+      "news"
+    ]
   },
   "env:development": {},
   "env:test": {},
@@ -10,5 +12,7 @@
   "os:ios": {},
   "os:mobileweb": {},
   "os:windows": {},
-  "dependencies": {}
+  "dependencies": {
+    "nl.fokkezb.pullToRefresh": "2.1.1"
+  }
 }
