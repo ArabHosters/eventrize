@@ -3,22 +3,25 @@
 	<Tab>
 		<Window>
 			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="myRefresher">
-			<ListView id="list" defaultItemTemplate="template1">
-				<Templates>
-					<ItemTemplate name="template1">
-						<ImageView bindId="image" id="image"/>
-						<View id="v1" layout="vertical">
-							<Label bindId="title" id="title"/>
-							<Label bindId="shortDesc" id="shortDesc"/>
-							<Label bindId="date" id="date"/>
-						</View>
-					</ItemTemplate>
-				</Templates>
-				<ListSection dataCollection="news">
-					<ListItem image:image="{image}"
-					title:text="{title}" shortDesc:text="{short_desc}" date:text="{date}" />
-				</ListSection>
-			</ListView>
+				<ListView id="list" defaultItemTemplate="template1">
+
+					<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
+					<Templates>
+						<ItemTemplate name="template1">
+							<ImageView bindId="image" id="image"/>
+							<View id="v1" layout="vertical">
+								<Label bindId="title" id="title"/>
+								<Label bindId="shortDesc" id="shortDesc"/>
+								<Label bindId="date" id="date"/>
+							</View>
+						</ItemTemplate>
+					</Templates>
+					<ListSection dataCollection="news">
+						<ListItem image:image="{image}"
+						title:text="{title}" shortDesc:text="{short_desc}" date:text="{date}" />
+					</ListSection>
+
+				</ListView>
 			</Widget>
 		</Window>
 	</Tab>

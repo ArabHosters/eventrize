@@ -13,6 +13,7 @@
   "os:mobileweb": {},
   "os:windows": {},
   "dependencies": {
-    "nl.fokkezb.pullToRefresh": "2.1.1"
+    "nl.fokkezb.pullToRefresh": "2.1.1",
+    "nl.fokkezb.infiniteScroll": "2.0.0"
   }
 }
