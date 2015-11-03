@@ -7,4 +7,6 @@
   <string name="isTap">Tap to load more...</string>
   <string name="isDone">No more to load...</string>
   <string name="isError">Tap to try again...</string>
+  <string name="shareButton">Share</string>
+  <string name="shareDialogTitle">Share this?</string>
 </resources>

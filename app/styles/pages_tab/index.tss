@@ -7,3 +7,6 @@
 '#featuredImageView' : {
   width: '100%'
 }
+'#shareButton' : {
+  title: L('shareButton')
+}

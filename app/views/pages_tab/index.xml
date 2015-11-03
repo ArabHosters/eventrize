@@ -1,5 +1,11 @@
 <Alloy>
   <Window>
+    <RightNavButton platform="ios">
+      <Button id="shareButton" onClick="shareButtonClicked"/>
+    </RightNavButton>
+    <Menu platform="android">
+      <MenuItem id="shareMenuItem" onClick="shareButtonClicked"/>
+    </Menu>
     <ScrollView>
       <ImageView id="featuredImageView"/>
       <Label id="contentLabel"/>
