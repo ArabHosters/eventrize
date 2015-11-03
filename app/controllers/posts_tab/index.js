@@ -45,4 +45,13 @@ function postsTransfomer(model) {
   return transform;
 }
 
+function onItemClick(e) {
+
+  var win = Alloy.createController('pages_tab/index', {
+    data: Alloy.Collections.posts.at(e.itemIndex).toJSON()
+  }).getView();
+
+  $.index.open(win);
+}
+
 $.is.init($.list);

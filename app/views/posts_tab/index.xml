@@ -3,7 +3,7 @@
   <Tab>
     <Window>
       <Widget id="ptr" onRelease="fetchPostsCollection" src="nl.fokkezb.pullToRefresh">
-        <ListView defaultItemTemplate="postTemplate" id="list">
+        <ListView defaultItemTemplate="postTemplate" id="list" onItemclick="onItemClick">
           <Widget id="is" onEnd="fetchMorePostsCollection" src="nl.fokkezb.infiniteScroll"/>
           <Templates>
             <ItemTemplate name="postTemplate">
