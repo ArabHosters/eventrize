@@ -9,7 +9,7 @@ _.each(Alloy.CFG.tabs, function(tabName) {
   try {
     tabs.push(Alloy.createController(controllerName).getView());
   } catch (exp) {
-    Ti.API.error("Can't catch controller:", controllerName);
+    Ti.API.error("Can't catch controller:", controllerName, exp);
   }
 });
 
@@ -22,9 +22,16 @@ if (OS_IOS) {
     success: function(collection) {
       var tabsArray = [];
       _.each(collection.models, function(pageModel) {
-        tabs.push(Alloy.createController('pages_tab/index', {
-          data: pageModel.toJSON()
-        }).getView());
+
+        var tab = Ti.UI.createTab({
+          title: pageModel.toJSON().title,
+          icon: '/images/tab.png',
+          window: Alloy.createController('pages_tab/index', {
+            data: pageModel.toJSON()
+          }).getView()
+        });
+
+        tabs.push(tab);
       });
       $.tabs.tabs = tabs;
       $.tabs.open();

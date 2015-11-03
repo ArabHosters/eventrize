@@ -1,0 +1,8 @@
+<Alloy>
+  <Window>
+    <ScrollView>
+      <ImageView id="featuredImageView"/>
+      <Label id="contentLabel"/>
+    </ScrollView>
+  </Window>
+</Alloy>
