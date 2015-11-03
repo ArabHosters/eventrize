@@ -11,13 +11,16 @@ exports.definition = {
       thumbnail: "TEXT"
     },
     URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'posts?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image',
-    debug: 0,
-    useStrictValidation: 1,
+    debug: false,
+    useStrictValidation: true,
     initFetchWithLocalData: true,
     parentNode: function(data) {
       var items = [];
       _.each(data, function(value, key) {
-        var item = {};
+        var item = {
+          featured_image: "",
+          thumbnail: ""
+        };
         item.id = value.id;
         item.date = value.date;
         item.link = value.link;
