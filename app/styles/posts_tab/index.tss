@@ -8,26 +8,26 @@
 'ListItem' : {
   height: 105
 }
-'#image' : {
+'#postImage' : {
   width: 70,
   height: 70,
   left: 5,
   top: 5,
   bottom: 5
 }
-'#title' : {
+'#titleLabel' : {
   top: 5,
   left: 80,
   height: 25
 }
-'#shortDesc' : {
+'#excerptLabel' : {
   left: 80,
   height: 55,
   font: {
     size: 12
   }
 }
-'#date' : {
+'#dateLabel' : {
   right: 5,
   color: 'gray',
   font: {

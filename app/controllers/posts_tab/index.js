@@ -1,7 +1,7 @@
 var args = arguments[0] || {};
 
 //implement pull to refresh
-function myRefresher(e) {
+function fetchPostsCollection(e) {
   Alloy.Collections.posts.fetch({
     urlparams: {
       per_page: Alloy.CFG.posts.per_page,
@@ -17,7 +17,7 @@ function myRefresher(e) {
 
 $.ptr.refresh();
 
-function myLoader(e) {
+function fetchMorePostsCollection(e) {
   var ln = Alloy.Collections.posts.models.length;
   Alloy.Collections.posts.fetch({
     // whatever your sync adapter needs to fetch the next page

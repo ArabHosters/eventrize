@@ -1,28 +1,26 @@
 <Alloy>
-	<Collection src="posts"/>
-	<Tab>
-		<Window>
-			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="myRefresher">
-				<ListView id="list" defaultItemTemplate="template1">
+  <Collection src="posts"/>
+  <Tab>
+    <Window>
+      <Widget id="ptr" onRelease="fetchPostsCollection" src="nl.fokkezb.pullToRefresh">
+        <ListView defaultItemTemplate="postTemplate" id="list">
+          <Widget id="is" onEnd="fetchMorePostsCollection" src="nl.fokkezb.infiniteScroll"/>
+          <Templates>
+            <ItemTemplate name="postTemplate">
+              <ImageView bindId="postImage" id="postImage"/>
+              <View id="v1" layout="vertical">
+                <Label bindId="titleLabel" id="titleLabel"/>
+                <Label bindId="excerptLabel" id="excerptLabel"/>
+                <Label bindId="dateLabel" id="dateLabel"/>
+              </View>
+            </ItemTemplate>
+          </Templates>
+          <ListSection dataCollection="posts">
+            <ListItem dateLabel:text="{date}" postImage:image="{thumbnail}" excerptLabel:text="{excerpt}" titleLabel:text="{title}"/>
+          </ListSection>
 
-					<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
-					<Templates>
-						<ItemTemplate name="template1">
-							<ImageView bindId="image" id="image"/>
-							<View id="v1" layout="vertical">
-								<Label bindId="title" id="title"/>
-								<Label bindId="shortDesc" id="shortDesc"/>
-								<Label bindId="date" id="date"/>
-							</View>
-						</ItemTemplate>
-					</Templates>
-					<ListSection dataCollection="posts">
-						<ListItem image:image="{thumbnail}"
-						title:text="{title}" shortDesc:text="{excerpt}" date:text="{date}" />
-					</ListSection>
-
-				</ListView>
-			</Widget>
-		</Window>
-	</Tab>
+        </ListView>
+      </Widget>
+    </Window>
+  </Tab>
 </Alloy>
