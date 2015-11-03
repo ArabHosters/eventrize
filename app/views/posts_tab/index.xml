@@ -17,7 +17,7 @@
 						</ItemTemplate>
 					</Templates>
 					<ListSection dataCollection="posts">
-						<ListItem image:image="{featured_image}"
+						<ListItem image:image="{thumbnail}"
 						title:text="{title}" shortDesc:text="{excerpt}" date:text="{date}" />
 					</ListSection>
 

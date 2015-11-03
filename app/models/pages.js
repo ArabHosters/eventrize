@@ -10,29 +10,34 @@ exports.definition = {
       featured_image: "TEXT",
       menu_order: "INTEGER"
     },
-    URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'pages?_embed',
+    URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'pages?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image',
     debug: 0,
     useStrictValidation: 1,
-    initFetchWithLocalData: true,
+    initFetchWithLocalData: false,
     parentNode: function(data) {
+      var items = [];
       _.each(data, function(value, key) {
-        data[key].title = value.title.rendered;
-        data[key].excerpt = value.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, '');
-        data[key].content = value.content.rendered.replace(/<(?:.|\n)*?>/gm, '');
+        var item = {};
+        item.id = value.id;
+        item.date = value.date;
+        item.link = value.link;
+        item.title = value.title.rendered;
+        item.menu_order = value.title.menu_order;
+        item.content = value.content.rendered.replace(/<(?:.|\n)*?>/gm, '');
+        item.excerpt = value.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, '');
 
-        // Get images url from _embedded tag
-        if (data[key].featured_image > 0) {
-          try {
-            data[key].featured_image = _.findWhere(value._embedded['http://v2.wp-api.org/attachment'][0], {
-              id: value.featured_image
-            }).source_url;
-          } catch (error) {
-            console.error(error);
-            data[key].featured_image = 0;
-          }
+        // Parse better_featured_image into media model parser
+        if (value.better_featured_image) {
+          var mediaModel = Alloy.createModel('media', value.better_featured_image),
+            mediaJson = mediaModel.config.parentNode([value.better_featured_image])[0];
+
+          item.featured_image = mediaJson.source_url;
+          item.thumbnail = mediaJson.thumbnail || mediaJson.source_url;
         }
+
+        items.push(item);
       });
-      return data;
+      return items;
     },
     adapter: {
       type: "sqlrest",
