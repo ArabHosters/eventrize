@@ -15,10 +15,9 @@
               </View>
             </ItemTemplate>
           </Templates>
-          <ListSection dataCollection="posts">
-            <ListItem dateLabel:text="{date}" postImage:image="{thumbnail}" excerptLabel:text="{excerpt}" titleLabel:text="{title}"/>
+          <ListSection dataCollection="posts" dataTransform="postsTransfomer">
+            <ListItem dateLabel:text="{prettyDate}" excerptLabel:text="{excerpt}" postImage:image="{thumbnail}" titleLabel:text="{title}"/>
           </ListSection>
-
         </ListView>
       </Widget>
     </Window>

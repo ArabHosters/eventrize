@@ -38,4 +38,11 @@ function fetchMorePostsCollection(e) {
   });
 }
 
+function postsTransfomer(model) {
+  var transform = model.toJSON();
+
+  transform.prettyDate = require('alloy/moment')(transform.date).fromNow();
+  return transform;
+}
+
 $.is.init($.list);
