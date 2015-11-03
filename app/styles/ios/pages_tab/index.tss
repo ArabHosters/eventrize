@@ -1,3 +1,9 @@
 'Tab' : {
   icon: '/images/tab.png'
 }
+'ScrollView' : {
+  layout: 'vertical'
+}
+'#featuredImageView' : {
+  width: '100%'
+}

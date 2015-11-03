@@ -1,5 +1,10 @@
 <Alloy>
   <Tab>
-    <Require src="posts_tab/post"/>
+    <Window id="postWindow">
+      <ScrollView>
+        <ImageView id="featuredImageView"/>
+        <Label id="contentLabel"/>
+      </ScrollView>
+    </Window>
   </Tab>
 </Alloy>
