@@ -7,6 +7,9 @@ function myRefresher(e) {
       per_page: Alloy.CFG.posts.per_page,
       page: 1
     },
+    sql: {
+      orderBy: "date DESC"
+    },
     success: e.hide,
     error: e.hide
   });
