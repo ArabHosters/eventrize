@@ -1,4 +1,5 @@
-var args = arguments[0] || {};
+var args = arguments[0] || {},
+  tabs = [];
 
 // Load tabs depend on configs
 _.each(Alloy.CFG.tabs, function(tabName) {
@@ -6,7 +7,7 @@ _.each(Alloy.CFG.tabs, function(tabName) {
 
   // Using try in case we don't have this controller
   try {
-    $.tabs.addTab(Alloy.createController(controllerName).getView());
+    tabs.push(Alloy.createController(controllerName).getView());
   } catch (exp) {
     Ti.API.error("Can't catch controller:", controllerName);
   }
@@ -17,13 +18,24 @@ if (OS_IOS) {
   // Load pages
   var pages = Alloy.createCollection('pages');
   pages.fetch({
+    localOnly: true,
     success: function(collection) {
       var tabsArray = [];
       _.each(collection.models, function(pageModel) {
-        $.tabs.addTab(Alloy.createController('pages_tab/index', pageModel.toJSON()).getView());
+        tabs.push(Alloy.createController('pages_tab/index', {
+          data: pageModel.toJSON()
+        }).getView());
       });
+      $.tabs.tabs = tabs;
+      $.tabs.open();
+    },
+    error: function() {
+      $.tabs.tabs = tabs;
+      $.tabs.open();
     }
   });
 } else if (OS_ANDROID) {
-  $.tabs.addTab(Alloy.createController("pages_tab/index").getView());
+  tabs.push(Alloy.createController("pages_tab/index").getView());
+  $.tabs.tabs = tabs;
+  $.tabs.open();
 }

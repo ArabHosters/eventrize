@@ -3,4 +3,4 @@
 $.index.open();
 
 // Open app home
-Alloy.createController('tabs').getView().open();
+Alloy.createController('tabs').getView();
