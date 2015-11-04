@@ -3,34 +3,12 @@ exports.definition = {
     columns: {
       id: "INTEGER",
       title: "TEXT",
-      media_type: "TEXT",
-      thumbnail: "TEXT",
-      source_url: "TEXT"
-    },
-    URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'media?post_parent={post_parent}',
-    debug: false,
-    useStrictValidation: true,
-    initFetchWithLocalData: true,
-    parentNode: function(data) {
-      var items = [];
-      _.each(data, function(value, key) {
-        var item = {};
-        item.id = value.id;
-        if (value.title) {
-          item.title = value.title.rendered || '';
-        }
-        item.thumbnail = value.media_details.sizes.thumbnail.source_url;
-        item.media_type = value.media_type;
-        item.source_url = value.source_url;
-
-        items.push(item);
-      });
-      return items;
+      featured_image: "TEXT",
+      thumbnail: "TEXT"
     },
     adapter: {
-      type: "sqlrest",
-      collection_name: "media",
-      idAttribute: "id"
+      type: "sql",
+      collection_name: "sponsors"
     }
   },
   extendModel: function(Model) {
