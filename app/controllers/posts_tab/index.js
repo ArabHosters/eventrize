@@ -47,7 +47,7 @@ function postsTransfomer(model) {
 
 function onItemClick(e) {
 
-  var win = Alloy.createController('pages_tab/index', {
+  var win = Alloy.createController('posts_tab/post', {
     data: Alloy.Collections.posts.at(e.itemIndex).toJSON()
   }).getView();
 

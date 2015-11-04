@@ -3,7 +3,7 @@
     "api": {
       "service": "wp-json/wp/v2/"
     },
-    "tabs": ["posts"],
+    "tabs": ["posts", "more"],
     "posts": {
       "per_page": 10
     }

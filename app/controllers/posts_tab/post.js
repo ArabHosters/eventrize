@@ -1,6 +1,6 @@
 var args = arguments[0] || {};
 
-$.index.title = args.data.title;
+$.post.title = args.data.title;
 $.contentLabel.text = args.data.content;
 if (args.data.featured_image) {
   $.featuredImageView.image = args.data.featured_image;

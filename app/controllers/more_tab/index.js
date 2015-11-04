@@ -1,8 +1,7 @@
 Alloy.Collections.pages.fetch();
 
 function onItemClick(e) {
-
-  Alloy.createController('pages_tab/index', {
+  $.index.open(Alloy.createController('posts_tab/post', {
     data: Alloy.Collections.pages.at(e.itemIndex).toJSON()
-  }).getView().open();
+  }).getView());
 }

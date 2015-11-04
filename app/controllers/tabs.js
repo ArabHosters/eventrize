@@ -13,36 +13,5 @@ _.each(Alloy.CFG.tabs, function(tabName) {
   }
 });
 
-// Only with iOS load pages as tabs from pages collection
-if (OS_IOS) {
-  // Load pages
-  var pages = Alloy.createCollection('pages');
-  pages.fetch({
-    localOnly: true,
-    success: function(collection) {
-      var tabsArray = [];
-      _.each(collection.models, function(pageModel) {
-
-        var tab = Ti.UI.createTab({
-          title: pageModel.toJSON().title,
-          icon: '/images/tab.png',
-          window: Alloy.createController('pages_tab/index', {
-            data: pageModel.toJSON()
-          }).getView()
-        });
-
-        tabs.push(tab);
-      });
-      $.tabs.tabs = tabs;
-      $.tabs.open();
-    },
-    error: function() {
-      $.tabs.tabs = tabs;
-      $.tabs.open();
-    }
-  });
-} else if (OS_ANDROID) {
-  tabs.push(Alloy.createController("pages_tab/index").getView());
-  $.tabs.tabs = tabs;
-  $.tabs.open();
-}
+$.tabs.tabs = tabs;
+$.tabs.open();
