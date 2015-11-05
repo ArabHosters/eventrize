@@ -9,10 +9,10 @@
     }
   },
   "env:development": {
-    "baseurl": "http://demo.wp-api.org/"
+    "baseurl": "http://dev.eventrize.com/"
   },
   "env:test": {
-    "baseurl": "http://demo.wp-api.org/"
+    "baseurl": "http://dev.eventrize.com/"
   },
   "env:production": {
     "baseurl": "http://app.eventrize.com/"
