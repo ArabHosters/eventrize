@@ -1,0 +1,13 @@
+'ListItem' : {
+  height: 75
+}
+'.templateView' : {
+  layout: 'horizontal'
+}
+'.thumbnailImageView' : {
+  left: 5,
+  height: 65
+}
+'.titleLabel' : {
+  left: 5
+}

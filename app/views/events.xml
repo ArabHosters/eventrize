@@ -1,0 +1,21 @@
+<Alloy>
+  <Collection src="events"/>
+  <Window>
+    <ListView defaultItemTemplate="eventsTemplate" onItemclick="onItemClick">
+      <HeaderView>
+        <Label>Header</Label>
+      </HeaderView>
+      <Templates>
+        <ItemTemplate name="eventsTemplate">
+          <View class="templateView">
+            <ImageView bindId="thumbnail" class="thumbnailImageView"/>
+            <Label bindId="titleLabel" class="titleLabel"/>
+          </View>
+        </ItemTemplate>
+      </Templates>
+      <ListSection dataCollection="events">
+        <ListItem thumbnail:image="{thumbnail}" titleLabel:text="{title}"/>
+      </ListSection>
+    </ListView>
+  </Window>
+</Alloy>

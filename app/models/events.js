@@ -14,7 +14,7 @@ exports.definition = {
     URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'event',
     debug: false,
     useStrictValidation: true,
-    initFetchWithLocalData: true,
+    initFetchWithLocalData: false,
     parentNode: function(data) {
       var items = [];
       _.each(data, function(value, key) {
