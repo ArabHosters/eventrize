@@ -1,6 +1,8 @@
 var args = arguments[0] || {},
   tabs = [];
 
+Alloy.Globals.lastActiveEvent = args.eventModelJSON;
+
 // Load tabs depend on configs
 _.each(Alloy.CFG.tabs, function(tabName) {
   var controllerName = tabName + '_tab/index';

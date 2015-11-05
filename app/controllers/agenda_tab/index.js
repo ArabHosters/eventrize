@@ -9,4 +9,9 @@ function agendaTransfomer(model) {
 
 function onItemClick(e) {}
 
-$.agendaCollection.fetch();
+$.agendaCollection.fetch({
+  query: {
+    statement: 'SELECT * from ' + $.agendaCollection.config.adapter.collection_name + ' where event_id = ?',
+    params: [Alloy.Globals.lastActiveEvent.id]
+  }
+});
