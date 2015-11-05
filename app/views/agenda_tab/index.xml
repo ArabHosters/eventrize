@@ -1,0 +1,28 @@
+<Alloy>
+  <Collection id="agendaCollection" instance="true" src="agenda"/>
+  <Tab>
+    <Window>
+      <ListView defaultItemTemplate="agendaTemplate" onItemclick="onItemClick">
+        <Templates>
+          <ItemTemplate name="agendaTemplate">
+            <View class="horizontalView">
+              <Label bindId="prettyStartDateLabel" class="prettyStartDateLabel"/>
+              <Label bindId="iconLabel" class="iconLabel"/>
+              <View class="verticalView">
+                <Label bindId="titleLabel" class="titleLabel"/>
+                <View class="horizontalView">
+                  <ImageView class="speakerImageView"/>
+                  <ImageView class="speakerImageView"/>
+                  <ImageView class="speakerImageView"/>
+                </View>
+              </View>
+            </View>
+          </ItemTemplate>
+        </Templates>
+        <ListSection dataCollection="$.agendaCollection" dataTransform="agendaTransfomer">
+          <ListItem iconLabel:text="{icon}" prettyStartDateLabel:text="{prettyStartDate}" titleLabel:text="{title}"/>
+        </ListSection>
+      </ListView>
+    </Window>
+  </Tab>
+</Alloy>

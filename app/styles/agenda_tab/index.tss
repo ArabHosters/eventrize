@@ -1,0 +1,18 @@
+'Tab' : {
+  title: L('agendaTabTitle'),
+  icon: '/images/tab.png'
+}
+'Window' : {
+  title: L('agendaWindowTitle')
+}
+'.horizontalView' : {
+  layout: 'horizontal'
+}
+'.verticalView' : {
+  layout: 'vertical'
+}
+'.agendaTemplate' : {}
+'.prettyStartDateLabel' : {}
+'.iconImageView' : {}
+'.titleLabel' : {}
+'.speakerImageView' : {}

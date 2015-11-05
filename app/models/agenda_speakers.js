@@ -1,12 +1,15 @@
 exports.definition = {
   config: {
     columns: {
+      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
       event_id: "INTEGER",
+      session_id: "INTEGER",
       speaker_id: "INTEGER"
     },
     adapter: {
       type: "sql",
-      collection_name: "agenda_speakers"
+      collection_name: "agenda_speakers",
+      idAttribute: "id"
     }
   },
   extendModel: function(Model) {

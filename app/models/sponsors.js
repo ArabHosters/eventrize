@@ -1,14 +1,16 @@
 exports.definition = {
   config: {
     columns: {
-      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
+      id: "INTEGER PRIMARY KEY",
       title: "TEXT",
       featured_image: "TEXT",
-      thumbnail: "TEXT"
+      thumbnail: "TEXT",
+      event_id: "INTEGER"
     },
     adapter: {
       type: "sql",
-      collection_name: "sponsors"
+      collection_name: "sponsors",
+      idAttribute: "id"
     }
   },
   extendModel: function(Model) {

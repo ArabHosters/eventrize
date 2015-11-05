@@ -56,6 +56,7 @@ exports.definition = {
           _.each(session.speaker_id, function(speakerId) {
             var agendaSpeakersModel = Alloy.createModel('agenda_speakers', {
               event_id: value.id,
+              session_id: session.id,
               speaker_id: speakerId
             });
             agendaSpeakersModel.save();
@@ -67,7 +68,9 @@ exports.definition = {
           var speakerModel = Alloy.createModel('speakers');
 
           // Reformat data according the schema
-          speaker = speakerModel.parser(speaker);
+          speaker = speakerModel.parser(_.extend(speaker, {
+            event_id: value.id
+          }));
           speakerModel.save(speaker);
         });
 

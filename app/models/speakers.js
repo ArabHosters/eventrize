@@ -1,12 +1,13 @@
 exports.definition = {
   config: {
     columns: {
-      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
+      id: "INTEGER PRIMARY KEY",
       name: "TEXT",
       title: "TEXT",
       bio: "TEXT",
       featured_image: "TEXT",
-      thumbnail: "TEXT"
+      thumbnail: "TEXT",
+      event_id: "INTEGER"
     },
     adapter: {
       type: "sql",
@@ -21,7 +22,8 @@ exports.definition = {
           id: json.speaker_id,
           name: json.speaker_name,
           title: json.speaker_job,
-          bio: json.speaker_bio
+          bio: json.speaker_bio,
+          event_id: json.event_id
         };
 
         // Parse better_featured_image into media model parser

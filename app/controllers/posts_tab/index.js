@@ -30,8 +30,11 @@ function fetchMorePostsCollection(e) {
     silent: true,
     returnExactServerResponse: true,
     success: function(col) {
-      // call done() when we received last page - else success()
-      (col.models.length === ln) ? e.done(): e.success();
+      if (col.models.length === ln) {
+        e.done();
+      } else {
+        e.success();
+      }
     },
     // call error() when fetch fails
     error: e.error

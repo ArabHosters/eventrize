@@ -1,5 +1,12 @@
 var args = arguments[0] || {};
 
-function agendaTransfomer() {}
+function agendaTransfomer(model) {
+  var transform = model.toJSON();
 
-function onItemClick() {}
+  transform.prettyStartDate = require('alloy/moment')(transform.startdate).format('h:mm a');
+  return transform;
+}
+
+function onItemClick(e) {}
+
+$.agendaCollection.fetch();

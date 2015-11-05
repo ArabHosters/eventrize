@@ -1,7 +1,7 @@
 exports.definition = {
   config: {
     columns: {
-      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
+      id: "INTEGER PRIMARY KEY",
       link: "TEXT",
       title: "TEXT",
       content: "TEXT",
@@ -9,7 +9,8 @@ exports.definition = {
       enddate: "TEXT",
       location: "TEXT",
       type: "TEXT",
-      icon: "TEXT"
+      icon: "TEXT",
+      event_id: "INTEGER"
     },
     adapter: {
       type: "sql",
@@ -29,7 +30,8 @@ exports.definition = {
           enddate: json.session_enddate,
           location: json.session_location,
           type: json.session_type,
-          icon: json.session_icon
+          icon: json.session_icon,
+          event_id: json.event_id
         };
       }
     });
