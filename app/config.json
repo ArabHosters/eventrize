@@ -6,6 +6,7 @@
     "tabs": [
       "posts",
       "agenda",
+      "speakers",
       "more"
     ],
     "posts": {

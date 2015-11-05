@@ -1,0 +1,23 @@
+<Alloy>
+  <Collection id="speakersCollection" instance="true" src="speakers"/>
+  <Tab>
+    <Window>
+      <ListView defaultItemTemplate="speakersTemplate" onItemclick="onItemClick">
+        <Templates>
+          <ItemTemplate name="speakersTemplate">
+            <View>
+              <ImageView bindId="featuredImageView" class="featuredImageView"/>
+              <View class="verticalView">
+                <Label bindId="nameLabel" class="nameLabel"/>
+                <Label bindId="titleLabel" class="titleLabel"/>
+              </View>
+            </View>
+          </ItemTemplate>
+        </Templates>
+        <ListSection dataCollection="$.speakersCollection" dataTransform="speakersTransfomer">
+          <ListItem featuredImageView:image="{featured_image}" nameLabel:text="{name}" titleLabel:text="{title}"/>
+        </ListSection>
+      </ListView>
+    </Window>
+  </Tab>
+</Alloy>

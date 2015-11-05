@@ -1,0 +1,35 @@
+'Tab' : {
+  title: L('speakersTabTitle'),
+  icon: '/images/tab.png'
+}
+'Window' : {
+  title: L('speakersWindowTitle')
+}
+'ListItem' : {
+  height: 140,
+  backgroundColor: '#2A2A2A'
+}
+'.featuredImageView' : {
+  width: Ti.UI.FILL,
+	height: Ti.UI.FILL 
+}
+'.verticalView' : {
+  layout: 'vertical',
+  height: Ti.UI.SIZE,
+  left: 12
+}
+'.nameLabel' : {
+  left: 0,
+  color: '#ffffff',
+  font: {
+    fontSize: 30
+  }
+}
+'.titleLabel' : {
+  left: 0,
+  color: '#ffffff',
+  backgroundColor: '#45BBFF',
+  font: {
+    fontSize: 14
+  }
+}
