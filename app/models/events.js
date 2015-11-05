@@ -43,10 +43,13 @@ exports.definition = {
 
         // Create agenda records
         _.each(value.event_sessions, function(session) {
-          var agendaModel = Alloy.createModel('agenda', _.extend(session, {
+          var agendaModel = Alloy.createModel('agenda');
+
+          // Reformat data according the schema
+          session = agendaModel.parser(_.extend(session, {
             event_id: value.id
           }));
-          agendaModel.save();
+          agendaModel.save(session);
 
 
           // Create agenda and speakers relation records
@@ -61,14 +64,22 @@ exports.definition = {
 
         // Create speaker records
         _.each(value.event_speakers, function(speaker) {
-          var speakerModel = Alloy.createModel('speakers', speaker);
-          speakerModel.save();
+          var speakerModel = Alloy.createModel('speakers');
+
+          // Reformat data according the schema
+          speaker = speakerModel.parser(speaker);
+          speakerModel.save(speaker);
         });
 
         // Create sponsors records
         _.each(value.event_sponsors, function(sponsor) {
-          var sponsorsModel = Alloy.createModel('sponsors', sponsor);
-          sponsorsModel.save();
+          var sponsorsModel = Alloy.createModel('sponsors');
+
+          // Reformat data according the schema
+          sponsor = sponsorsModel.parser(_.extend(sponsor, {
+            event_id: value.id
+          }));
+          sponsorsModel.save(sponsor);
         });
       });
       return items;

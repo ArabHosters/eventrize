@@ -1,10 +1,10 @@
 exports.definition = {
   config: {
     columns: {
-      id: "INTEGER",
+      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
       name: "TEXT",
       title: "TEXT",
-      company: "TEXT",
+      bio: "TEXT",
       featured_image: "TEXT",
       thumbnail: "TEXT"
     },
@@ -16,7 +16,24 @@ exports.definition = {
   },
   extendModel: function(Model) {
     _.extend(Model.prototype, {
-      // extended functions and properties go here
+      parser: function(json) {
+        var item = {
+          id: json.speaker_id,
+          name: json.speaker_name,
+          title: json.speaker_job,
+          bio: json.speaker_bio
+        };
+
+        // Parse better_featured_image into media model parser
+        if (json.better_featured_image) {
+          var mediaModel = Alloy.createModel('media', json.better_featured_image),
+            mediaJson = mediaModel.config.parentNode([json.better_featured_image])[0];
+
+          item.featured_image = mediaJson.source_url;
+          item.thumbnail = mediaJson.thumbnail || mediaJson.source_url;
+        }
+        return item;
+      }
     });
 
     return Model;

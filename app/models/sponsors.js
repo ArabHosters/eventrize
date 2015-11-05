@@ -1,7 +1,7 @@
 exports.definition = {
   config: {
     columns: {
-      id: "INTEGER",
+      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
       title: "TEXT",
       featured_image: "TEXT",
       thumbnail: "TEXT"
@@ -13,7 +13,9 @@ exports.definition = {
   },
   extendModel: function(Model) {
     _.extend(Model.prototype, {
-      // extended functions and properties go here
+      parser: function(json) {
+        return json;
+      }
     });
 
     return Model;

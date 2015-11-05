@@ -1,15 +1,15 @@
 exports.definition = {
   config: {
     columns: {
-      id: "INTEGER",
-      date: "TEXT",
+      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
       link: "TEXT",
       title: "TEXT",
       content: "TEXT",
-      start_date: "TEXT",
-      end_date: "TEXT",
+      startdate: "TEXT",
+      enddate: "TEXT",
       location: "TEXT",
-      session_type: "TEXT"
+      type: "TEXT",
+      icon: "TEXT"
     },
     adapter: {
       type: "sql",
@@ -19,7 +19,19 @@ exports.definition = {
   },
   extendModel: function(Model) {
     _.extend(Model.prototype, {
-      // extended functions and properties go here
+      parser: function(json) {
+        return {
+          id: json.session_id,
+          link: json.link,
+          title: json.session_title,
+          content: json.session_content,
+          startdate: json.session_startdate,
+          enddate: json.session_enddate,
+          location: json.session_location,
+          type: json.session_type,
+          icon: json.session_icon
+        };
+      }
     });
 
     return Model;

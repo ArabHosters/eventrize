@@ -1,8 +1,8 @@
 exports.definition = {
   config: {
     columns: {
-      event_id: value.id,
-      speaker_id: speakerId
+      event_id: "INTEGER",
+      speaker_id: "INTEGER"
     },
     adapter: {
       type: "sql",
