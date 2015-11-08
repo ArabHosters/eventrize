@@ -3,12 +3,10 @@
   backgroundColor: '#ffffff'
 }
 'Window[platform=ios]' : {
-  statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
-  barColor: '#24B3FF',
-  tintColor: '#ffffff',
-  navTintColor: '#ffffff',
+  tintColor: '#24B3FF',
+  navTintColor: '#24B3FF',
   titleAttributes: {
-    color: '#ffffff'
+    color: '#24B3FF'
   }
 }
 'TabGroup' : {
