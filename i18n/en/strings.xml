@@ -11,4 +11,12 @@
   <string name="shareDialogTitle">Share this?</string>
   <string name="agendaTabTitle">Agenda</string>
   <string name="agendaWindowTitle">Agenda</string>
+  <string name="speakersTabTitle">Speakers</string>
+  <string name="speakersWindowTitle">Speakers</string>
+  <string name="sponsorsTabTitle">Sponsors</string>
+  <string name="sponsorsWindowTitle">Sponsors</string>
+  <string name="openSponsorLinkAlertDialogTitle">Open the URL?</string>
+  <string name="openSponsorLinkAlertDialogMessage">Are you sure?</string>
+  <string name="cancelButton">Cancel</string>
+  <string name="OK">OK</string>
 </resources>

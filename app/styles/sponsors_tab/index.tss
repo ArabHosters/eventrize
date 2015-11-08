@@ -1,0 +1,25 @@
+'Tab' : {
+  icon: '/images/tab.png',
+  activeIcon: '/images/tabActive.png',
+  title: L('sponsorsTabTitle')
+}
+'Tab[platform=ios]' : {
+  title: L('sponsorsTabTitle')
+}
+'Window' : {
+  title: L('sponsorsWindowTitle')
+}
+'ScrollableView' : {
+  height: 200,
+  top: 0
+}
+'#gridView' : {
+  top: 200,
+  layout: 'horizontal',
+  horizontalWrap: true
+}
+'.gridImageView' : {
+  width: 90,
+  height: 90,
+  left: 10
+}

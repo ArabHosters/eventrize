@@ -2,7 +2,10 @@ exports.definition = {
   config: {
     columns: {
       id: "INTEGER PRIMARY KEY",
-      title: "TEXT",
+      name: "TEXT",
+      link: "TEXT",
+      sponsor_info: "TEXT",
+      sponsor_category: "TEXT",
       featured_image: "TEXT",
       thumbnail: "TEXT",
       event_id: "INTEGER"
@@ -16,7 +19,24 @@ exports.definition = {
   extendModel: function(Model) {
     _.extend(Model.prototype, {
       parser: function(json) {
-        return json;
+        var item = {
+          id: json.sponsor_id,
+          name: json.sponsor_name,
+          link: json.sponsor_website,
+          info: json.sponsor_info,
+          category: json.sponsor_category,
+          event_id: json.event_id
+        };
+
+        // Parse better_featured_image into media model parser
+        if (json.better_featured_image) {
+          var mediaModel = Alloy.createModel('media', json.better_featured_image),
+            mediaJson = mediaModel.config.parentNode([json.better_featured_image])[0];
+
+          item.featured_image = mediaJson.source_url || '';
+          item.thumbnail = mediaJson.thumbnail || mediaJson.source_url;
+        }
+        return item;
       }
     });
 
