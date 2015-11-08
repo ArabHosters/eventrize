@@ -3,14 +3,14 @@
   backgroundColor: '#ffffff'
 }
 'Window[platform=ios]' : {
-  tintColor: '#24B3FF',
-  navTintColor: '#24B3FF',
+  tintColor: Alloy.CFG.style.mainColor,
+  navTintColor: Alloy.CFG.style.mainColor,
   titleAttributes: {
-    color: '#24B3FF'
+    color: Alloy.CFG.style.mainColor
   }
 }
 'TabGroup' : {
-  tabsBackgroundColor: '#24B3FF',
+  tabsBackgroundColor: Alloy.CFG.style.mainColor,
   tabsTintColor: '#ffffff',
   tintColor: '#ffffff',
   backgroundImage: 'appicon.png'

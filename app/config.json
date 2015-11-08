@@ -12,6 +12,9 @@
     ],
     "posts": {
       "per_page": 10
+    },
+    "style": {
+      "mainColor": "#24B3FF"
     }
   },
   "env:development": {
