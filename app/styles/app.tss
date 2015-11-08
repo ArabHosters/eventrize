@@ -3,7 +3,24 @@
   backgroundColor: '#ffffff'
 }
 'Window[platform=ios]' : {
-  statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
+  statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+  barColor: '#24B3FF',
+  tintColor: '#ffffff',
+  navTintColor: '#ffffff',
+  titleAttributes: {
+    color: '#ffffff'
+  }
+}
+'TabGroup' : {
+  tabsBackgroundColor: '#24B3FF',
+  tabsTintColor: '#ffffff',
+  tintColor: '#ffffff',
+  backgroundImage: 'appicon.png'
+}
+'Tab': {
+  titleColor: '#eeeeee',
+  activeTitleColor: '#ffffff',
+  iconIsMask: false,
 }
 'Label[platform=android]' : {
   color: '#000000'

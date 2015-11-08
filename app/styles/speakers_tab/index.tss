@@ -1,5 +1,6 @@
 'Tab' : {
   icon: '/images/tab.png',
+  activeIcon: '/images/tabActive.png',
   title: L('speakersTabTitle')
 }
 'Tab[platform=ios]' : {
