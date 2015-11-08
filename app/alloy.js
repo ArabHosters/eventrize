@@ -3,3 +3,13 @@ if (Ti.Locale.currentLanguage === 'ar') {
   require('alloy/moment/lang/ar');
   moment.lang(Ti.Locale.currentLanguage);
 }
+
+Alloy.Globals.androidBackPressedToExitTheApp = function() {
+  var win = Ti.UI.createWindow({
+    exitOnClose: true
+  });
+  win.addEventListener('open', function() {
+    win.close();
+  });
+  win.open();
+};

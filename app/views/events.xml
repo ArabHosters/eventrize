@@ -1,6 +1,6 @@
 <Alloy>
   <Collection src="events"/>
-  <Window>
+  <Window onAndroid:back="Alloy.Globals.androidBackPressedToExitTheApp">
     <ListView defaultItemTemplate="eventsTemplate" onItemclick="onItemClick">
       <HeaderView>
         <Label>Header</Label>

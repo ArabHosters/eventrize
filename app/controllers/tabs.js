@@ -15,5 +15,14 @@ _.each(Alloy.CFG.tabs, function(tabName) {
   }
 });
 
+// Set tabs into the TabGroup
 $.tabs.tabs = tabs;
+tabs = null;
+
+// In case we have only 1 event, no need to return back to last screen, close app directly
+if (args.eventsCount === 1) {
+  $.tabs.addEventListener('androidback', Alloy.Globals.androidBackPressedToExitTheApp);
+}
+
+// Let the tabs rock the ram
 $.tabs.open();
