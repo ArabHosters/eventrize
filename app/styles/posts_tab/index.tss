@@ -1,5 +1,6 @@
 'Tab' : {
-  icon: '/images/tab.png'
+  icon: '/images/tab.png',
+  title: L('postsTabTitle')
 }
 'Tab[platform=ios]' : {
   title: L('postsTabTitle')
