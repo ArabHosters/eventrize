@@ -9,14 +9,37 @@
 'Window' : {
   title: L('agendaWindowTitle')
 }
-'.horizontalView' : {
-  layout: 'horizontal'
-}
-'.verticalView' : {
+'ScrollView' : {
   layout: 'vertical'
 }
-'.agendaTemplate' : {}
-'.prettyStartDateLabel' : {}
-'.iconImageView' : {}
-'.titleLabel' : {}
-'.speakerImageView' : {}
+'.lineView' : {
+  left: 112,
+  width: 1,
+  backgroundColor: Alloy.CFG.style.mainColor,
+  height: 22
+}
+'.horizontalView' : {
+  layout: 'horizontal',
+  height: Ti.UI.SIZE
+}
+'.verticalView' : {
+  layout: 'vertical',
+  height: Ti.UI.SIZE
+}
+'.prettyStartDateLabel' : {
+  width: 90,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+'.iconLabel' : {
+  width: 44,
+  height: 44,
+  borderWidth: 1,
+  borderRadius: 22,
+  borderColor: Alloy.CFG.style.mainColor,
+  backgroundColor: '#ffffff',
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.CFG.style.mainColor
+}
+'.titleLabel' : {
+  left: 10
+}
