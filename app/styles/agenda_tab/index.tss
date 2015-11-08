@@ -1,6 +1,8 @@
 'Tab' : {
-  title: L('agendaTabTitle'),
   icon: '/images/tab.png'
+}
+'Tab[platform=ios]' : {
+  title: L('agendaTabTitle')
 }
 'Window' : {
   title: L('agendaWindowTitle')

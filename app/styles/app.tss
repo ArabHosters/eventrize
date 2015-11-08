@@ -1,9 +1,17 @@
-'Window': {
-  backgroundColor: '#fff'
+'Window' : {
+  orientationModes: [Titanium.UI.PORTRAIT],
+  backgroundColor: '#ffffff'
 }
-'Label[platform=android]': {
-  color: '#000'
+'Window[platform=ios]' : {
+  statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 }
-'TextField[platform=android]': {
-  height: Ti.UI.SIZE
+'Label[platform=android]' : {
+  color: '#000000'
+}
+'TextField[platform=android]' : {
+  height: Ti.UI.SIZE,
+  hintTextColor: '#c0c0c0'
+}
+'MenuItem' : {
+  showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
 }

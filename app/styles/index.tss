@@ -1,3 +1,6 @@
-'Window': {
-  exitOnClose: true
+'Window[platform=android]' : {
+  theme: 'Theme.AppCompat.Translucent.NoTitleBar'
+}
+'Label' : {
+  title: L('loadingMessage')
 }

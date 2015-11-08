@@ -1,6 +1,8 @@
 'Tab' : {
-  title: L('speakersTabTitle'),
   icon: '/images/tab.png'
+}
+'Tab[platform=ios]' : {
+  title: L('speakersTabTitle')
 }
 'Window' : {
   title: L('speakersWindowTitle')
@@ -11,7 +13,7 @@
 }
 '.featuredImageView' : {
   width: Ti.UI.FILL,
-	height: Ti.UI.FILL 
+  height: Ti.UI.FILL
 }
 '.verticalView' : {
   layout: 'vertical',
