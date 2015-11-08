@@ -2,9 +2,20 @@
   <Collection src="pages"/>
   <Tab>
     <Window>
-      <ListView onItemclick="onItemClick">
+      <ListView defaultItemTemplate="moreTabTemplate" onItemclick="onItemClick">
+        <Templates>
+          <ItemTemplate name="moreTabTemplate">
+            <View class="templateView">
+              <ImageView bindId="thumbnailImageView" class="thumbnailImageView"/>
+              <Label bindId="titleLabel" class="titleLabel"/>
+            </View>
+          </ItemTemplate>
+        </Templates>
         <ListSection dataCollection="pages">
-          <ListItem title="{title}"/>
+          <ListItem thumbnailImageView:image="{thumbnail}" titleLabel:text="{title}"/>
+        </ListSection>
+        <ListSection>
+          <ListItem controllerToOpen="more_tab/venue" thumbnailImageView:image="/images/icons/venue.png" titleLabel:text="Venue"/>
         </ListSection>
       </ListView>
     </Window>

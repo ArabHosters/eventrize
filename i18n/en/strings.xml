@@ -19,4 +19,5 @@
   <string name="openSponsorLinkAlertDialogMessage">Are you sure?</string>
   <string name="cancelButton">Cancel</string>
   <string name="OK">OK</string>
+  <string name="venueWindowTitle">Venue</string>
 </resources>

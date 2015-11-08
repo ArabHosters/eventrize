@@ -10,7 +10,14 @@
   title: L('moreWindowTitle')
 }
 'ListItem' : {
-  color: '#000000',
-  height: 40,
-  image: '/images/tab.png'
+  height: 50
+}
+'.templateView' : {}
+'.thumbnailImageView' : {
+  left: 5,
+  width: 40,
+  height: 40
+}
+'.titleLabel' : {
+  left: 50
 }

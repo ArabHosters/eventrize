@@ -46,6 +46,8 @@
   <modules>
     <module platform="android" version="0.6">com.rkam.swiperefreshlayout</module>
     <module platform="iphone" version="1.8.2">dk.napp.social</module>
+    <module platform="iphone">ti.map</module>
+    <module platform="android">ti.map</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>
