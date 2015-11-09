@@ -1,0 +1,16 @@
+<Alloy>
+  <Window onClose="$.destroy" title="{name}">
+    <RightNavButton platform="ios">
+      <Button id="shareButton" onClick="shareButtonClicked"/>
+    </RightNavButton>
+    <Menu platform="android">
+      <MenuItem id="shareMenuItem" onClick="shareButtonClicked"/>
+    </Menu>
+    <ScrollView>
+      <ImageView class="featuredImageView" image="{featured_image}"/>
+      <Label text="{name}"/>
+      <Label text="{title}"/>
+      <Label text="{bio}"/>
+    </ScrollView>
+  </Window>
+</Alloy>

@@ -15,7 +15,7 @@
           </ItemTemplate>
         </Templates>
         <ListSection dataCollection="$.speakersCollection" dataTransform="speakersTransfomer">
-          <ListItem featuredImageView:image="{featured_image}" nameLabel:text="{name}" titleLabel:text="{title}"/>
+          <ListItem featuredImageView:image="{featured_image}" myId="{id}" nameLabel:text="{name}" titleLabel:text="{title}"/>
         </ListSection>
       </ListView>
     </Window>

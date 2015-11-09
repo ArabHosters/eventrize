@@ -7,7 +7,11 @@ function speakersTransfomer(model) {
   return transform;
 }
 
-function onItemClick(e) {}
+function onItemClick(e) {
+  $.index.open(Alloy.createController('speakers_tab/child', {
+    $model: $.speakersCollection.get(e.section.getItemAt(e.itemIndex).properties.myId)
+  }).getView());
+}
 
 $.speakersCollection.fetch({
   query: {
