@@ -2,17 +2,18 @@
   <Collection id="agendaCollection" instance="true" src="agenda"/>
   <Tab>
     <Window>
-      <ScrollView dataCollection="$.agendaCollection" dataTransform="agendaTransfomer">
-        <View class="lineView" visible="{showLineView}"/>
-        <View class="horizontalView">
-          <Label class="prettyStartDateLabel" text="{prettyStartDate}"/>
-          <Widget class="iconLabel" icon="{icon}" src="ti.ux.iconfont"/>
-          <View class="verticalView">
-            <Label class="titleLabel" text="{title}"/>
-            <View class="horizontalView">
-              <ImageView class="speakerImageView"/>
-              <ImageView class="speakerImageView"/>
-              <ImageView class="speakerImageView"/>
+      <ScrollView>
+        <View class="lineView"/>
+        <View dataCollection="$.agendaCollection" dataTransform="agendaTransfomer" layout="vertical">
+          <View class="horizontalView" myId="{id}" onClick="viewClicked">
+            <Label class="prettyStartDateLabel" text="{prettyStartDate}"/>
+            <Widget class="iconLabel" icon="{icon}" src="ti.ux.iconfont"/>
+            <View class="verticalView fitView">
+              <Label class="titleLabel" text="{title}"/>
+              <View class="horizontalView fitView">
+                <ImageView class="speakerImageView"/>
+                <Label class="speakerLabel" left="5" text="Hazem Khaled"/>
+              </View>
             </View>
           </View>
         </View>

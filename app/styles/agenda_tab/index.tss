@@ -9,25 +9,27 @@
 'Window' : {
   title: L('agendaWindowTitle')
 }
+'Label' : {
+  touchEnabled: false
+}
 'ScrollView' : {
-  layout: 'vertical'
+  scrollType: 'vertical'
 }
 '.lineView' : {
   left: 112,
+  top: 22,
   width: 1,
-  backgroundColor: Alloy.CFG.style.mainColor,
-  height: 22
+  //height: 22,
+  backgroundColor: Alloy.CFG.style.mainColor
 }
-'.horizontalView' : {
-  layout: 'horizontal',
-  height: Ti.UI.SIZE
-}
-'.verticalView' : {
-  layout: 'vertical',
-  height: Ti.UI.SIZE
+'.fitView' : {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  touchEnabled: false
 }
 '.prettyStartDateLabel' : {
   width: 90,
+  height: 66,
   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
 '.iconLabel' : {
@@ -38,8 +40,26 @@
   borderColor: Alloy.CFG.style.mainColor,
   backgroundColor: '#ffffff',
   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-  color: Alloy.CFG.style.mainColor
+  color: Alloy.CFG.style.mainColor,
+  touchEnabled: false
 }
 '.titleLabel' : {
-  left: 10
+  left: 10,
+  font: {
+    fontSize: 18
+  }
+}
+'.speakerImageView' : {
+  image: 'https://pbs.twimg.com/profile_images/569856970148941824/Zdzzp2CV.jpeg',
+  width: 24,
+  height: 24,
+  borderRadius: 12,
+  left: 10,
+  touchEnabled: false
+}
+'.speakerLabel' : {
+  color: 'gray',
+  font: {
+    fontSize: 12
+  }
 }

@@ -10,7 +10,12 @@ function agendaTransfomer(model) {
   return transform;
 }
 
-function onItemClick(e) {}
+function viewClicked(e) {
+  console.log(e.source.apiName, e.source.myId);
+  $.index.open(Alloy.createController('agenda_tab/child', {
+    $model: $.agendaCollection.get(e.source.myId)
+  }).getView());
+}
 
 $.agendaCollection.fetch({
   query: {
