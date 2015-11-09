@@ -5,11 +5,13 @@ if (Ti.Locale.currentLanguage === 'ar') {
 }
 
 Alloy.Globals.androidBackPressedToExitTheApp = function() {
-  var win = Ti.UI.createWindow({
-    exitOnClose: true
-  });
-  win.addEventListener('open', function() {
-    win.close();
-  });
-  win.open();
+  if (OS_ANDROID) {
+    var win = Ti.UI.createWindow({
+      exitOnClose: true
+    });
+    win.addEventListener('open', function() {
+      win.close();
+    });
+    win.open();
+  }
 };
