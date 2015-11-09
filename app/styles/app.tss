@@ -15,10 +15,10 @@
   tintColor: '#ffffff',
   backgroundImage: 'appicon.png'
 }
-'Tab': {
+'Tab' : {
   titleColor: '#eeeeee',
   activeTitleColor: '#ffffff',
-  iconIsMask: false,
+  iconIsMask: false
 }
 'Label[platform=android]' : {
   color: '#000000'
@@ -29,4 +29,11 @@
 }
 'MenuItem' : {
   showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
+}
+'.horizontalView' : {
+  layout: 'horizontal',
+  height: Ti.UI.SIZE
+}
+'.verticalView' : {
+  layout: 'vertical'
 }

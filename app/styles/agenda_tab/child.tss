@@ -1,0 +1,16 @@
+'ScrollView' : {
+  layout: 'vertical',
+  scrollType: 'vertical'
+}
+'#shareButton' : {
+  title: L('shareButton')
+}
+'#shareMenuItem' : {
+  icon: Titanium.Android.R.drawable.ic_menu_share
+}
+'.iconLabel' : {
+  color: Alloy.CFG.style.mainColor
+}
+'.horizontalView' : {
+  width: Ti.UI.SIZE
+}

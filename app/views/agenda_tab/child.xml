@@ -1,0 +1,23 @@
+<Alloy>
+  <Model id="speakersModel" instance="true" src="speakers"/>
+  <Window onClose="$.destroy" title="{title}">
+    <RightNavButton platform="ios">
+      <Button id="shareButton" onClick="shareButtonClicked"/>
+    </RightNavButton>
+    <Menu platform="android">
+      <MenuItem id="shareMenuItem" onClick="shareButtonClicked"/>
+    </Menu>
+    <ScrollView>
+      <ImageView image="{$.speakersModel.thumbnail}"/>
+      <Label text="{title}"/>
+      <Label text="by {$.speakersModel.name}"/>
+      <View class="horizontalView">
+        <Widget class="iconLabel" icon="fa-clock-o" src="ti.ux.iconfont"/>
+        <Label text="{startdatePretty}"/>
+        <Label text=" - "/>
+        <Label text="{enddatePretty}"/>
+      </View>
+      <Label text="{content}"/>
+    </ScrollView>
+  </Window>
+</Alloy>
