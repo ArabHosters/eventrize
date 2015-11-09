@@ -4,7 +4,7 @@ function onItemClick(e) {
   switch (e.sectionIndex) {
     case 0:
       $.index.open(Alloy.createController('posts_tab/post', {
-        data: Alloy.Collections.pages.at(e.itemIndex).toJSON()
+        $model: Alloy.Collections.pages.at(e.itemIndex)
       }).getView());
       break;
     case 1:

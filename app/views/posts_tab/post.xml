@@ -1,5 +1,5 @@
 <Alloy>
-  <Window>
+  <Window onClose="$.destroy" title="{title}">
     <RightNavButton platform="ios">
       <Button id="shareButton" onClick="shareButtonClicked"/>
     </RightNavButton>
@@ -7,8 +7,8 @@
       <MenuItem id="shareMenuItem" onClick="shareButtonClicked"/>
     </Menu>
     <ScrollView>
-      <ImageView id="featuredImageView"/>
-      <Label id="contentLabel"/>
+      <ImageView id="featuredImageView" image="{featured_image}"/>
+      <Label id="contentLabel" text="{content}"/>
     </ScrollView>
   </Window>
 </Alloy>
