@@ -1,9 +1,9 @@
 exports.definition = {
   config: {
     columns: {
-      id: "INTEGER PRIMARY KEY AUTOINCREMENT",
+      id: "TEXT PRIMARY KEY",
       event_id: "INTEGER",
-      session_id: "INTEGER",
+      agenda_id: "INTEGER",
       speaker_id: "INTEGER"
     },
     adapter: {

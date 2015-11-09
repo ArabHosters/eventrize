@@ -50,21 +50,22 @@ exports.definition = {
         items.push(item);
 
         // Create agenda records
-        _.each(value.event_sessions, function(session) {
+        _.each(value.event_sessions, function(_session) {
           var agendaModel = Alloy.createModel('agenda');
 
           // Reformat data according the schema
-          session = agendaModel.parser(_.extend(session, {
+          session = agendaModel.parser(_.extend(_session, {
             event_id: value.id
           }));
           agendaModel.save(session);
 
 
           // Create agenda and speakers relation records
-          _.each(session.speaker_id, function(speakerId) {
+          _.each(_session.session_speakers, function(speakerId) {
             var agendaSpeakersModel = Alloy.createModel('agenda_speakers', {
+              id: value.id + '.' + session.id + '.' + speakerId,
               event_id: value.id,
-              session_id: session.id,
+              agenda_id: session.id,
               speaker_id: speakerId
             });
             agendaSpeakersModel.save();
