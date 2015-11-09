@@ -20,6 +20,12 @@ exports.definition = {
   },
   extendModel: function(Model) {
     _.extend(Model.prototype, {
+      initialize: function() {
+        this.set({
+          startdatePretty: require('alloy/moment')(this.get('startdate')).format('h:mm a'),
+          enddatePretty: require('alloy/moment')(this.get('enddate')).format('h:mm a')
+        });
+      },
       parser: function(json) {
         return {
           id: json.session_id,

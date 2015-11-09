@@ -4,9 +4,9 @@
     <Window>
       <ScrollView>
         <View class="lineView"/>
-        <View dataCollection="$.agendaCollection" dataTransform="agendaTransfomer" layout="vertical">
+        <View dataCollection="$.agendaCollection" layout="vertical">
           <View class="horizontalView" myId="{id}" onClick="viewClicked">
-            <Label class="prettyStartDateLabel" text="{prettyStartDate}"/>
+            <Label class="startdatePrettyLabel" text="{startdatePretty}"/>
             <Widget class="iconLabel" icon="{icon}" src="ti.ux.iconfont"/>
             <View class="verticalView fitView">
               <Label class="titleLabel" text="{title}"/>

@@ -27,7 +27,7 @@
   height: Ti.UI.SIZE,
   touchEnabled: false
 }
-'.prettyStartDateLabel' : {
+'.startdatePrettyLabel' : {
   width: 90,
   height: 66,
   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
