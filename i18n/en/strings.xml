@@ -20,4 +20,5 @@
   <string name="cancelButton">Cancel</string>
   <string name="OK">OK</string>
   <string name="venueWindowTitle">Venue</string>
+  <string name="venueListItemText">Venue</string>
 </resources>

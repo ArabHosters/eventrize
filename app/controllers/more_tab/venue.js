@@ -4,15 +4,18 @@ var args = arguments[0] || {},
 $.mapView.region = {
   latitude: Alloy.Globals.lastActiveEvent.latitude,
   longitude: Alloy.Globals.lastActiveEvent.longitude,
-  zoom: 14
+  zoom: Alloy.Globals.lastActiveEvent.mapZoom
 };
-
+console.log(Alloy.Globals.lastActiveEvent.venueThumbnail);
 // Add venue location
-$.mapView.addAnnotation(Map.createAnnotation({
+var myAnnotation = Map.createAnnotation({
   title: Alloy.Globals.lastActiveEvent.venueTitle,
-  subtitle: Alloy.Globals.lastActiveEvent.location,
+  subtitle: Alloy.Globals.lastActiveEvent.venueAddress,
   latitude: Alloy.Globals.lastActiveEvent.latitude,
   longitude: Alloy.Globals.lastActiveEvent.longitude,
+  leftButton: Alloy.Globals.lastActiveEvent.venueThumbnail,
   pincolor: Map.ANNOTATION_RED,
   myid: 1
-}));
+});
+$.mapView.addAnnotation(myAnnotation);
+myAnnotation.fireEvent('click');

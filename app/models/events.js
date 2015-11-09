@@ -10,10 +10,12 @@ exports.definition = {
       thumbnail: "TEXT",
       start_date: "TEXT",
       end_date: "TEXT",
-      location: "TEXT",
+      venueAddress: "TEXT",
       longitude: "TEXT",
       latitude: "TEXT",
-      venueTitle: "TEXT"
+      mapZoom: "INTEGER",
+      venueTitle: "TEXT",
+      venueThumbnail: "TEXT"
     },
     URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'event',
     debug: false,
@@ -31,11 +33,7 @@ exports.definition = {
           featured_image: "",
           thumbnail: "",
           start_date: value.event_meta.start_date,
-          end_date: value.event_meta.end_date,
-          location: value.location,
-          longitude: value.longitude || "30",
-          latitude: value.latitude || "30",
-          venueTitle: value.venueTitle
+          end_date: value.event_meta.end_date
         };
 
         // Parse better_featured_image into media model parser
@@ -45,6 +43,24 @@ exports.definition = {
 
           item.featured_image = mediaJson.source_url;
           item.thumbnail = mediaJson.thumbnail || mediaJson.source_url;
+        }
+
+        if (value.event_meta.location.length > 0) {
+          var location = value.event_meta.location[0];
+          item = _.extend(item, {
+            venueTitle: location.venue_title,
+            venueAddress: location.location_address,
+            longitude: location.lat_lng.split(',')[1],
+            latitude: location.lat_lng.split(',')[0],
+            mapZoom: location.map_zoom
+          });
+
+          if (location.better_featured_image) {
+            var mediaModel = Alloy.createModel('media', location.better_featured_image),
+              mediaJson = mediaModel.config.parentNode([location.better_featured_image])[0];
+
+            item.venueThumbnail = mediaJson.thumbnail;
+          }
         }
 
         items.push(item);
