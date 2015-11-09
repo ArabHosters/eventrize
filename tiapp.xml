@@ -48,6 +48,8 @@
     <module platform="iphone" version="1.8.2">dk.napp.social</module>
     <module platform="iphone">ti.map</module>
     <module platform="android">ti.map</module>
+    <module platform="commonjs" version="0.1.2">ti-push-notification</module>
+    <module platform="android" version="1.2">nl.vanvianen.android.gcm</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>

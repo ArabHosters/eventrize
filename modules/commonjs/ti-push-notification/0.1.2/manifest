@@ -1,0 +1,10 @@
+version: 0.1.2
+description: Generic push notifications for both iOS and Android into Titanium apps
+author: Hazem Khaled <hazem.khaled@gmail.com> (http://about.me/hazemkhaled)
+license: MIT
+copyright: Copyright © 2015 Hazem Khaled
+name: TiPushNotification
+moduleid: ti-push-notification
+guid: 675edc6f-40d0-e30f-d14e-5e06923318e0
+platform: commonjs
+minsdk: 3.2.0.GA

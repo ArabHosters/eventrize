@@ -1,7 +1,9 @@
 {
   "global": {
     "api": {
-      "service": "wp-json/wp/v2/"
+      "service": "wp-json/wp/v2/",
+      "pushNotification": "pnfw/register/",
+      "GCMSenderId": "898256744866"
     },
     "tabs": [
       "posts",
