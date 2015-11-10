@@ -1,5 +1,10 @@
 var args = arguments[0] || {};
 
+// Set statusBarStyle in case we got it from config file
+if (Alloy.CFG.style.selectEvent.statusBarStyle) {
+  $.events.statusBarStyle = Titanium.UI.iPhone.StatusBar[Alloy.CFG.style.selectEvent.statusBarStyle];
+}
+
 function onItemClick(e) {
   // Open app home
   Alloy.createController('tabs', {

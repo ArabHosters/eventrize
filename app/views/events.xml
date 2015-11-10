@@ -3,7 +3,7 @@
   <Window onAndroid:back="Alloy.Globals.androidBackPressedToExitTheApp">
     <ListView defaultItemTemplate="eventsTemplate" onItemclick="onItemClick">
       <HeaderView>
-        <Label>Header</Label>
+        <ImageView image="Alloy.CFG.style.selectEvent.banner"/>
       </HeaderView>
       <Templates>
         <ItemTemplate name="eventsTemplate">

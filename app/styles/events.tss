@@ -1,13 +1,19 @@
+'ListView' : {
+  separatorStyle: Titanium.UI.iPhone.ListViewSeparatorStyle.NONE
+}
 'ListItem' : {
-  height: 75
+  height: 90,
+  accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 }
 '.templateView' : {
+  top: 20,
   layout: 'horizontal'
 }
 '.thumbnailImageView' : {
-  left: 5,
-  height: 65
+  left: 10,
+  height: 60,
+  borderRadius: 30
 }
 '.titleLabel' : {
-  left: 5
+  left: 40
 }
