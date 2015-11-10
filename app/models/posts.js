@@ -49,7 +49,11 @@ exports.definition = {
   },
   extendModel: function(Model) {
     _.extend(Model.prototype, {
-      // extended functions and properties go here
+      initialize: function() {
+        this.set({
+          datePretty: require('alloy/moment')(this.get('date')).format('h:mm a')
+        });
+      }
     });
 
     return Model;

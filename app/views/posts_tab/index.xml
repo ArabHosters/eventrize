@@ -7,16 +7,16 @@
           <Widget id="is" onEnd="fetchMorePostsCollection" src="nl.fokkezb.infiniteScroll"/>
           <Templates>
             <ItemTemplate name="postTemplate">
-              <ImageView bindId="postImage" id="postImage"/>
-              <View id="v1" layout="vertical">
-                <Label bindId="titleLabel" id="titleLabel"/>
-                <Label bindId="excerptLabel" id="excerptLabel"/>
-                <Label bindId="dateLabel" id="dateLabel"/>
+              <ImageView bindId="postImage" class="postImage"/>
+              <View class="gradientView"/>
+              <View class="labelsContainerView">
+                <Label bindId="titleLabel" class="titleLabel"/>
+                <Label bindId="dateLabel" class="dateLabel"/>
               </View>
             </ItemTemplate>
           </Templates>
           <ListSection dataCollection="posts" dataTransform="postsTransfomer">
-            <ListItem dateLabel:text="{prettyDate}" excerptLabel:text="{excerpt}" postImage:image="{thumbnail}" titleLabel:text="{title}"/>
+            <ListItem dateLabel:text="{prettyDate}" postImage:image="{featured_image}" titleLabel:text="{title}"/>
           </ListSection>
         </ListView>
       </Widget>

@@ -9,3 +9,11 @@ function shareButtonClicked(e) {
     androidDialogTitle: L('shareDialogTitle')
   });
 }
+
+function updateScrolls(e) {
+  e.cancelBubble = true;
+  if (e.source !== $.mainTable) {
+    return;
+  }
+  $.featuredImageWidget.updateScroll(e);
+}

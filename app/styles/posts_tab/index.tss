@@ -10,31 +10,54 @@
   title: L('postsWindowTitle')
 }
 'ListItem' : {
-  height: 105
+  height: 140
 }
-'#postImage' : {
-  width: 70,
-  height: 70,
-  left: 5,
-  top: 5,
-  bottom: 5
+'.postImage' : {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL
 }
-'#titleLabel' : {
-  top: 5,
-  left: 80,
-  height: 25
-}
-'#excerptLabel' : {
-  left: 80,
-  height: 55,
-  font: {
-    size: 12
+'.gradientView' : {
+  opacity: 0.7,
+  backgroundGradient: {
+    type: 'linear',
+    startPoint: {
+      X: '0%',
+      Y: '50%'
+    },
+    endPoint: {
+      X: '100%',
+      Y: '50%'
+    },
+    colors: [
+      {
+        color: 'transparent',
+        offset: 0.0
+      }, {
+        color: '#000000',
+        offset: 1.0
+      }
+    ]
   }
 }
-'#dateLabel' : {
-  right: 5,
-  color: 'gray',
+'.labelsContainerView' : {
+  height: Ti.UI.SIZE,
+  layout: 'vertical',
+  left: 12,
+  right: 12,
+  bottom: 15
+}
+'.titleLabel' : {
+  color: '#ffffff',
+  left: 0,
   font: {
-    size: 10
+    fontSize: 18,
+    fontWeight: 'lighter'
+  }
+}
+'.dateLabel' : {
+  color: '#ffffff',
+  left: 0,
+  font: {
+    fontSize: 10
   }
 }

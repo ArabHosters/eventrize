@@ -1,12 +1,59 @@
-'ScrollView' : {
-  layout: 'vertical'
+'Window' : {
+  title: L('postsWindowTitle')
 }
-'#featuredImageView' : {
-  width: '100%'
+'#mainTable' : {
+  top: -50
 }
-'#shareButton' : {
-  title: L('shareButton')
+'#mainTable[platform=ios]' : {
+  separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }
-'#shareMenuItem' : {
+'TableViewRow' : {
+  selectedBackgroundColor: 'transparent'
+}
+'.shareButton' : {
+  title: L('shareButton'),
+  image: '/images/share.png',
+  top: -25,
+  width: 50
+}
+'.shareMenuItem' : {
   icon: Titanium.Android.R.drawable.ic_menu_share
+}
+'#featuredImageWidget' : {
+  innerMargin: 140,
+  left: 0,
+  realTop: -10,
+  right: 0,
+  zoomable: true,
+  //backgroundColor: 'black',
+  height: 200
+}
+'.leftBorder' : {
+  left: 0,
+  width: 4,
+  height: 95,
+  backgroundColor: Alloy.CFG.style.mainColor
+}
+'.datePrettyLabel' : {
+  left: 17,
+  top: 0,
+  color: '#979797'
+}
+'.titleLabel' : {
+  left: 17,
+  right: 17,
+  height: 70,
+  bottom: 0,
+  font: {
+    fontSize: 20
+  }
+}
+'.contentLabel' : {
+  left: 17,
+  right: 17,
+  top: 17,
+  color: 'gray',
+  font: {
+    fontSize: 14
+  }
 }

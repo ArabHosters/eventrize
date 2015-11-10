@@ -1,14 +1,21 @@
 <Alloy>
-  <Window onClose="$.destroy" title="{title}">
-    <RightNavButton platform="ios">
-      <Button id="shareButton" onClick="shareButtonClicked"/>
-    </RightNavButton>
+  <Window onClose="$.destroy">
     <Menu platform="android">
-      <MenuItem id="shareMenuItem" onClick="shareButtonClicked"/>
+      <MenuItem class="shareMenuItem" onClick="shareButtonClicked"/>
     </Menu>
-    <ScrollView>
-      <ImageView id="featuredImageView" image="{featured_image}"/>
-      <Label id="contentLabel" text="{content}"/>
-    </ScrollView>
+    <TableView id="mainTable" onScroll="updateScrolls">
+      <TableViewRow layout="vertical">
+        <Widget id="featuredImageWidget" image="{featured_image}" src="ti.ux.image"/>
+        <ImageView class="shareButton" onClick="shareButtonClicked"/>
+      </TableViewRow>
+      <TableViewRow>
+        <View class="leftBorder"/>
+        <Label class="datePrettyLabel" text="{datePretty}"/>
+        <Label class="titleLabel" text="Sharp unveils"/>
+      </TableViewRow>
+      <TableViewRow>
+        <Label class="contentLabel" text="{content}"/>
+      </TableViewRow>
+    </TableView>
   </Window>
 </Alloy>
