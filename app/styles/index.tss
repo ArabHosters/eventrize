@@ -2,5 +2,5 @@
   theme: 'Theme.AppCompat.Translucent.NoTitleBar'
 }
 'Label' : {
-  title: L('loadingMessage')
+  text: L('loadingMessage')
 }

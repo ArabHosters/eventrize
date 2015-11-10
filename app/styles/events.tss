@@ -1,4 +1,4 @@
-'ListView' : {
+'ListView[platform=ios]' : {
   separatorStyle: Titanium.UI.iPhone.ListViewSeparatorStyle.NONE
 }
 'ListItem' : {
