@@ -9,12 +9,12 @@ function openUrl(e) {
       cancel: 0
     });
 
-    dialog.addEventListener('click', function(e) {
-      if (e.index === e.cancel) {
+    dialog.addEventListener('click', function(ev) {
+      if (ev.index === ev.cancel) {
         return;
       }
 
-      Ti.Platform.openURL(e.source.link);
+      Titanium.Platform.openURL(e.source.link);
     });
 
     dialog.show();
