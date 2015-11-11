@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+  <string name="loadingMessage">...تحميل</string>
+  <string name="postsTabTitle">اخبار</string>
+  <string name="postsWindowTitle">جديد</string>
+  <string name="moreTabTitle">المزيد</string>
+  <string name="moreWindowTitle">المزيد</string>
+  <string name="isTap">...اضغط لقراءة المزيد</string>
+  <string name="isDone">...لا يوجد المزيد للتحميل</string>
+  <string name="isError">...اضغط للمحاولة مرة اخري</string>
+  <string name="shareButton">مشاركة</string>
+  <string name="shareDialogTitle">تشارك بهذا؟</string>
+  <string name="agendaTabTitle">المواعيد</string>
+  <string name="agendaWindowTitle">المواعيد</string>
+  <string name="speakersTabTitle">المتحدثون</string>
+  <string name="speakersWindowTitle">المتحدثون</string>
+  <string name="sponsorsTabTitle">الرعاه الرسميون</string>
+  <string name="sponsorsWindowTitle">الرعاه الرسميون</string>
+  <string name="openSponsorLinkAlertDialogTitle">هل تريد فتح الرابط؟</string>
+  <string name="openSponsorLinkAlertDialogMessage">هل انت متأكد؟</string>
+  <string name="cancelButton">إلغاء</string>
+  <string name="OK">موافقة</string>
+  <string name="venueWindowTitle">المكان</string>
+  <string name="venueListItemText">المكان</string>
+  <string name="pushNotificationAgreeNotificationActionTitle">موافق</string>
+  <string name="pushNotificationDisagreeNotificationActionTitle">غير موافق</string>
+</resources>
