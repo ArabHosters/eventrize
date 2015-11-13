@@ -1,3 +1,6 @@
+'Window[platform=android]' : {
+  theme: 'Theme.AppCompat.Translucent.NoTitleBar'
+}
 'ListView[platform=ios]' : {
   separatorStyle: Titanium.UI.iPhone.ListViewSeparatorStyle.NONE
 }
