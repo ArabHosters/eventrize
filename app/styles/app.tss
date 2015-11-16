@@ -42,3 +42,6 @@
 '.verticalView' : {
   layout: 'vertical'
 }
+'TableViewRow[platform=ios]' : {
+  selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
+}
