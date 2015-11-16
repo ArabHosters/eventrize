@@ -10,10 +10,6 @@
             <Widget class="iconLabel" icon="{icon}" src="ti.ux.iconfont"/>
             <View class="verticalView fitView">
               <Label class="titleLabel" text="{title}"/>
-              <View class="horizontalView fitView">
-                <ImageView class="speakerImageView"/>
-                <Label class="speakerLabel" left="5" text="Hazem Khaled"/>
-              </View>
             </View>
           </View>
         </View>
