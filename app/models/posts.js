@@ -8,7 +8,8 @@ exports.definition = {
       content: "TEXT",
       excerpt: "TEXT",
       featured_image: "TEXT",
-      thumbnail: "TEXT"
+      thumbnail: "TEXT",
+      event_id: "INTEGER"
     },
     URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'posts?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image&filter[connected_type]=posts_to_event&filter[connected_items]=' + Alloy.Globals.lastActiveEvent.id,
     debug: false,
@@ -27,6 +28,7 @@ exports.definition = {
         item.title = value.title.rendered;
         item.content = value.content.rendered.replace(/<(?:.|\n)*?>/gm, '');
         item.excerpt = value.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, '');
+        item.event_id = Alloy.Globals.lastActiveEvent.id;
 
         // Parse better_featured_image into media model parser
         if (value.better_featured_image) {

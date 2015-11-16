@@ -1,4 +1,11 @@
-Alloy.Collections.pages.fetch();
+Alloy.Collections.pages.fetch({
+  sql: {
+    where: {
+      event_id: Alloy.Globals.lastActiveEvent.id
+    },
+    orderBy: "menu_order ASC"
+  }
+});
 
 function onItemClick(e) {
   switch (e.sectionIndex) {

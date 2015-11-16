@@ -8,6 +8,9 @@ function fetchPostsCollection(e) {
       page: 1
     },
     sql: {
+      where: {
+        event_id: Alloy.Globals.lastActiveEvent.id
+      },
       orderBy: "date DESC"
     },
     success: e.hide,
