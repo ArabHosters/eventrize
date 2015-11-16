@@ -23,4 +23,5 @@
   <string name="venueListItemText">المكان</string>
   <string name="pushNotificationAgreeNotificationActionTitle">موافق</string>
   <string name="pushNotificationDisagreeNotificationActionTitle">غير موافق</string>
+  <string name="back">رجوع</string>
 </resources>

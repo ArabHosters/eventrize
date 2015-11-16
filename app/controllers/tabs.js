@@ -9,7 +9,9 @@ _.each(Alloy.CFG.tabs, function(tabName) {
 
   // Using try in case we don't have this controller
   try {
-    tabs.push(Alloy.createController(controllerName).getView());
+    tabs.push(Alloy.createController(controllerName, {
+      eventsCount: args.eventsCount
+    }).getView());
   } catch (exp) {
     Ti.API.error("Can't catch controller:", controllerName, exp);
   }
@@ -18,9 +20,14 @@ _.each(Alloy.CFG.tabs, function(tabName) {
 // Set tabs into the TabGroup
 $.tabs.tabs = tabs;
 tabs = null;
+Alloy.Globals.tabGroup = $.tabs;
+$.tabs.addEventListener('close', function() {
+  Alloy.Globals.tabGroup = null;
+});
+
 
 // In case we have only 1 event, no need to return back to last screen, close app directly
-if (args.eventsCount === 1) {
+if (args.eventsCount === 1 && OS_ANDROID) {
   $.tabs.addEventListener('androidback', Alloy.Globals.androidBackPressedToExitTheApp);
 }
 

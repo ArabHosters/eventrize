@@ -61,3 +61,19 @@ function onItemClick(e) {
 }
 
 $.is.init($.list);
+
+// Show back button to re-select event
+if (args.eventsCount > 1) {
+  if (OS_IOS) {
+    var backButton = Ti.UI.createButton({
+      title: L('back')
+    });
+    backButton.addEventListener('click', function(e) {
+      // Close TabGroup
+      Alloy.Globals.tabGroup.close();
+    });
+    $.myWin.leftNavButton = backButton;
+  } else if (OS_ANDROID) {
+    //TODO: Android back to select event
+  }
+}

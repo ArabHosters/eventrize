@@ -23,4 +23,5 @@
   <string name="venueListItemText">Venue</string>
   <string name="pushNotificationAgreeNotificationActionTitle">Agree</string>
   <string name="pushNotificationDisagreeNotificationActionTitle">Disagree</string>
+  <string name="back">Back</string>
 </resources>
