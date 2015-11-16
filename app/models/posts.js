@@ -10,7 +10,7 @@ exports.definition = {
       featured_image: "TEXT",
       thumbnail: "TEXT"
     },
-    URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'posts?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image',
+    URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'posts?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image&filter[connected_type]=posts_to_event&filter[connected_items]=' + Alloy.Globals.lastActiveEvent.id,
     debug: false,
     useStrictValidation: true,
     initFetchWithLocalData: true,
