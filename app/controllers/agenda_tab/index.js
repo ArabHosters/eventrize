@@ -9,7 +9,7 @@ function viewClicked(e) {
 
 $.agendaCollection.fetch({
   query: {
-    statement: 'SELECT * from ' + $.agendaCollection.config.adapter.collection_name + ' where event_id = ?',
+    statement: 'SELECT * from ' + $.agendaCollection.config.adapter.collection_name + ' where event_id = ? order by startdate ASC',
     params: [Alloy.Globals.lastActiveEvent.id]
   }
 });

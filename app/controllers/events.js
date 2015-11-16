@@ -14,6 +14,9 @@ function onItemClick(e) {
 }
 
 Alloy.Collections.events.fetch({
+  sql: {
+    orderBy: "start_date DESC"
+  },
   success: function(collection) {
     // If only one event
     if (collection.length === 1) {

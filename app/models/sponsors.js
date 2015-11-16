@@ -8,7 +8,8 @@ exports.definition = {
       sponsor_category: "TEXT",
       featured_image: "TEXT",
       thumbnail: "TEXT",
-      event_id: "INTEGER"
+      event_id: "INTEGER",
+      menu_order: "INTEGER"
     },
     adapter: {
       type: "sql",
@@ -25,7 +26,8 @@ exports.definition = {
           link: json.sponsor_website,
           info: json.sponsor_info,
           category: json.sponsor_category,
-          event_id: json.event_id
+          event_id: json.event_id,
+          menu_order: json.menu_order
         };
 
         // Parse better_featured_image into media model parser

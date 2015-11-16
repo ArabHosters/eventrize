@@ -7,7 +7,8 @@ exports.definition = {
       bio: "TEXT",
       featured_image: "TEXT",
       thumbnail: "TEXT",
-      event_id: "INTEGER"
+      event_id: "INTEGER",
+      menu_order: "INTEGER"
     },
     adapter: {
       type: "sql",
@@ -23,7 +24,8 @@ exports.definition = {
           name: json.speaker_name,
           title: json.speaker_job,
           bio: json.speaker_bio,
-          event_id: json.event_id
+          event_id: json.event_id,
+          menu_order: json.menu_order
         };
 
         // Parse better_featured_image into media model parser
