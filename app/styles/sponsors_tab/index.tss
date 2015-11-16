@@ -13,13 +13,11 @@
   height: 200,
   top: 0
 }
-'#gridView' : {
-  top: 200,
-  layout: 'horizontal',
-  horizontalWrap: true
+'ScrollView' : {
+  scrollType: 'vertical',
+  width: Ti.Platform.displayCaps.platformWidth,
+  contentWidth: Ti.Platform.displayCaps.platformWidth
 }
-'.gridImageView' : {
-  width: 90,
-  height: 90,
-  left: 10
+'#gridDeals' : {
+  top: 200
 }

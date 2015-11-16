@@ -1,0 +1,5 @@
+'ImageView' : {
+  width: 80,
+  height: 80,
+  backgroundColor: '#ffffff'
+}

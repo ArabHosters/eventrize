@@ -1,0 +1,5 @@
+<Alloy>
+  <View>
+    <ImageView id="myImage" onClick="openUrl"/>
+  </View>
+</Alloy>

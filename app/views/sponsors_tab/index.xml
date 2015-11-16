@@ -3,12 +3,12 @@
   <Collection id="sponsorsGridCollection" instance="true" src="sponsors"/>
   <Tab>
     <Window>
-      <ScrollableView dataCollection="$.sponsorsSliderCollection">
-        <ImageView image="{featured_image}" link="{link}" onClick="openUrl"/>
-      </ScrollableView>
-      <View dataCollection="$.sponsorsGridCollection" id="gridView">
-        <ImageView class="gridImageView" image="{thumbnail}" link="{link}" onClick="openUrl"/>
-      </View>
+      <ScrollView>
+        <ScrollableView dataCollection="$.sponsorsSliderCollection">
+          <ImageView image="{featured_image}" link="{link}" onClick="openUrl"/>
+        </ScrollableView>
+        <Widget columns="3" id="gridDeals" src="br.com.coredigital.GridLayout"/>
+      </ScrollView>
     </Window>
   </Tab>
 </Alloy>

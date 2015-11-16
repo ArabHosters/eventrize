@@ -29,7 +29,24 @@ $.sponsorsSliderCollection.fetch({
 });
 $.sponsorsGridCollection.fetch({
   query: {
-    statement: 'SELECT * from ' + $.sponsorsGridCollection.config.adapter.collection_name + ' where event_id = ? limit 99, 4',
+    statement: 'SELECT * from ' + $.sponsorsGridCollection.config.adapter.collection_name + ' where event_id = ? limit 4, 99',
     params: [Alloy.Globals.lastActiveEvent.id]
+  },
+  success: function(collection) {
+
+    var color = '#E5E5E5';
+
+    _.each(collection.models, function(model, key) {
+
+      // Switch color
+      if (key % 3 === 0) {
+        color = color === '#F2F2F2' ? '#E5E5E5' : '#F2F2F2';
+      }
+
+      $.gridDeals.addItem(Alloy.createController('sponsors_tab/image', {
+        data: model.toJSON(),
+        color: color
+      }).getView());
+    });
   }
 });

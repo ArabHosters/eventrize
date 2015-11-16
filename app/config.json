@@ -42,6 +42,7 @@
     "nl.fokkezb.infiniteScroll": "2.0.0",
     "ti.ux.iconfont": "1.0",
     "ti.ux.image": "1.0",
-    "com.criteriastudio.RemoteImageView": "1.0"
+    "com.criteriastudio.RemoteImageView": "1.0",
+    "br.com.coredigital.GridLayout": "1.0"
   }
 }
