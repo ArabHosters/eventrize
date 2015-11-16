@@ -1,6 +1,6 @@
 'Tab' : {
-  icon: '/images/tab.png',
-  activeIcon: '/images/tabActive.png',
+  icon: '/images/tabs/news.png',
+  activeIcon: '/images/tabs/newsActive.png',
   title: L('postsTabTitle')
 }
 'Tab[platform=ios]' : {
@@ -18,26 +18,8 @@
 }
 '.gradientView' : {
   opacity: 0.7,
-  backgroundGradient: {
-    type: 'linear',
-    startPoint: {
-      X: '0%',
-      Y: '50%'
-    },
-    endPoint: {
-      X: '100%',
-      Y: '50%'
-    },
-    colors: [
-      {
-        color: 'transparent',
-        offset: 0.0
-      }, {
-        color: '#000000',
-        offset: 1.0
-      }
-    ]
-  }
+  backgroundImage: '/images/bg.png',
+  backgroundRepeat: true
 }
 '.labelsContainerView' : {
   height: Ti.UI.SIZE,
