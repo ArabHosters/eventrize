@@ -1,9 +1,14 @@
 var refreshControl;
+var list;
 
 $.refresh = refresh;
 
 $.hide = hide;
 $.show = show;
+
+$.getList = function() {
+  return list;
+};
 
 (function constructor(args) {
 
@@ -17,7 +22,7 @@ $.show = show;
     return;
   }
 
-  var list = _.last(args.children);
+  list = _.last(args.children);
   delete args.children;
 
   _.extend($, args);
@@ -25,6 +30,10 @@ $.show = show;
   if (OS_IOS) {
     refreshControl = Ti.UI.createRefreshControl();
     refreshControl.addEventListener('refreshstart', onRefreshstart);
+
+    if (args.title) {
+      setTitle(args.title);
+    }
 
     list.refreshControl = refreshControl;
 
@@ -57,6 +66,7 @@ function hide() {
     refreshControl.setRefreshing(false);
   }
 }
+exports.hide = hide;
 
 function show() {
 
@@ -67,6 +77,25 @@ function show() {
     refreshControl.setRefreshing(true);
   }
 }
+exports.show = show;
+
+function setTitle(text){
+
+  if (OS_IOS) {
+
+  	if (text.apiName && text.apiName == 'Ti.UI.AttributedString'){
+  		refreshTitle = text;
+
+  	} else {
+  		refreshTitle = Ti.UI.createAttributedString({
+      		text: text
+    		});
+  	}
+
+  	refreshControl.title = refreshTitle;
+  }
+}
+exports.setTitle = setTitle;
 
 function onRefreshstart() {
 
