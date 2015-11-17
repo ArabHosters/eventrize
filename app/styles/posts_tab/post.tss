@@ -19,13 +19,9 @@
 '.shareMenuItem' : {
   icon: Titanium.Android.R.drawable.ic_menu_share
 }
-'#featuredImageWidget' : {
-  innerMargin: 140,
+'#featuredImageView' : {
   left: 0,
-  realTop: -10,
   right: 0,
-  zoomable: true,
-  //backgroundColor: 'black',
   height: 200
 }
 '.leftBorder' : {

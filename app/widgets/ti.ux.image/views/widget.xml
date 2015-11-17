@@ -1,5 +1,0 @@
-<Alloy>
-    <View id="container">
-		<Widget src="com.criteriastudio.RemoteImageView" id="img" />
-	</View>
-</Alloy>

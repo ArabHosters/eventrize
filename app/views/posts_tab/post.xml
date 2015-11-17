@@ -5,7 +5,7 @@
     </Menu>
     <TableView id="mainTable" onScroll="updateScrolls">
       <TableViewRow layout="vertical">
-        <Widget id="featuredImageWidget" image="{featured_image}" src="ti.ux.image"/>
+        <Module id="featuredImageView" image="{featured_image}" method="createImageView" module="dk.napp.imageview" platform="ios"/>
         <ImageView class="shareButton" onClick="shareButtonClicked"/>
       </TableViewRow>
       <TableViewRow>
