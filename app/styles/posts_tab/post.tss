@@ -1,14 +1,11 @@
 'Window' : {
   title: L('postsWindowTitle')
 }
-'#mainTable' : {
-  top: -50
-}
 '#mainTable[platform=ios]' : {
   separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }
-'TableViewRow' : {
-  selectedBackgroundColor: 'transparent'
+'TableViewRow[platform=ios]' : {
+  selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 }
 '.shareButton' : {
   title: L('shareButton'),
@@ -23,6 +20,10 @@
   left: 0,
   right: 0,
   height: 200
+}
+'#featuredImageView[platform=android]' : {
+  scrollingEnabled: false,
+  contentWidth: '100%'
 }
 '.leftBorder' : {
   left: 0,

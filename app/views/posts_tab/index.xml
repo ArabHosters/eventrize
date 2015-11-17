@@ -7,7 +7,8 @@
           <Widget id="is" onEnd="fetchMorePostsCollection" src="nl.fokkezb.infiniteScroll"/>
           <Templates>
             <ItemTemplate name="postTemplate">
-              <ImageView bindId="postImage" class="postImage"/>
+              <Module bindId="postImage" class="postImage" method="createImageView" module="dk.napp.imageview" platform="ios"/>
+              <ImageView bindId="postImage" class="postImage" platform="android"/>
               <View class="gradientView"/>
               <View class="labelsContainerView">
                 <Label bindId="titleLabel" class="titleLabel"/>
@@ -16,7 +17,7 @@
             </ItemTemplate>
           </Templates>
           <ListSection dataCollection="posts" dataTransform="postsTransfomer">
-            <ListItem dateLabel:text="{prettyDate}" postImage:image="{featured_image}" titleLabel:text="{title}"/>
+            <ListItem dateLabel:text="{prettyDate}" postImage:backgroundImage="{featured_image}" titleLabel:text="{title}"/>
           </ListSection>
         </ListView>
       </Widget>

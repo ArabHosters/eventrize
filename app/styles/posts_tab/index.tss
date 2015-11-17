@@ -12,7 +12,9 @@
   height: 140
 }
 '.postImage' : {
-  width: Ti.UI.FILL,
+  width: Ti.UI.FILL
+}
+'.postImage[platform=ios]' : {
   height: Ti.UI.FILL
 }
 '.gradientView' : {

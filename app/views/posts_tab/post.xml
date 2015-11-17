@@ -1,11 +1,11 @@
 <Alloy>
   <Window onClose="$.destroy">
-    <Menu platform="android">
-      <MenuItem class="shareMenuItem" onClick="shareButtonClicked"/>
-    </Menu>
-    <TableView id="mainTable" onScroll="updateScrolls">
+    <TableView id="mainTable">
       <TableViewRow layout="vertical">
-        <Module id="featuredImageView" image="{featured_image}" method="createImageView" module="dk.napp.imageview" platform="ios"/>
+        <Module bindId="postImage" id="featuredImageView" image="{featured_image}" method="createImageView" module="dk.napp.imageview"/>
+        <ScrollView id="featuredImageView" platform="android">
+          <ImageView image="{featured_image}" width="100%"/>
+        </ScrollView>
         <ImageView class="shareButton" onClick="shareButtonClicked"/>
       </TableViewRow>
       <TableViewRow>
