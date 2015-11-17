@@ -1,10 +1,9 @@
 'Tab' : {
-  icon: '/images/tabs/more.png',
-  activeIcon: '/images/tabs/moreActive.png',
-  title: L('moreTabTitle')
+  icon: '/images/tabs/more.png'
 }
 'Tab[platform=ios]' : {
-  title: L('moreTabTitle')
+  title: L('moreTabTitle'),
+  activeIcon: '/images/tabs/moreActive.png'
 }
 'Window' : {
   title: L('moreWindowTitle')

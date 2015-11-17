@@ -1,10 +1,9 @@
 'Tab' : {
-  icon: '/images/tabs/agenda.png',
-  activeIcon: '/images/tabs/agendaActive.png',
-  title: L('agendaTabTitle')
+  icon: '/images/tabs/agenda.png'
 }
 'Tab[platform=ios]' : {
-  title: L('agendaTabTitle')
+  title: L('agendaTabTitle'),
+  activeIcon: '/images/tabs/agendaActive.png'
 }
 'Window' : {
   title: L('agendaWindowTitle')

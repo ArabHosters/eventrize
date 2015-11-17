@@ -1,10 +1,9 @@
 'Tab' : {
-  icon: '/images/tabs/news.png',
-  activeIcon: '/images/tabs/newsActive.png',
-  title: L('postsTabTitle')
+  icon: '/images/tabs/news.png'
 }
 'Tab[platform=ios]' : {
-  title: L('postsTabTitle')
+  title: L('postsTabTitle'),
+  activeIcon: '/images/tabs/newsActive.png'
 }
 'Window' : {
   title: L('postsWindowTitle')

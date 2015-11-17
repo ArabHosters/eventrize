@@ -1,10 +1,9 @@
 'Tab' : {
-  icon: '/images/tabs/speakers.png',
-  activeIcon: '/images/tabs/speakersActive.png',
-  title: L('speakersTabTitle')
+  icon: '/images/tabs/speakers.png'
 }
 'Tab[platform=ios]' : {
-  title: L('speakersTabTitle')
+  title: L('speakersTabTitle'),
+  activeIcon: '/images/tabs/speakersActive.png'
 }
 'Window' : {
   title: L('speakersWindowTitle')
