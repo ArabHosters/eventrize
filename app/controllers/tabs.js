@@ -20,6 +20,17 @@ _.each(Alloy.CFG.tabs, function(tabName) {
 // Set tabs into the TabGroup
 $.tabs.tabs = tabs;
 tabs = null;
+
+if (OS_ANDROID) {
+  var homeIconItemSelected = function() {
+    $.tabs.close();
+  };
+
+  var Locale = Ti.Locale.currentLanguage === 'ar' ? Ti.Locale.currentLanguage : 'en';
+
+  $.tabs.title = Alloy.CFG.info[Locale].title;
+}
+
 Alloy.Globals.tabGroup = $.tabs;
 $.tabs.addEventListener('close', function() {
   Alloy.Globals.tabGroup = null;

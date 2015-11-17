@@ -13,9 +13,6 @@
   top: -25,
   width: 50
 }
-'.shareMenuItem' : {
-  icon: Titanium.Android.R.drawable.ic_menu_share
-}
 '#featuredImageView' : {
   left: 0,
   right: 0,

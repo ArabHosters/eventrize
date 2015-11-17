@@ -13,7 +13,9 @@
   top: 0
 }
 'ScrollView' : {
-  scrollType: 'vertical',
+  scrollType: 'vertical'
+}
+'ScrollView[platform=ios]' : {
   width: Ti.Platform.displayCaps.platformWidth,
   contentWidth: Ti.Platform.displayCaps.platformWidth
 }

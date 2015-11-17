@@ -17,6 +17,9 @@
         <ListSection dataCollection="$.speakersCollection" dataTransform="speakersTransfomer">
           <ListItem featuredImageView:image="{featured_image}" myId="{id}" nameLabel:text="{name}" titleLabel:text="{title}"/>
         </ListSection>
+        <FooterView platform="ios">
+          <View height="1"/>
+        </FooterView>
       </ListView>
     </Window>
   </Tab>

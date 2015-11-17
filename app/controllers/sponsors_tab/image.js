@@ -14,7 +14,7 @@ function openUrl() {
     });
 
     dialog.addEventListener('click', function(ev) {
-      if (ev.index !== 1) {
+      if (ev.index === 0) {
         return;
       }
 

@@ -2,7 +2,7 @@
   <Window onClose="$.destroy">
     <TableView id="mainTable">
       <TableViewRow layout="vertical">
-        <Module bindId="postImage" id="featuredImageView" image="{featured_image}" method="createImageView" module="dk.napp.imageview"/>
+        <Module bindId="postImage" id="featuredImageView" image="{featured_image}" method="createImageView" module="dk.napp.imageview" platform="ios"/>
         <ScrollView id="featuredImageView" platform="android">
           <ImageView image="{featured_image}" width="100%"/>
         </ScrollView>

@@ -1,3 +1,5 @@
 <Alloy>
-  <TabGroup/>
+  <TabGroup activeTab="0">
+    <ActionBar id="myActionBar" onHomeIconItemSelected="homeIconItemSelected" platform="android"/>
+  </TabGroup>
 </Alloy>
