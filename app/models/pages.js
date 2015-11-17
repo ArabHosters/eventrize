@@ -12,7 +12,7 @@ exports.definition = {
       menu_order: "INTEGER",
       event_id: "INTEGER"
     },
-    URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'pages?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image&filter[connected_type]=pages_to_event&filter[connected_items]=' + Alloy.Globals.lastActiveEvent.id,
+    URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'pages?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image&filter[connected_type]=pages_to_event',
     debug: false,
     useStrictValidation: true,
     initFetchWithLocalData: true,

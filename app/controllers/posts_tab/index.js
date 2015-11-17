@@ -5,7 +5,8 @@ function fetchPostsCollection(e) {
   Alloy.Collections.posts.fetch({
     urlparams: {
       per_page: Alloy.CFG.posts.per_page,
-      page: 1
+      page: 1,
+      'filter[connected_items]': Alloy.Globals.lastActiveEvent.id
     },
     sql: {
       where: {
@@ -26,7 +27,14 @@ function fetchMorePostsCollection(e) {
     // whatever your sync adapter needs to fetch the next page
     urlparams: {
       per_page: Alloy.CFG.posts.per_page,
-      page: parseInt(ln / 10) + 1
+      page: parseInt(ln / 10) + 1,
+      'filter[connected_items]': Alloy.Globals.lastActiveEvent.id
+    },
+    sql: {
+      where: {
+        event_id: Alloy.Globals.lastActiveEvent.id
+      },
+      orderBy: "date DESC"
     },
     // don't reset the collection, but add to it
     add: true,

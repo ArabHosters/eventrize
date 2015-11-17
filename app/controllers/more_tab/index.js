@@ -1,4 +1,7 @@
 Alloy.Collections.pages.fetch({
+  urlparams: {
+    'filter[connected_items]': Alloy.Globals.lastActiveEvent.id
+  },
   sql: {
     where: {
       event_id: Alloy.Globals.lastActiveEvent.id
