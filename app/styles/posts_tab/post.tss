@@ -20,7 +20,8 @@
 }
 '#featuredImageView[platform=android]' : {
   scrollingEnabled: false,
-  contentWidth: '100%'
+  contentWidth: '100%',
+  scrollType: 'vertical'
 }
 '.leftBorder' : {
   left: 0,

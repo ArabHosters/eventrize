@@ -30,7 +30,7 @@
     "baseurl": "http://dev.eventrize.com/"
   },
   "env:production": {
-    "baseurl": "http://app.eventrize.com/"
+    "baseurl": "http://dev.eventrize.com/"
   },
   "os:android": {},
   "os:blackberry": {},
