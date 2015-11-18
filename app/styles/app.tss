@@ -29,6 +29,11 @@
     fontFamily: 'Roboto'
   }
 }
+'Button' : {
+  font: {
+    fontFamily: 'Roboto'
+  }
+}
 'TextField[platform=android]' : {
   height: Ti.UI.SIZE,
   hintTextColor: '#c0c0c0'

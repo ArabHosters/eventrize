@@ -1,8 +1,9 @@
 <Alloy>
   <Collection id="agendaCollection" instance="true" src="agenda"/>
+  <Collection id="agendaDaysCollection" instance="true" src="agenda"/>
   <Tab>
     <Window>
-      <ScrollView>
+      <ScrollView id="containnerScrollView">
         <View class="lineView"/>
         <View dataCollection="$.agendaCollection" layout="vertical">
           <View class="horizontalView" myId="{id}" onClick="viewClicked">
@@ -14,6 +15,10 @@
           </View>
         </View>
       </ScrollView>
+
+      <View dataCollection="$.agendaDaysCollection" dataTransform="dataTransformer" id="segmentBar" onClick="segmentBarClicked">
+        <Button backgroundColor="{backgroundColor}" class="segmentBarButton" dayNumber="{dayNumber}" rel="yahoo" title="{dayNumberFormated}" width="{width}"/>
+      </View>
     </Window>
   </Tab>
 </Alloy>

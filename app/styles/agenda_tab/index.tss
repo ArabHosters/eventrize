@@ -11,14 +11,13 @@
 'Label' : {
   touchEnabled: false
 }
-'ScrollView' : {
+'#containnerScrollView' : {
   scrollType: 'vertical'
 }
 '.lineView' : {
   left: 112,
   top: 22,
   width: 1,
-  //height: 22,
   backgroundColor: Alloy.CFG.style.mainColor
 }
 '.fitView' : {
@@ -48,17 +47,20 @@
     fontSize: 18
   }
 }
-'.speakerImageView' : {
-  image: 'https://pbs.twimg.com/profile_images/569856970148941824/Zdzzp2CV.jpeg',
-  width: 24,
-  height: 24,
-  borderRadius: 12,
-  left: 10,
-  touchEnabled: false
+'#segmentBar' : {
+  selectItemColor: Alloy.CFG.style.mainColor,
+  height: 40,
+  layout: 'horizontal',
+  backgroundColor: '#eeeeee'
 }
-'.speakerLabel' : {
-  color: 'gray',
-  font: {
-    fontSize: 12
-  }
+'#segmentBar[platform=ios]' : {
+  top: 0
+}
+'#segmentBar[platform=android]' : {
+  bottom: 0
+}
+'.segmentBarButton' : {
+  color: '#000000',
+  height: Ti.UI.FILL,
+  textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
 }
