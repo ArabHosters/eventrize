@@ -28,7 +28,7 @@ if (OS_ANDROID) {
 
   var Locale = Ti.Locale.currentLanguage === 'ar' ? Ti.Locale.currentLanguage : 'en';
 
-  $.tabs.title = Alloy.CFG.info[Locale].title;
+  $.tabs.title = args.eventModelJSON.title;
 }
 
 Alloy.Globals.tabGroup = $.tabs;

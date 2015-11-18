@@ -25,14 +25,26 @@
   left: 0,
   color: '#ffffff',
   font: {
-    fontSize: 30
+    fontSize: 30,
+    fontWeight: 'bold'
   }
 }
-'.titleLabel' : {
-  left: 0,
-  color: '#ffffff',
+'.titleLabelContainnerView' : {
   backgroundColor: '#45BBFF',
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  left: 0
+}
+'.titleLabel' : {
+  left: 2,
+  right: 2,
+  width: Ti.UI.SIZE,
+  color: '#ffffff',
   font: {
     fontSize: 14
   }
+}
+'.overlayView' : {
+  opacity: 0.5,
+  backgroundColor: '#000000'
 }

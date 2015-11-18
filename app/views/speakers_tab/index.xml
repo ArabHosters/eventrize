@@ -7,9 +7,12 @@
           <ItemTemplate name="speakersTemplate">
             <View>
               <ImageView bindId="featuredImageView" class="featuredImageView"/>
+              <View class="overlayView"/>
               <View class="verticalView">
                 <Label bindId="nameLabel" class="nameLabel"/>
-                <Label bindId="titleLabel" class="titleLabel"/>
+                <View class="titleLabelContainnerView">
+                  <Label bindId="titleLabel" class="titleLabel"/>
+                </View>
               </View>
             </View>
           </ItemTemplate>

@@ -14,7 +14,6 @@ var myAnnotation = Map.createAnnotation({
   latitude: Alloy.Globals.lastActiveEvent.latitude,
   longitude: Alloy.Globals.lastActiveEvent.longitude,
   leftButton: Alloy.Globals.lastActiveEvent.venueThumbnail,
-  pincolor: Map.ANNOTATION_RED,
   myid: 1
 });
 $.mapView.addAnnotation(myAnnotation);

@@ -1,13 +1,5 @@
 {
   "global": {
-    "info": {
-      "en": {
-        "title": "Eventrize"
-      },
-      "ar": {
-        "title": "ايفنتريز"
-      }
-    },
     "api": {
       "service": "wp-json/wp/v2/",
       "pushNotification": "pnfw/register/",
