@@ -1,16 +1,90 @@
-'ScrollView' : {
+'Window' : {
+  backgroundImage: '/images/loading_bg.png'
+}
+'Window[platform=android]' : {
+  theme: 'Theme.AppCompat.Translucent.NoTitleBar'
+}
+'.backgroundView' : {
+  backgroundColor: '#ffffff',
+  opacity: 0.7
+}
+'.containerView' : {
+  scrollType: 'vertical',
+  right: 22,
+  left: 22,
+  top: 75,
+  bottom: 75,
+  backgroundColor: Alloy.CFG.style.mainColor,
+  borderRadius: 5
+}
+'.subContainerView' : {
   layout: 'vertical',
-  scrollType: 'vertical'
+  top: 15,
+  right: 15,
+  bottom: 65,
+  left: 15
 }
-'#shareButton' : {
-  title: L('shareButton')
+'.closeButton' : {
+  image: '/images/spkr_close.png',
+  backgroundColor: Alloy.CFG.style.mainColor,
+  right: 15,
+  top: 10,
+  width: 30,
+  height: 30,
+  tintColor: '#8DD5FF'
 }
-'#shareMenuItem' : {
-  icon: Titanium.Android.R.drawable.ic_menu_share
+'.speakerAvatarMaskView' : {
+  backgroundImage: '/images/spkr_pop.png',
+  width: 70,
+  height: 80
 }
-'.iconLabel' : {
-  color: Alloy.CFG.style.mainColor
+'.speakerAvatarImageView' : {
+  top: 6,
+  left: 6,
+  right: 6,
+  borderRadius: 30
+}
+'.titleLabel' : {
+  font: {
+    fontSize: 18
+  },
+  color: '#ffffff'
+}
+'.bySpeakerNameLabel' : {
+  text: L('by'),
+  color: '#8DD5FF',
+  right: 3,
+  font: {
+    fontFamily: 'Georgia-Italic'
+  }
+}
+'.timeView' : {
+  top: 20
+}
+'.timeImageView' : {
+  height: 27,
+  image: '/images/spkr_time.png',
+  right: 3,
+  width: 27
+}
+'.whiteLabel' : {
+  color: '#ffffff'
+}
+'.contentLabel' : {
+  top: 10,
+  color: '#ffffff',
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
 '.horizontalView' : {
   width: Ti.UI.SIZE
+}
+'.thankYouButton' : {
+  title: L('thankYouButton'),
+  color: Alloy.CFG.style.mainColor,
+  backgroundColor: '#ffffff',
+  height: 40,
+  borderRadius: 20,
+  right: 15,
+  bottom: 15,
+  left: 15
 }

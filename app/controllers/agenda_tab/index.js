@@ -2,9 +2,11 @@ var args = arguments[0] || {},
   rowIndexer = 0;
 
 function viewClicked(e) {
-  $.index.open(Alloy.createController('agenda_tab/child', {
+  Alloy.createController('agenda_tab/child', {
     $model: $.agendaCollection.get(e.source.myId)
-  }).getView());
+  }).getView().open({
+    modal: true
+  });
 }
 
 // Tabs click handler

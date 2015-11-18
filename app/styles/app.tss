@@ -41,6 +41,9 @@
 'MenuItem' : {
   showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
 }
+'ImageView[platform=ios]' : {
+  hires: true
+}
 '.horizontalView' : {
   layout: 'horizontal',
   height: Ti.UI.SIZE

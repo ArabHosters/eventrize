@@ -24,4 +24,6 @@
   <string name="pushNotificationAgreeNotificationActionTitle">Agree</string>
   <string name="pushNotificationDisagreeNotificationActionTitle">Disagree</string>
   <string name="back">Back</string>
+  <string name="by">by</string>
+  <string name="thankYouButton">Thank You</string>
 </resources>
