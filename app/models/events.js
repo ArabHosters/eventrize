@@ -29,7 +29,7 @@ exports.definition = {
           date: value.date,
           link: value.link,
           title: value.title.rendered,
-          content: value.content.rendered.replace(/<(?:.|\n)*?>/gm, ''),
+          content: Alloy.Globals.decodeHTMLEntities(value.content.rendered),
           featured_image: "",
           thumbnail: "",
           start_date: value.event_meta.start_date,

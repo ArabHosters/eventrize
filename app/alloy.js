@@ -16,6 +16,11 @@ Alloy.Globals.androidBackPressedToExitTheApp = function() {
   }
 };
 
+Alloy.Globals.decodeHTMLEntities = function(text) {
+  // Remove all tags, dublicated spaces, return back curly qoutes
+  return text.replace(/(<([^>]+)>)/gi, '').replace(/(\[([^\]]+)\])/gi, '').replace(/(?:&nbsp;|\s)+/gi, ' ').replace(/&#8221;/g, '“').replace(/&#8220;/g, '”');
+};
+
 // Push notifications
 if (OS_ANDROID) {
   // set android-only options

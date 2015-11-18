@@ -31,7 +31,7 @@ exports.definition = {
           id: json.session_id,
           link: json.link,
           title: json.session_title,
-          content: json.session_content,
+          content: Alloy.Globals.decodeHTMLEntities(json.session_content),
           startdate: json.session_startdate,
           enddate: json.session_enddate,
           location: json.session_location,

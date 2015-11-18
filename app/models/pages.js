@@ -28,8 +28,8 @@ exports.definition = {
         item.link = value.link;
         item.title = value.title.rendered;
         item.menu_order = value.title.menu_order;
-        item.content = value.content.rendered.replace(/<(?:.|\n)*?>/gm, '');
-        item.excerpt = value.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, '');
+        item.content = Alloy.Globals.decodeHTMLEntities(value.content.rendered);
+        item.excerpt = Alloy.Globals.decodeHTMLEntities(value.excerpt.rendered);
         item.event_id = Alloy.Globals.lastActiveEvent.id;
 
         // Parse better_featured_image into media model parser
