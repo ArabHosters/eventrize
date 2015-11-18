@@ -1,5 +1,5 @@
 <Alloy>
   <Window>
-    <Label/>
+    <ImageView id="loadingImageView"/>
   </Window>
 </Alloy>

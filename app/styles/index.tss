@@ -1,6 +1,15 @@
+'Window' : {
+  backgroundImage: '/images/loading_bg.png'
+}
 'Window[platform=android]' : {
   theme: 'Theme.AppCompat.Translucent.NoTitleBar'
 }
-'Label' : {
-  text: L('loadingMessage')
+'#loadingImageView' : {
+  images: [
+    '/images/loading/01.png', '/images/loading/02.png', '/images/loading/03.png', '/images/loading/04.png', '/images/loading/05.png', '/images/loading/06.png', '/images/loading/07.png', '/images/loading/08.png', '/images/loading/09.png', '/images/loading/10.png', '/images/loading/11.png', '/images/loading/12.png', '/images/loading/13.png', '/images/loading/14.png', '/images/loading/15.png', '/images/loading/16.png', '/images/loading/17.png'
+  ],
+  duration: 100,
+  width: 81,
+  height: 16,
+  bottom: 100
 }
