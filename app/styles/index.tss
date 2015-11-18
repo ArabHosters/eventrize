@@ -1,8 +1,21 @@
-'Window' : {
+'Window[platform=ios]' : {
   backgroundImage: '/images/loading_bg.png'
 }
 'Window[platform=android]' : {
   theme: 'Theme.AppCompat.Translucent.NoTitleBar'
+}
+'#imageScaleScrollView' : {
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  scrollingEnabled: false,
+  scrollType: 'vertical',
+  contentWidth: '100%'
+}
+'#bgImageView' : {
+  image: '/images/loading_bg.png',
+  width: Ti.UI.FILL
 }
 '#loadingImageView' : {
   images: [
