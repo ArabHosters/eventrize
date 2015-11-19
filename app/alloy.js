@@ -18,7 +18,11 @@ Alloy.Globals.decodeHTMLEntities = function(text) {
 // Get device lang or last selected language and set it to moment and local
 var lang = Ti.App.Properties.getString('languageFlag', Ti.Locale.currentLanguage);
 require('com.shareourideas.locale').setLocale(lang);
-require('alloy/moment').lang(lang);
+// Set moment language
+if (Ti.Locale.currentLanguage === 'ar') {
+  var moment = require('alloy/moment');
+  moment.lang("ar-sa");
+}
 
 // Change language event handler
 Alloy.Globals.changeLanguageButtonClicked = function() {
@@ -41,11 +45,9 @@ Alloy.Globals.changeLanguageButtonClicked = function() {
       require('com.shareourideas.locale').setLocale(lang);
 
       // Set moment language
-      var moment = require('alloy/moment');
       if (Ti.Locale.currentLanguage === 'ar') {
-        moment.lang("ar");
-      } else {
-        moment.lang("en");
+        var moment = require('alloy/moment');
+        moment.lang("ar-sa");
       }
 
       // Restart the window stack
