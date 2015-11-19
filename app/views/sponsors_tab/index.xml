@@ -2,7 +2,7 @@
   <Collection id="sponsorsSliderCollection" instance="true" src="sponsors"/>
   <Collection id="sponsorsGridCollection" instance="true" src="sponsors"/>
   <Tab>
-    <Window>
+    <Window onClose="$.destroy">
       <ScrollView>
         <ScrollableView dataCollection="$.sponsorsSliderCollection">
           <ImageView image="{featured_image}" link="{link}" onClick="openUrl"/>

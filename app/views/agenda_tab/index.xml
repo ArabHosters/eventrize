@@ -2,7 +2,7 @@
   <Collection id="agendaCollection" instance="true" src="agenda"/>
   <Collection id="agendaDaysCollection" instance="true" src="agenda"/>
   <Tab>
-    <Window>
+    <Window onClose="$.destroy">
       <ScrollView id="containnerScrollView">
         <View class="lineView"/>
         <View dataCollection="$.agendaCollection" layout="vertical">

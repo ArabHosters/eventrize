@@ -11,10 +11,10 @@ var eventWindow = Alloy.createController('events').getView();
 
 Alloy.Globals.restart = function() {
 
-  if (Alloy.Globals.tabs) {
+  if (Alloy.Globals.tabGroup) {
 
     // Close events after closing tabs
-    Alloy.Globals.tabs.addEventListener('close', function() {
+    Alloy.Globals.tabGroup.addEventListener('close', function() {
 
       // Create anothe events controller after close current
       eventWindow.addEventListener('close', function() {
@@ -27,6 +27,6 @@ Alloy.Globals.restart = function() {
       }
     });
 
-    Alloy.Globals.tabs.close();
+    Alloy.Globals.tabGroup.close();
   }
 };

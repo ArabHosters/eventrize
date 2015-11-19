@@ -1,7 +1,7 @@
 <Alloy>
   <Collection id="speakersCollection" instance="true" src="speakers"/>
   <Tab>
-    <Window>
+    <Window onClose="$.destroy">
       <ListView defaultItemTemplate="speakersTemplate" onItemclick="onItemClick">
         <Templates>
           <ItemTemplate name="speakersTemplate">

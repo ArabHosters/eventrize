@@ -1,7 +1,7 @@
 <Alloy>
   <Collection src="pages"/>
   <Tab>
-    <Window>
+    <Window onClose="$.destroy">
       <ListView defaultItemTemplate="moreTabTemplate" onItemclick="onItemClick">
         <Templates>
           <ItemTemplate name="moreTabTemplate">

@@ -1,7 +1,7 @@
 <Alloy>
   <Collection src="posts"/>
   <Tab>
-    <Window id="myWin">
+    <Window id="myWin" onClose="$.destroy">
       <RightNavButton platform="ios">
         <Button id="changeLanguageButton" onClick="Alloy.Globals.changeLanguageButtonClicked"/>
       </RightNavButton>

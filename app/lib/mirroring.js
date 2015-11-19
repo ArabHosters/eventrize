@@ -2,14 +2,20 @@ function mirror(options) {
 
   var optionsFixed = {};
 
-  var p = ['right', 'left'];
-  var r = ['left', 'right'];
+  var p = {
+    'right': 'left',
+    'left': 'right'
+  };
 
   _.each(options, function(value, key) {
-    if (p.indexOf(key) !== -1) {
-      optionsFixed[r[p.indexOf(key)]] = value;
-    } else {
+
+    if (typeof value === 'object') {
       optionsFixed[key] = mirror(value);
+      return;
+    }
+
+    if (key === 'right' || key === 'left') {
+      optionsFixed[p[key]] = value;
     }
   });
   return optionsFixed;
@@ -91,14 +97,15 @@ var en = {
       }
     }
   },
-  ar = _.extend(mirror(en), {
-    common: {
-      'leftTextAlign': Ti.UI.TEXT_ALIGNMENT_RIGHT,
-      'rightTextAlign': Ti.UI.TEXT_ALIGNMENT_LEFT,
-      'left': 'right',
-      'right': 'left'
-    }
-  });
+  ar = mirror(en);
+/*, {
+  common: {
+    'leftTextAlign': Ti.UI.TEXT_ALIGNMENT_RIGHT,
+    'rightTextAlign': Ti.UI.TEXT_ALIGNMENT_LEFT,
+    'left': 'right',
+    'right': 'left'
+  }
+});*/
 
 exports.generate = function() {
   Alloy.CFG.tss = Ti.Locale.currentLanguage === 'ar' ? ar : en;

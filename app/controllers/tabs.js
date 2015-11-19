@@ -3,10 +3,13 @@ var args = arguments[0] || {},
 
 Alloy.Globals.lastActiveEvent = args.eventModelJSON;
 
+var sortedTabs = _.clone(Alloy.CFG.tabs);
+
 // Revers tab order in rtl
 if (Ti.Locale.currentLanguage === 'ar') {
-  Alloy.CFG.tabs = Alloy.CFG.tabs.reverse();
-
+  console.log(sortedTabs);
+  sortedTabs.reverse();
+  console.log(sortedTabs);
   if (OS_ANDROID) {
     $.tabs.addEventListener('open', function() {
       $.tabs.setActiveTab(Alloy.CFG.tabs.length - 1);
@@ -14,12 +17,10 @@ if (Ti.Locale.currentLanguage === 'ar') {
   } else if (OS_IOS) {
     $.tabs.activeTab = Alloy.CFG.tabs.length - 1;
   }
-} else {
-  alert(Ti.Locale.currentLanguage);
 }
 
 // Load tabs depend on configs
-_.each(Alloy.CFG.tabs, function(tabName) {
+_.each(sortedTabs, function(tabName) {
   var controllerName = tabName + '_tab/index';
 
   // Using try in case we don't have this controller
@@ -41,16 +42,16 @@ if (OS_ANDROID) {
     $.tabs.close();
   };
 
-  var Locale = Ti.Locale.currentLanguage === 'ar' ? Ti.Locale.currentLanguage : 'en';
-
+  // Set tabGroup title
   $.tabs.title = args.eventModelJSON.title;
 }
 
+// Put tabs in global to restart the app when change the language
 Alloy.Globals.tabGroup = $.tabs;
 $.tabs.addEventListener('close', function() {
   Alloy.Globals.tabGroup = null;
+  Alloy.Globals.lastActiveEvent = null;
 });
-
 
 // In case we have only 1 event, no need to return back to last screen, close app directly
 if (args.eventsCount === 1 && OS_ANDROID) {
@@ -59,9 +60,3 @@ if (args.eventsCount === 1 && OS_ANDROID) {
 
 // Let the tabs rock the ram
 $.tabs.open();
-
-// Put tabs in global to restart the app when change the language
-Alloy.Globals.tabs = $.tabs;
-$.tabs.addEventListener('close', function() {
-  Alloy.Globals.tabs = null;
-});

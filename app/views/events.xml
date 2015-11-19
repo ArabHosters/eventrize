@@ -1,6 +1,6 @@
 <Alloy>
   <Collection src="events"/>
-  <Window onAndroid:back="Alloy.Globals.androidBackPressedToExitTheApp">
+  <Window onAndroid:back="Alloy.Globals.androidBackPressedToExitTheApp" onClose="$.destroy">
     <ListView defaultItemTemplate="eventsTemplate" onItemclick="onItemClick">
       <HeaderView>
         <ImageView image="Alloy.CFG.style.selectEvent.banner"/>
