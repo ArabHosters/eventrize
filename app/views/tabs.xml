@@ -1,5 +1,8 @@
 <Alloy>
   <TabGroup>
     <ActionBar id="myActionBar" onHomeIconItemSelected="homeIconItemSelected" platform="android"/>
+    <Menu platform="android">
+      <MenuItem id="changeLanguageButton" onClick="Alloy.Globals.changeLanguageButtonClicked"/>
+    </Menu>
   </TabGroup>
 </Alloy>

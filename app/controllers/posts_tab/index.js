@@ -4,13 +4,15 @@ var args = arguments[0] || {};
 function fetchPostsCollection(e) {
   Alloy.Collections.posts.fetch({
     urlparams: {
-      per_page: Alloy.CFG.posts.per_page,
-      page: 1,
-      'filter[connected_items]': Alloy.Globals.lastActiveEvent.id
+      'per_page': Alloy.CFG.posts.per_page,
+      'page': 1,
+      'filter[connected_items]': Alloy.Globals.lastActiveEvent.id,
+      'lang': Ti.Locale.currentLanguage
     },
     sql: {
       where: {
-        event_id: Alloy.Globals.lastActiveEvent.id
+        event_id: Alloy.Globals.lastActiveEvent.id,
+        lang: Ti.Locale.currentLanguage
       },
       orderBy: "date DESC"
     },
@@ -26,13 +28,15 @@ function fetchMorePostsCollection(e) {
   Alloy.Collections.posts.fetch({
     // whatever your sync adapter needs to fetch the next page
     urlparams: {
-      per_page: Alloy.CFG.posts.per_page,
-      page: parseInt(ln / 10) + 1,
-      'filter[connected_items]': Alloy.Globals.lastActiveEvent.id
+      'per_page': Alloy.CFG.posts.per_page,
+      'page': parseInt(ln / 10) + 1,
+      'filter[connected_items]': Alloy.Globals.lastActiveEvent.id,
+      'lang': Ti.Locale.currentLanguage
     },
     sql: {
       where: {
-        event_id: Alloy.Globals.lastActiveEvent.id
+        event_id: Alloy.Globals.lastActiveEvent.id,
+        lang: Ti.Locale.currentLanguage
       },
       orderBy: "date DESC"
     },

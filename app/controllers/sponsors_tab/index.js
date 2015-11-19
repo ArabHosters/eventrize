@@ -23,14 +23,14 @@ function openUrl(e) {
 
 $.sponsorsSliderCollection.fetch({
   query: {
-    statement: 'SELECT * from ' + $.sponsorsSliderCollection.config.adapter.collection_name + ' where event_id = ? order by menu_order ASC limit 4',
-    params: [Alloy.Globals.lastActiveEvent.id]
+    statement: 'SELECT * from ' + $.sponsorsSliderCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4',
+    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
   }
 });
 $.sponsorsGridCollection.fetch({
   query: {
-    statement: 'SELECT * from ' + $.sponsorsGridCollection.config.adapter.collection_name + ' where event_id = ? order by menu_order ASC limit 4, 99',
-    params: [Alloy.Globals.lastActiveEvent.id]
+    statement: 'SELECT * from ' + $.sponsorsGridCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4, 99',
+    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
   },
   success: function(collection) {
 

@@ -1,10 +1,12 @@
 Alloy.Collections.pages.fetch({
   urlparams: {
-    'filter[connected_items]': Alloy.Globals.lastActiveEvent.id
+    'filter[connected_items]': Alloy.Globals.lastActiveEvent.id,
+    'lang': Ti.Locale.currentLanguage
   },
   sql: {
     where: {
-      event_id: Alloy.Globals.lastActiveEvent.id
+      event_id: Alloy.Globals.lastActiveEvent.id,
+      lang: Ti.Locale.currentLanguage
     },
     orderBy: "menu_order ASC"
   }

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ti:app xmlns:ti="http://ti.appcelerator.org">
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
   <id>com.eventrize</id>
   <name>eventrize</name>
   <version>2.0</version>
   <publisher>Rize Innovations</publisher>
   <url>http://eventrize.com</url>
-  <description/>
+  <description>not specified</description>
   <copyright>2015 Rize Innovations</copyright>
   <icon>appicon.png</icon>
   <fullscreen>false</fullscreen>
   <navbar-hidden>false</navbar-hidden>
   <analytics>false</analytics>
-  <guid>7170931d-8af9-4b2f-8739-0a85a3e0143c</guid>
+  <guid>ae45f844-6916-44df-9000-93a1ff2bc0f2</guid>
   <property name="ti.ui.defaultunit" type="string">dp</property>
   <ios>
     <plist>
@@ -38,7 +39,8 @@
       </dict>
     </plist>
   </ios>
-  <android xmlns:android="http://schemas.android.com/apk/res/android">
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest android:versionCode="1" android:versionName="1">
       <application android:theme="@style/materialTheme"/>
     </manifest>
@@ -51,6 +53,8 @@
     <module platform="commonjs" version="0.1.2">ti-push-notification</module>
     <module platform="android" version="1.3">nl.vanvianen.android.gcm</module>
     <module platform="iphone" version="1.1.1">dk.napp.imageview</module>
+    <module platform="iphone" version="0.2">com.shareourideas.locale</module>
+    <module platform="android" version="0.1">com.shareourideas.locale</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>
@@ -63,4 +67,5 @@
   <plugins>
     <plugin version="1.0">ti.alloy</plugin>
   </plugins>
+  <property name="appc-app-id" type="string">564db70c577e33b53e75c683</property>
 </ti:app>

@@ -44,3 +44,9 @@ if (args.eventsCount === 1 && OS_ANDROID) {
 
 // Let the tabs rock the ram
 $.tabs.open();
+
+// Put tabs in global to restart the app when change the language
+Alloy.Globals.tabs = $.tabs;
+$.tabs.addEventListener('close', function() {
+  Alloy.Globals.tabs = null;
+});

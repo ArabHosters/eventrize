@@ -5,7 +5,8 @@ exports.definition = {
       title: "TEXT",
       media_type: "TEXT",
       thumbnail: "TEXT",
-      source_url: "TEXT"
+      source_url: "TEXT",
+      lang: "TEXT"
     },
     URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'media?post_parent={post_parent}',
     debug: false,
@@ -26,6 +27,7 @@ exports.definition = {
         }
         item.media_type = value.media_type;
         item.source_url = value.source_url;
+        item.lang = Ti.Locale.currentLanguage;
 
         items.push(item);
       });

@@ -9,7 +9,8 @@ exports.definition = {
       featured_image: "TEXT",
       thumbnail: "TEXT",
       event_id: "INTEGER",
-      menu_order: "INTEGER"
+      menu_order: "INTEGER",
+      lang: "TEXT"
     },
     adapter: {
       type: "sql",
@@ -27,7 +28,8 @@ exports.definition = {
           info: json.sponsor_info,
           category: json.sponsor_category,
           event_id: json.event_id,
-          menu_order: json.menu_order
+          menu_order: json.menu_order,
+          lang: Ti.Locale.currentLanguage
         };
 
         // Parse better_featured_image into media model parser

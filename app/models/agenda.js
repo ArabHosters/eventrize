@@ -10,7 +10,8 @@ exports.definition = {
       location: "TEXT",
       type: "TEXT",
       icon: "TEXT",
-      event_id: "INTEGER"
+      event_id: "INTEGER",
+      lang: "TEXT"
     },
     adapter: {
       type: "sql",
@@ -37,7 +38,8 @@ exports.definition = {
           location: json.session_location,
           type: json.session_type,
           icon: json.session_icon,
-          event_id: json.event_id
+          event_id: json.event_id,
+          lang: Ti.Locale.currentLanguage
         };
       }
     });

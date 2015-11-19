@@ -15,7 +15,8 @@ exports.definition = {
       latitude: "TEXT",
       mapZoom: "INTEGER",
       venueTitle: "TEXT",
-      venueThumbnail: "TEXT"
+      venueThumbnail: "TEXT",
+      lang: "TEXT"
     },
     URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'event',
     debug: false,
@@ -33,7 +34,8 @@ exports.definition = {
           featured_image: "",
           thumbnail: "",
           start_date: value.event_meta.start_date,
-          end_date: value.event_meta.end_date
+          end_date: value.event_meta.end_date,
+          lang: Ti.Locale.currentLanguage
         };
 
         // Parse better_featured_image into media model parser

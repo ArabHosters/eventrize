@@ -14,8 +14,14 @@ function onItemClick(e) {
 }
 
 Alloy.Collections.events.fetch({
+  urlparams: {
+    lang: Ti.Locale.currentLanguage
+  },
   sql: {
-    orderBy: "start_date DESC"
+    orderBy: "start_date DESC",
+    where: {
+      lang: Ti.Locale.currentLanguage
+    }
   },
   success: function(collection) {
     // If only one event

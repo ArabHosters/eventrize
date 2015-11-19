@@ -1,9 +1,3 @@
-var moment = require('alloy/moment');
-if (Ti.Locale.currentLanguage === 'ar') {
-  require('alloy/moment/lang/ar');
-  moment.lang(Ti.Locale.currentLanguage);
-}
-
 Alloy.Globals.androidBackPressedToExitTheApp = function() {
   if (OS_ANDROID) {
     var win = Ti.UI.createWindow({
@@ -19,6 +13,46 @@ Alloy.Globals.androidBackPressedToExitTheApp = function() {
 Alloy.Globals.decodeHTMLEntities = function(text) {
   // Remove all tags, dublicated spaces, return back curly qoutes
   return text.replace(/(<([^>]+)>)/gi, '').replace(/(\[([^\]]+)\])/gi, '').replace(/(?:&nbsp;|\s)+/gi, ' ').replace(/&#8221;/g, '“').replace(/&#8220;/g, '”');
+};
+
+// Get device lang or last selected language and set it to moment and local
+var lang = Ti.App.Properties.getString('languageFlag', Ti.Locale.currentLanguage);
+require('com.shareourideas.locale').setLocale(lang);
+require('alloy/moment').lang(lang);
+
+// Change language event handler
+Alloy.Globals.changeLanguageButtonClicked = function() {
+  var changeLanguageDialog = Ti.UI.createAlertDialog({
+    title: L('changeLanguageDialogTitle'),
+    message: L('changeLanguageDialogMessage'),
+    cancel: 2,
+    buttonNames: [L('arabicLanguageButton'), L('englishLanguageButton'), L('cancelButton')]
+  });
+  changeLanguageDialog.addEventListener('click', function(e) {
+    if (e.index < 2) {
+
+      // get selected language
+      var lang = e.index === 0 ? 'ar' : 'en';
+
+      // Android forget the value after app terminated, let's save in ourselves
+      Ti.App.Properties.setString('languageFlag', lang);
+
+      // Overwrite system locale
+      require('com.shareourideas.locale').setLocale(lang);
+
+      // Set moment language
+      var moment = require('alloy/moment');
+      if (Ti.Locale.currentLanguage === 'ar') {
+        moment.lang("ar");
+      } else {
+        moment.lang("en");
+      }
+
+      // Restart the window stack
+      Alloy.Globals.restart();
+    }
+  });
+  changeLanguageDialog.show();
 };
 
 // Push notifications

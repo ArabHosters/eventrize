@@ -15,7 +15,7 @@ function onItemClick(e) {
 
 $.speakersCollection.fetch({
   query: {
-    statement: 'SELECT * from ' + $.speakersCollection.config.adapter.collection_name + ' where event_id = ? order by menu_order ASC',
-    params: [Alloy.Globals.lastActiveEvent.id]
+    statement: 'SELECT * from ' + $.speakersCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC',
+    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
   }
 });

@@ -9,7 +9,8 @@ exports.definition = {
       excerpt: "TEXT",
       featured_image: "TEXT",
       thumbnail: "TEXT",
-      event_id: "INTEGER"
+      event_id: "INTEGER",
+      lang: "TEXT"
     },
     URL: Alloy.CFG.baseurl + Alloy.CFG.api.service + 'posts?fields=id,date,link,title,content,excerpt,featured_image,menu_order,better_featured_image&filter[connected_type]=posts_to_event',
     debug: false,
@@ -29,6 +30,7 @@ exports.definition = {
         item.content = Alloy.Globals.decodeHTMLEntities(value.content.rendered);
         item.excerpt = Alloy.Globals.decodeHTMLEntities(value.excerpt.rendered);
         item.event_id = Alloy.Globals.lastActiveEvent.id;
+        item.lang = Ti.Locale.currentLanguage;
 
         // Parse better_featured_image into media model parser
         if (value.better_featured_image) {

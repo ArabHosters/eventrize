@@ -29,4 +29,9 @@
   <string name="about">عن المتحدث</string>
   <string name="openSpeakerLinkAlertDialogTitle">هل تريد فتح الرابط؟</string>
   <string name="openSpeakerLinkAlertDialogMessage">هل انت متأكد؟</string>
+	<string name="changeLanguageButton">تغيير اللغة</string>
+	<string name="changeLanguageDialogTitle">تغيير اللغة</string>
+	<string name="changeLanguageDialogMessage">هل انت تريد تغيير اللغة ؟</string>
+	<string name="arabicLanguageButton">العربية</string>
+	<string name="englishLanguageButton">الانجليزية</string>
 </resources>

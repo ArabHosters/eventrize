@@ -29,4 +29,9 @@
   <string name="about">About</string>
   <string name="openSpeakerLinkAlertDialogTitle">Open the URL?</string>
   <string name="openSpeakerLinkAlertDialogMessage">Are you sure?</string>
+	<string name="changeLanguageButton">Change language</string>
+	<string name="changeLanguageDialogTitle">Change language</string>
+	<string name="changeLanguageDialogMessage">Are you sure that you want to change language ?</string>
+	<string name="arabicLanguageButton">Arabic</string>
+	<string name="englishLanguageButton">English</string>
 </resources>

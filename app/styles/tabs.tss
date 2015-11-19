@@ -1,3 +1,6 @@
 'ActionBar[platform=android]' : {
   displayHomeAsUp: true
 }
+'#changeLanguageButton' : {
+  title: L('changeLanguageButton')
+}

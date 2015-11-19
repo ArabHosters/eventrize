@@ -9,7 +9,8 @@ exports.definition = {
       thumbnail: "TEXT",
       event_id: "INTEGER",
       speaker_social: "TEXT",
-      menu_order: "INTEGER"
+      menu_order: "INTEGER",
+      lang: "TEXT"
     },
     adapter: {
       type: "sql",
@@ -27,7 +28,8 @@ exports.definition = {
           bio: json.speaker_bio,
           event_id: json.event_id,
           speaker_social: JSON.stringify(json.speaker_social),
-          menu_order: json.menu_order
+          menu_order: json.menu_order,
+          lang: Ti.Locale.currentLanguage
         };
 
         // Parse better_featured_image into media model parser

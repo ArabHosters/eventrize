@@ -8,6 +8,9 @@
   height: 90,
   accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 }
+'ListItem[platform=ios]' : {
+  selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
+}
 '.templateView' : {
   top: 20,
   layout: 'horizontal'

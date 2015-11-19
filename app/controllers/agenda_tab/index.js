@@ -16,8 +16,8 @@ function segmentBarClicked(e) {
   if (e === undefined) {
     $.agendaCollection.fetch({
       query: {
-        statement: "SELECT * from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? order by startdate ASC",
-        params: [Alloy.Globals.lastActiveEvent.id]
+        statement: "SELECT * from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? and lang = ? order by startdate ASC",
+        params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
       }
     });
   } else {
@@ -34,8 +34,8 @@ function segmentBarClicked(e) {
     // Load data filtered by this day
     $.agendaCollection.fetch({
       query: {
-        statement: "SELECT * from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? and date(startdate) = ? order by startdate ASC",
-        params: [Alloy.Globals.lastActiveEvent.id, e.source.dayNumber]
+        statement: "SELECT * from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? and date(startdate) = ? and lang = ? order by startdate ASC",
+        params: [Alloy.Globals.lastActiveEvent.id, e.source.dayNumber, Ti.Locale.currentLanguage]
       }
     });
   }
@@ -54,8 +54,8 @@ function dataTransformer(model) {
 
 $.agendaDaysCollection.fetch({
   query: {
-    statement: "SELECT *, date(startdate) dayNumber, count(*) ccc from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? group by dayNumber order by startdate ASC",
-    params: [Alloy.Globals.lastActiveEvent.id]
+    statement: "SELECT *, date(startdate) dayNumber, count(*) ccc from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? and lang = ? group by dayNumber order by startdate ASC",
+    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
   },
   success: function(collection) {
     if (collection.length <= 1) {
