@@ -62,5 +62,5 @@
 '.segmentBarButton' : {
   color: '#000000',
   height: Ti.UI.FILL,
-  textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }

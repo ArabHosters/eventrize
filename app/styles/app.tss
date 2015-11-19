@@ -1,5 +1,5 @@
 'Window' : {
-  orientationModes: [Titanium.UI.PORTRAIT],
+  orientationModes: [Ti.UI.PORTRAIT],
   backgroundColor: '#ffffff'
 }
 'Window[platform=ios]' : {
@@ -52,8 +52,5 @@
   layout: 'vertical'
 }
 'TableViewRow[platform=ios]' : {
-  selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
-}
-'ListView[platform=ios]' : {
-  separatorStyle: Titanium.UI.iPhone.ListViewSeparatorStyle.NONE
+  selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
 }

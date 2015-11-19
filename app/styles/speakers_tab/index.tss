@@ -8,9 +8,15 @@
 'Window' : {
   title: L('speakersWindowTitle')
 }
+'ListView[platform=ios]' : {
+  separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
+}
 'ListItem' : {
   height: 140,
   backgroundColor: '#2A2A2A'
+}
+'ListItem[platform=ios]' : {
+  selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
 }
 '.featuredImageView' : {
   width: Ti.UI.FILL,

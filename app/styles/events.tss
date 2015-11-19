@@ -1,6 +1,9 @@
 'Window[platform=android]' : {
   theme: 'Theme.AppCompat.Translucent.NoTitleBar'
 }
+'ListView[platform=ios]' : {
+  separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
+}
 'ListItem' : {
   height: 90,
   accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
