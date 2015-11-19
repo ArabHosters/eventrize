@@ -57,6 +57,9 @@ Alloy.Globals.changeLanguageButtonClicked = function() {
   changeLanguageDialog.show();
 };
 
+// load mirroring file
+require('mirroring').generate();
+
 // Push notifications
 if (OS_ANDROID) {
   // set android-only options
