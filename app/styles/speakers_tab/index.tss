@@ -25,10 +25,13 @@
 '.verticalView' : {
   layout: 'vertical',
   height: Ti.UI.SIZE,
-  left: 12
+  left: 12,
+  right: 12
 }
 '.nameLabel' : {
   left: 0,
+  right: 0,
+  textAlign: Alloy.CFG.tss.common.leftTextAlign,
   color: '#ffffff',
   font: {
     fontSize: 30,
@@ -39,7 +42,8 @@
   backgroundColor: '#45BBFF',
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
-  left: 0
+  left: Alloy.CFG.tss.speakers.index.titleLabelContainnerView.left,
+  right: Alloy.CFG.tss.speakers.index.titleLabelContainnerView.right
 }
 '.titleLabel' : {
   left: 2,

@@ -15,7 +15,8 @@
   scrollType: 'vertical'
 }
 '.lineView' : {
-  left: 112,
+  left: Alloy.CFG.tss.agenda.index.lineView.left,
+  right: Alloy.CFG.tss.agenda.index.lineView.right,
   top: 22,
   width: 1,
   backgroundColor: Alloy.CFG.style.mainColor
@@ -26,11 +27,15 @@
   touchEnabled: false
 }
 '.startdatePrettyLabel' : {
+  left: Alloy.CFG.tss.agenda.index.startdatePrettyLabel.left,
+  right: Alloy.CFG.tss.agenda.index.startdatePrettyLabel.right,
   width: 90,
   height: 66,
   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
 '.iconLabel' : {
+  left: Alloy.CFG.tss.agenda.index.iconLabel.left,
+  right: Alloy.CFG.tss.agenda.index.iconLabel.right,
   width: 44,
   height: 44,
   borderWidth: 1,
@@ -42,7 +47,9 @@
   touchEnabled: false
 }
 '.titleLabel' : {
-  left: 10,
+  left: Alloy.CFG.tss.agenda.index.titleLabel.left,
+  right: Alloy.CFG.tss.agenda.index.titleLabel.right,
+  textAlign: Alloy.CFG.tss.common.leftTextAlign,
   font: {
     fontSize: 18
   }
@@ -50,7 +57,6 @@
 '#segmentBar' : {
   selectItemColor: Alloy.CFG.style.mainColor,
   height: 40,
-  layout: 'horizontal',
   backgroundColor: '#eeeeee'
 }
 '#segmentBar[platform=ios]' : {

@@ -41,14 +41,21 @@ function segmentBarClicked(e) {
   }
 }
 
+
+var index = 0;
+
 function dataTransformer(model) {
   var modelData = model.toJSON();
 
   // Reformat date with localization
-  modelData.dayNumberFormated = require('alloy/moment')(modelData.dayNumber).format('MMM-DD');
+  var dateFormat = Ti.Locale.currentLanguage === 'ar' ? 'DD MMM' : 'MMM-D';
+  modelData.dayNumberFormated = require('alloy/moment')(modelData.dayNumber).format(dateFormat);
 
   // Set equal width
-  modelData.width = Math.floor(100 / $.agendaDaysCollection.length) + '%';
+  var width = Math.floor(100 / $.agendaDaysCollection.length);
+  modelData.width = width + '%';
+  modelData[Alloy.CFG.tss.common.left] = (width * index++) + '%';
+  modelData[Alloy.CFG.tss.common.right] = null;
   return modelData;
 }
 

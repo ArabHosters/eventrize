@@ -5,21 +5,21 @@
   separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }
 'ListItem' : {
-  height: 90,
-  accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+  height: 90
 }
 'ListItem[platform=ios]' : {
   selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
 }
 '.templateView' : {
-  top: 20,
-  layout: 'horizontal'
+  top: 2
 }
 '.thumbnailImageView' : {
-  left: 10,
+  left: Alloy.CFG.tss.events.thumbnailImageView.left,
+  right: Alloy.CFG.tss.events.thumbnailImageView.right,
   height: 60,
   borderRadius: 30
 }
 '.titleLabel' : {
-  left: 40
+  left: Alloy.CFG.tss.events.titleLabel.left,
+  right: Alloy.CFG.tss.events.titleLabel.right
 }

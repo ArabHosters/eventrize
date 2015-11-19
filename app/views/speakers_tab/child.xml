@@ -14,13 +14,13 @@
       <View id="containnerView">
         <Label id="nameLabel" text="{name}"/>
         <Label id="titleLabel" text="{title}"/>
-        <View class="horizontalView" left="0">
-          <ImageView image="/images/info_ic.png"/>
+        <View height="Ti.UI.SIZE" left="0">
+          <ImageView id="infoImageView"/>
           <Label id="aboutLabel"/>
         </View>
         <Label id="bioLabel" text="{bio}"/>
       </View>
-      <View id="iconsView" onClick="openUrl" />
+      <View id="iconsView" onClick="openUrl"/>
     </ScrollView>
   </Window>
 </Alloy>

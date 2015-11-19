@@ -28,6 +28,7 @@
   scrollType: 'vertical'
 }
 '#containnerView' : {
+  textAlign: Alloy.CFG.tss.common.leftTextAlign,
   top: 200,
   left: 10,
   right: 10,
@@ -46,12 +47,20 @@
     fontSize: 14
   }
 }
+'#infoImageView' : {
+  width: 29,
+  image: '/images/info_ic.png',
+  left: Alloy.CFG.tss.speakers.child.infoImageView.left,
+  right: Alloy.CFG.tss.speakers.child.infoImageView.right
+}
 '#aboutLabel' : {
   text: L('about'),
   color: Alloy.CFG.style.mainColor,
-  left: 4
+  left: Alloy.CFG.tss.speakers.child.aboutLabel.left,
+  right: Alloy.CFG.tss.speakers.child.aboutLabel.right
 }
 '#bioLabel' : {
+textAlign: Alloy.CFG.tss.common.leftTextAlign,
   left: 3,
   top: 10,
   font: {

@@ -3,6 +3,21 @@ var args = arguments[0] || {},
 
 Alloy.Globals.lastActiveEvent = args.eventModelJSON;
 
+// Revers tab order in rtl
+if (Ti.Locale.currentLanguage === 'ar') {
+  Alloy.CFG.tabs = Alloy.CFG.tabs.reverse();
+
+  if (OS_ANDROID) {
+    $.tabs.addEventListener('open', function() {
+      $.tabs.setActiveTab(Alloy.CFG.tabs.length - 1);
+    });
+  } else if (OS_IOS) {
+    $.tabs.activeTab = Alloy.CFG.tabs.length - 1;
+  }
+} else {
+  alert(Ti.Locale.currentLanguage);
+}
+
 // Load tabs depend on configs
 _.each(Alloy.CFG.tabs, function(tabName) {
   var controllerName = tabName + '_tab/index';

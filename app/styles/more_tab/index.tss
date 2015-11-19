@@ -13,10 +13,12 @@
 }
 '.templateView' : {}
 '.thumbnailImageView' : {
-  left: 5,
+  left: Alloy.CFG.tss.more.index.thumbnailImageView.left,
+  right: Alloy.CFG.tss.more.index.thumbnailImageView.right,
   width: 40,
   height: 40
 }
 '.titleLabel' : {
-  left: 50
+  left: Alloy.CFG.tss.more.index.titleLabel.left,
+  right: Alloy.CFG.tss.more.index.titleLabel.right
 }

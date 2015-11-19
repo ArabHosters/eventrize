@@ -6,7 +6,7 @@
       <ScrollView id="containnerScrollView">
         <View class="lineView"/>
         <View dataCollection="$.agendaCollection" layout="vertical">
-          <View class="horizontalView" myId="{id}" onClick="viewClicked">
+          <View height="Ti.UI.SIZE" myId="{id}" onClick="viewClicked">
             <Label class="startdatePrettyLabel" text="{startdatePretty}"/>
             <Widget class="iconLabel" icon="{icon}" src="ti.ux.iconfont"/>
             <View class="verticalView fitView">
@@ -17,7 +17,7 @@
       </ScrollView>
 
       <View dataCollection="$.agendaDaysCollection" dataTransform="dataTransformer" id="segmentBar" onClick="segmentBarClicked">
-        <Button backgroundColor="{backgroundColor}" class="segmentBarButton" dayNumber="{dayNumber}" rel="yahoo" title="{dayNumberFormated}" width="{width}"/>
+        <Button backgroundColor="{backgroundColor}" class="segmentBarButton" dayNumber="{dayNumber}" left="{left}" rel="yahoo" right="{right}" title="{dayNumberFormated}" width="{width}"/>
       </View>
     </Window>
   </Tab>

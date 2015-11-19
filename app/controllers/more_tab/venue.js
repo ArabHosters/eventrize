@@ -6,7 +6,7 @@ $.mapView.region = {
   longitude: Alloy.Globals.lastActiveEvent.longitude,
   zoom: Alloy.Globals.lastActiveEvent.mapZoom
 };
-console.log(Alloy.Globals.lastActiveEvent.venueThumbnail);
+
 // Add venue location
 var myAnnotation = Map.createAnnotation({
   title: Alloy.Globals.lastActiveEvent.venueTitle,

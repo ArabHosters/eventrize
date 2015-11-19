@@ -31,15 +31,16 @@
 }
 '.titleLabel' : {
   color: '#ffffff',
-  left: 0,
+  left: Alloy.CFG.tss.posts.index.titleLabel.left,
+  right: Alloy.CFG.tss.posts.index.titleLabel.right,
   font: {
-    fontSize: 18,
-    fontWeight: 'lighter'
+    fontSize: 18
   }
 }
 '.dateLabel' : {
   color: '#ffffff',
-  left: 0,
+  left: Alloy.CFG.tss.posts.index.dateLabel.left,
+  right: Alloy.CFG.tss.posts.index.dateLabel.right,
   font: {
     fontSize: 10
   }

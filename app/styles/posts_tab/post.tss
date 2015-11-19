@@ -18,17 +18,20 @@
   scrollType: 'vertical'
 }
 '.leftBorder' : {
-  left: 0,
+  left: Alloy.CFG.tss.posts.post.leftBorder.left,
+  right: Alloy.CFG.tss.posts.post.leftBorder.right,
   width: 4,
   height: 95,
   backgroundColor: Alloy.CFG.style.mainColor
 }
 '.datePrettyLabel' : {
-  left: 17,
+  left: Alloy.CFG.tss.posts.post.datePrettyLabel.left,
+  right: Alloy.CFG.tss.posts.post.datePrettyLabel.right,
   top: 0,
   color: '#979797'
 }
 '.titleLabel' : {
+  textAlign: Alloy.CFG.tss.common.leftTextAlign,
   left: 17,
   right: 17,
   height: 70,
@@ -38,10 +41,10 @@
   }
 }
 '.contentLabel' : {
+  textAlign: Alloy.CFG.tss.common.leftTextAlign,
   left: 15,
   right: 15,
   top: 15,
-  bottom: 15,
   color: 'gray',
   font: {
     fontSize: 14
