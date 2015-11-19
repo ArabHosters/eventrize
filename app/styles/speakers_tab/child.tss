@@ -1,13 +1,107 @@
-'ScrollView' : {
-  layout: 'vertical',
-  scrollType: 'vertical'
-}
-'#shareButton' : {
+'#shareButton[platform=ios]' : {
   title: L('shareButton')
 }
-'#shareMenuItem' : {
+'#shareMenuItem[platform=android]' : {
   icon: Titanium.Android.R.drawable.ic_menu_share
 }
-'.featuredImageView' : {
-  width: '100%'
+'#containnerScrollView' : {
+  scrollType: 'vertical'
+}
+'.horizontalView' : {
+  width: Ti.UI.SIZE
+}
+'.iconLabel' : {
+  width: 40,
+  height: 40,
+  left: 5,
+  color: '#ffffff',
+  backgroundColor: 'silver',
+  borderRadius: 20,
+  borderColor: '#ffffff',
+  borderWidth: 3,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+'#featuredImageView' : {
+  left: 0,
+  right: 0,
+  top: 0,
+  height: 200
+}
+'#featuredImageView[platform=android]' : {
+  scrollingEnabled: false,
+  contentWidth: '100%',
+  scrollType: 'vertical'
+}
+'#containnerView' : {
+  top: 200,
+  left: 10,
+  right: 10,
+  backgroundColor: '#ffffff',
+  layout: 'vertical'
+}
+'#nameLabel' : {
+  top: 30,
+  font: {
+    fontSize: 22
+  }
+}
+'#titleLabel' : {
+  color: 'gray',
+  font: {
+    fontSize: 14
+  }
+}
+'#aboutLabel' : {
+  text: L('about'),
+  color: Alloy.CFG.style.mainColor,
+  left: 4
+}
+'#bioLabel' : {
+  left: 3,
+  top: 10,
+  font: {
+    fontSize: 14
+  }
+}
+'.fa-facebook' : {
+  backgroundColor: '#3b5998'
+}
+'.fa-twitter' : {
+  backgroundColor: '#00aced'
+}
+'.fa-google-plus' : {
+  backgroundColor: '#dd4b39'
+}
+'.fa-linkedin' : {
+  backgroundColor: '#007bb5'
+}
+'.fa-link' : {
+  backgroundColor: Alloy.CFG.style.mainColor
+}
+'.fa-youtube' : {
+  backgroundColor: '#bb0000'
+}
+'.fa-instagram' : {
+  backgroundColor: '#125688'
+}
+'.fa-whatsapp' : {
+  backgroundColor: '#4dc247'
+}
+'.fa-pinterest' : {
+  backgroundColor: '#cb2027'
+}
+'.fa-vine' : {
+  backgroundColor: '#00bf8f'
+}
+'.fa-flickr' : {
+  backgroundColor: '#ff0084'
+}
+'.fa-tumblr' : {
+  backgroundColor: '#32506d'
+}
+'.fa-vk' : {
+  backgroundColor: '#45668e'
+}
+'.fa-vimeo' : {
+  backgroundColor: '#aad450'
 }

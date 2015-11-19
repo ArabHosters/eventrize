@@ -54,3 +54,6 @@
 'TableViewRow[platform=ios]' : {
   selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 }
+'ListView[platform=ios]' : {
+  separatorStyle: Titanium.UI.iPhone.ListViewSeparatorStyle.NONE
+}

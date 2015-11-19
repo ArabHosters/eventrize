@@ -4,9 +4,6 @@
 '#mainTable[platform=ios]' : {
   separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }
-'TableViewRow[platform=ios]' : {
-  selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
-}
 '.shareButton' : {
   title: L('shareButton'),
   image: '/images/share.png',

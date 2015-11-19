@@ -6,11 +6,28 @@
     <Menu platform="android">
       <MenuItem id="shareMenuItem" onClick="shareButtonClicked"/>
     </Menu>
-    <ScrollView>
-      <ImageView class="featuredImageView" image="{featured_image}"/>
-      <Label text="{name}"/>
-      <Label text="{title}"/>
-      <Label text="{bio}"/>
+    <Module bindId="postImage" id="featuredImageView" image="{featured_image}" method="createImageView" module="dk.napp.imageview" platform="ios"/>
+    <ScrollView id="featuredImageView" platform="android">
+      <ImageView image="{featured_image}" width="100%"/>
+    </ScrollView>
+    <ScrollView id="containnerScrollView">
+      <View id="containnerView">
+        <Label id="nameLabel" text="{name}"/>
+        <Label id="titleLabel" text="{title}"/>
+        <View class="horizontalView" left="0">
+          <ImageView image="/images/info_ic.png"/>
+          <Label id="aboutLabel"/>
+        </View>
+        <Label id="bioLabel" text="{bio}"/>
+      </View>
+      <View class="horizontalView" top="180">
+        <Widget class="iconLabel fa-facebook" icon="fa-facebook" src="ti.ux.iconfont"/>
+        <Widget class="iconLabel fa-twitter" icon="fa-twitter" src="ti.ux.iconfont"/>
+        <Widget class="iconLabel fa-vine" icon="fa-vine" src="ti.ux.iconfont"/>
+        <Widget class="iconLabel fa-youtube" icon="fa-youtube" src="ti.ux.iconfont"/>
+        <Widget class="iconLabel fa-flickr" icon="fa-flickr" src="ti.ux.iconfont"/>
+        <Widget class="iconLabel fa-link" icon="fa-link" src="ti.ux.iconfont"/>
+      </View>
     </ScrollView>
   </Window>
 </Alloy>
