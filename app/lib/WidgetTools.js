@@ -1,6 +1,6 @@
 //Most basic standard view titanium properties.
 //You can add any other TI property to be applied with method setTiProps
-var TI_PROPS = [ "backgroundColor", "borderColor", "borderRadius", "borderWidth", "bottom", "bubbleParent", "center", "color", "height", "layout", "left", "opacity", "right", "tintColor", "top", "touchEnabled", "transform", "visible", "width", "zIndex", "textAlign" ];
+var TI_PROPS = [ "backgroundColor", "borderColor", "borderRadius", "borderWidth", "bottom", "bubbleParent", "center", "color", "height", "layout", "left", "opacity", "right", "tintColor", "top", "touchEnabled", "transform", "visible", "width", "zIndex", "textAlign", "link" ];
 
 exports.cleanArgs = function( args ) {
 	// delete irrelevant args

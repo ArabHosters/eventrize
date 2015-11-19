@@ -10,7 +10,7 @@ function openUrl(e) {
     });
 
     dialog.addEventListener('click', function(ev) {
-      if (ev.index === ev.cancel) {
+      if (ev.index === 0) {
         return;
       }
 

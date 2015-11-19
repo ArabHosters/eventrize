@@ -10,16 +10,11 @@
 '.horizontalView' : {
   width: Ti.UI.SIZE
 }
-'.iconLabel' : {
-  width: 40,
+'#iconsView' : {
+  top: 180,
   height: 40,
-  left: 5,
-  color: '#ffffff',
-  backgroundColor: 'silver',
-  borderRadius: 20,
-  borderColor: '#ffffff',
-  borderWidth: 3,
-  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+  width: Ti.UI.SIZE,
+  layout: 'horizontal'
 }
 '#featuredImageView' : {
   left: 0,
@@ -62,46 +57,4 @@
   font: {
     fontSize: 14
   }
-}
-'.fa-facebook' : {
-  backgroundColor: '#3b5998'
-}
-'.fa-twitter' : {
-  backgroundColor: '#00aced'
-}
-'.fa-google-plus' : {
-  backgroundColor: '#dd4b39'
-}
-'.fa-linkedin' : {
-  backgroundColor: '#007bb5'
-}
-'.fa-link' : {
-  backgroundColor: Alloy.CFG.style.mainColor
-}
-'.fa-youtube' : {
-  backgroundColor: '#bb0000'
-}
-'.fa-instagram' : {
-  backgroundColor: '#125688'
-}
-'.fa-whatsapp' : {
-  backgroundColor: '#4dc247'
-}
-'.fa-pinterest' : {
-  backgroundColor: '#cb2027'
-}
-'.fa-vine' : {
-  backgroundColor: '#00bf8f'
-}
-'.fa-flickr' : {
-  backgroundColor: '#ff0084'
-}
-'.fa-tumblr' : {
-  backgroundColor: '#32506d'
-}
-'.fa-vk' : {
-  backgroundColor: '#45668e'
-}
-'.fa-vimeo' : {
-  backgroundColor: '#aad450'
 }

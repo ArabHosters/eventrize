@@ -8,6 +8,7 @@ exports.definition = {
       featured_image: "TEXT",
       thumbnail: "TEXT",
       event_id: "INTEGER",
+      speaker_social: "TEXT",
       menu_order: "INTEGER"
     },
     adapter: {
@@ -25,6 +26,7 @@ exports.definition = {
           title: json.speaker_job,
           bio: json.speaker_bio,
           event_id: json.event_id,
+          speaker_social: JSON.stringify(json.speaker_social),
           menu_order: json.menu_order
         };
 

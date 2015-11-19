@@ -27,4 +27,6 @@
   <string name="by">by</string>
   <string name="thankYouButton">شكراً لك</string>
   <string name="about">عن المتحدث</string>
+  <string name="openSpeakerLinkAlertDialogTitle">هل تريد فتح الرابط؟</string>
+  <string name="openSpeakerLinkAlertDialogMessage">هل انت متأكد؟</string>
 </resources>

@@ -27,4 +27,6 @@
   <string name="by">by</string>
   <string name="thankYouButton">Thank You</string>
   <string name="about">About</string>
+  <string name="openSpeakerLinkAlertDialogTitle">Open the URL?</string>
+  <string name="openSpeakerLinkAlertDialogMessage">Are you sure?</string>
 </resources>
