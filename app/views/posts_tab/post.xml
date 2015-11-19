@@ -1,5 +1,5 @@
 <Alloy>
-  <Window onClose="$.destroy">
+  <Window onClose="$.destroy" title="{title}">
     <TableView id="mainTable">
       <TableViewRow layout="vertical">
         <Module bindId="postImage" id="featuredImageView" image="{featured_image}" method="createImageView" module="dk.napp.imageview" platform="ios"/>
@@ -11,7 +11,7 @@
       <TableViewRow>
         <View class="leftBorder"/>
         <Label class="datePrettyLabel" text="{datePretty}"/>
-        <Label class="titleLabel" text="Sharp unveils"/>
+        <Label class="titleLabel" text="{title}"/>
       </TableViewRow>
       <TableViewRow>
         <Label class="contentLabel" text="{content}"/>

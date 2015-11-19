@@ -1,6 +1,3 @@
-'Window' : {
-  title: L('postsWindowTitle')
-}
 '#mainTable[platform=ios]' : {
   separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }
@@ -41,9 +38,10 @@
   }
 }
 '.contentLabel' : {
-  left: 17,
-  right: 17,
-  top: 17,
+  left: 15,
+  right: 15,
+  top: 15,
+  bottom: 15,
   color: 'gray',
   font: {
     fontSize: 14
