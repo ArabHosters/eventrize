@@ -24,6 +24,9 @@ if (Ti.Locale.currentLanguage === 'ar') {
   moment.lang("ar-sa");
 }
 
+// load mirroring file
+require('mirroring').generate();
+
 // Change language event handler
 Alloy.Globals.changeLanguageButtonClicked = function() {
   var changeLanguageDialog = Ti.UI.createAlertDialog({
@@ -50,6 +53,9 @@ Alloy.Globals.changeLanguageButtonClicked = function() {
         moment.lang("ar-sa");
       }
 
+      // re-load mirroring file
+      require('mirroring').generate();
+
       // Restart the window stack
       Alloy.Globals.restart();
     }
@@ -57,11 +63,8 @@ Alloy.Globals.changeLanguageButtonClicked = function() {
   changeLanguageDialog.show();
 };
 
-// load mirroring file
-require('mirroring').generate();
-
 // Push notifications
-if (OS_ANDROID) {
+/*if (OS_ANDROID) {
   // set android-only options
   var pnOptions = {
     senderId: Alloy.CFG.api.GCMSenderId, // It's the same as your project id
@@ -132,4 +135,4 @@ var tiPush = require('ti-push-notification').init({
 tiPush.registerDevice({
   pnOptions: pnOptions,
   onReceive: onReceive
-});
+});*/
