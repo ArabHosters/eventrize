@@ -98,14 +98,13 @@ var en = {
     }
   },
   ar = mirror(en);
-/*, {
-  common: {
-    'leftTextAlign': Ti.UI.TEXT_ALIGNMENT_RIGHT,
-    'rightTextAlign': Ti.UI.TEXT_ALIGNMENT_LEFT,
-    'left': 'right',
-    'right': 'left'
-  }
-});*/
+
+ar.common = {
+  'leftTextAlign': Ti.UI.TEXT_ALIGNMENT_RIGHT,
+  'rightTextAlign': Ti.UI.TEXT_ALIGNMENT_LEFT,
+  'left': 'right',
+  'right': 'left'
+};
 
 exports.generate = function() {
   Alloy.CFG.tss = Ti.Locale.currentLanguage === 'ar' ? ar : en;

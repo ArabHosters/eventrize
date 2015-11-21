@@ -9,9 +9,7 @@
           <View height="Ti.UI.SIZE" myId="{id}" onClick="viewClicked">
             <Label class="startdatePrettyLabel" text="{startdatePretty}"/>
             <Widget class="iconLabel" icon="{icon}" src="ti.ux.iconfont"/>
-            <View class="verticalView fitView">
-              <Label class="titleLabel" text="{title}"/>
-            </View>
+            <Label class="titleLabel" text="{title}"/>
           </View>
         </View>
       </ScrollView>
