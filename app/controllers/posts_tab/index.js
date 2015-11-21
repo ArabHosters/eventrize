@@ -22,8 +22,6 @@ function fetchPostsCollection(e) {
   });
 }
 
-$.ptr.refresh();
-
 function fetchMorePostsCollection(e) {
   var ln = Alloy.Collections.posts.models.length;
   Alloy.Collections.posts.fetch({
@@ -74,7 +72,14 @@ function onItemClick(e) {
   $.index.open(win);
 }
 
-$.is.init($.list);
+var loadEvent = OS_IOS ? 'focus' : 'selected';
+$.index.addEventListener(loadEvent, function init() {
+  $.index.removeEventListener(loadEvent, init);
+
+  $.ptr.refresh();
+
+  $.is.init($.list);
+});
 
 // Show back button to re-select event
 if (OS_IOS && args.eventsCount > 1) {

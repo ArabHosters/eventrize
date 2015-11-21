@@ -1,16 +1,21 @@
-Alloy.Collections.pages.fetch({
-  urlparams: {
-    'filter[connected_items]': Alloy.Globals.lastActiveEvent.id,
-    'lang': Ti.Locale.currentLanguage
-  },
-  sql: {
-    where: {
-      event_id: Alloy.Globals.lastActiveEvent.id,
-      lang: Ti.Locale.currentLanguage
+var loadEvent = OS_IOS ? 'focus' : 'selected';
+$.index.addEventListener(loadEvent, function init() {
+  $.index.removeEventListener(loadEvent, init);
+
+  Alloy.Collections.pages.fetch({
+    urlparams: {
+      'filter[connected_items]': Alloy.Globals.lastActiveEvent.id,
+      'lang': Ti.Locale.currentLanguage
     },
-    orderBy: "menu_order ASC"
-  },
-  localOnly: !Ti.Network.online
+    sql: {
+      where: {
+        event_id: Alloy.Globals.lastActiveEvent.id,
+        lang: Ti.Locale.currentLanguage
+      },
+      orderBy: "menu_order ASC"
+    },
+    localOnly: !Ti.Network.online
+  });
 });
 
 function onItemClick(e) {

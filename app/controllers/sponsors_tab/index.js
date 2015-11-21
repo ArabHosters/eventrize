@@ -21,32 +21,38 @@ function openUrl(e) {
   }
 }
 
-$.sponsorsSliderCollection.fetch({
-  query: {
-    statement: 'SELECT * from ' + $.sponsorsSliderCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4',
-    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
-  }
-});
-$.sponsorsGridCollection.fetch({
-  query: {
-    statement: 'SELECT * from ' + $.sponsorsGridCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4, 99',
-    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
-  },
-  success: function(collection) {
+var loadEvent = OS_IOS ? 'focus' : 'selected';
+$.index.addEventListener(loadEvent, function init() {
+  $.index.removeEventListener(loadEvent, init);
 
-    var color = '#E5E5E5';
+  $.sponsorsSliderCollection.fetch({
+    query: {
+      statement: 'SELECT * from ' + $.sponsorsSliderCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4',
+      params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
+    }
+  });
 
-    _.each(collection.models, function(model, key) {
+  $.sponsorsGridCollection.fetch({
+    query: {
+      statement: 'SELECT * from ' + $.sponsorsGridCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4, 99',
+      params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
+    },
+    success: function(collection) {
 
-      // Switch color
-      if (key % 3 === 0) {
-        color = color === '#F2F2F2' ? '#E5E5E5' : '#F2F2F2';
-      }
+      var color = '#E5E5E5';
 
-      $.gridDeals.addItem(Alloy.createController('sponsors_tab/image', {
-        data: model.toJSON(),
-        color: color
-      }).getView());
-    });
-  }
+      _.each(collection.models, function(model, key) {
+
+        // Switch color
+        if (key % 3 === 0) {
+          color = color === '#F2F2F2' ? '#E5E5E5' : '#F2F2F2';
+        }
+
+        $.gridDeals.addItem(Alloy.createController('sponsors_tab/image', {
+          data: model.toJSON(),
+          color: color
+        }).getView());
+      });
+    }
+  });
 });

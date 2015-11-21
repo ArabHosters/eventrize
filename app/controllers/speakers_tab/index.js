@@ -13,9 +13,14 @@ function onItemClick(e) {
   }).getView());
 }
 
-$.speakersCollection.fetch({
-  query: {
-    statement: 'SELECT * from ' + $.speakersCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC',
-    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
-  }
+var loadEvent = OS_IOS ? 'focus' : 'selected';
+$.index.addEventListener(loadEvent, function init() {
+  $.index.removeEventListener(loadEvent, init);
+
+  $.speakersCollection.fetch({
+    query: {
+      statement: 'SELECT * from ' + $.speakersCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC',
+      params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
+    }
+  });
 });

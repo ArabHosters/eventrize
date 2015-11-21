@@ -59,23 +59,28 @@ function dataTransformer(model) {
   return modelData;
 }
 
-$.agendaDaysCollection.fetch({
-  query: {
-    statement: "SELECT *, date(startdate) dayNumber, count(*) ccc from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? and lang = ? group by dayNumber order by startdate ASC",
-    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
-  },
-  success: function(collection) {
-    if (collection.length <= 1) {
-      $.segmentBar.hide();
-      segmentBarClicked();
-    } else {
+var loadEvent = OS_IOS ? 'focus' : 'selected';
+$.index.addEventListener(loadEvent, function init() {
+  $.index.removeEventListener(loadEvent, init);
 
-      // put tabs at the top or bottom
-      $.containnerScrollView[OS_IOS ? 'top' : 'bottom'] = 40;
+  $.agendaDaysCollection.fetch({
+    query: {
+      statement: "SELECT *, date(startdate) dayNumber, count(*) ccc from " + $.agendaCollection.config.adapter.collection_name + " where event_id = ? and lang = ? group by dayNumber order by startdate ASC",
+      params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
+    },
+    success: function(collection) {
+      if (collection.length <= 1) {
+        $.segmentBar.hide();
+        segmentBarClicked();
+      } else {
 
-      segmentBarClicked({
-        source: $.segmentBar.children[0]
-      });
+        // put tabs at the top or bottom
+        $.containnerScrollView[OS_IOS ? 'top' : 'bottom'] = 40;
+
+        segmentBarClicked({
+          source: $.segmentBar.children[0]
+        });
+      }
     }
-  }
+  });
 });
