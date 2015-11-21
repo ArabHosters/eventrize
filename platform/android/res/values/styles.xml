@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <!--item name="colorControlNormal">#24B3FF</item>
+    <item name="colorControlActivated">#24B3FF</item-->
+    <!--item name="colorControlHighlight">@color/colorControlHighlight</item-->
+    <!--item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
+    <item name="android:colorButtonNormal">@color/colorButtonNormal</item-->
+    <item name="android:colorEdgeEffect">@color/colorEdgeEffect</item>
+    <!--item name="android:navigationBarColor">@color/navigationBarColor</item-->
+    <item name="android:textColorPrimary">@color/textColorPrimary</item>
+  </style>
+  <style name="AppTheme.TranslucentStatus" parent="AppTheme">
+    <item name="android:windowTranslucentStatus">true</item>
+  </style>
+  <!-- events -->
+  <style name="AppTheme.TranslucentStatus.NoTitleBar" parent="Theme.AppCompat.NoTitleBar">
+    <item name="android:windowTranslucentStatus">true</item>
+  </style>
+  <!-- loading screen -->
+  <style name="AppTheme.Translucent.NoTitleBar" parent="Theme.AppCompat.Translucent.NoTitleBar.Fullscreen">
+    <item name="android:windowTranslucentNavigation">true</item>
+  </style>
+</resources>

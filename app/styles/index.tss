@@ -2,7 +2,7 @@
   backgroundImage: '/images/loading_bg.png'
 }
 'Window[platform=android]' : {
-  theme: 'Theme.AppCompat.Translucent.NoTitleBar'
+  theme: 'AppTheme.Translucent.NoTitleBar'
 }
 '#imageScaleScrollView' : {
   left: 0,

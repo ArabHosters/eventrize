@@ -1,5 +1,5 @@
 'Window[platform=android]' : {
-  theme: 'Theme.AppCompat.Translucent.NoTitleBar'
+  theme: 'AppTheme.TranslucentStatus.NoTitleBar'
 }
 'ListView[platform=ios]' : {
   separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE

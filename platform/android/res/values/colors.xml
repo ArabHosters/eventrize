@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#24B3FF</color>
+  <color name="colorPrimaryDark">#1E88E5</color>
+  <color name="colorAccent">#ffffff</color>
+  <color name="colorControlNormal">#24B3FF</color>
+  <color name="colorControlActivated">#24B3FF</color>
+  <color name="colorControlHighlight">#24B3FF</color>
+  <color name="colorSwitchThumbNormal">#24B3FF</color>
+  <color name="colorButtonNormal">#24B3FF</color>
+  <color name="colorEdgeEffect">#000000</color>
+  <color name="navigationBarColor">#24B3FF</color>
+  <color name="textColorPrimary">#ffffff</color>
+  <color name="tabsScrollColor">#24B3FF</color>
+</resources>

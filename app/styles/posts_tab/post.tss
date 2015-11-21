@@ -1,3 +1,6 @@
+'Window' : {
+  theme: 'AppTheme.TranslucentStatus.NoTitleBar'
+}
 '#mainTable[platform=ios]' : {
   separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }
