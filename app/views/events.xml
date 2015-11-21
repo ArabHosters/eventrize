@@ -3,7 +3,10 @@
   <Window onAndroid:back="Alloy.Globals.androidBackPressedToExitTheApp" onClose="$.destroy">
     <ListView defaultItemTemplate="eventsTemplate" onItemclick="onItemClick">
       <HeaderView>
-        <ImageView image="Alloy.CFG.style.selectEvent.banner"/>
+        <Module id="featuredImageView" image="Alloy.CFG.style.selectEvent.banner" method="createImageView" module="dk.napp.imageview" platform="ios"/>
+        <ScrollView id="featuredImageView" platform="android">
+          <ImageView image="Alloy.CFG.style.selectEvent.banner" width="100%"/>
+        </ScrollView>
       </HeaderView>
       <Templates>
         <ItemTemplate name="eventsTemplate">

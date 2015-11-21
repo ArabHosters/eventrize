@@ -7,9 +7,7 @@ var sortedTabs = _.clone(Alloy.CFG.tabs);
 
 // Revers tab order in rtl
 if (Ti.Locale.currentLanguage === 'ar') {
-  console.log(sortedTabs);
   sortedTabs.reverse();
-  console.log(sortedTabs);
   if (OS_ANDROID) {
     $.tabs.addEventListener('open', function() {
       $.tabs.setActiveTab(Alloy.CFG.tabs.length - 1);
