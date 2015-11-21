@@ -9,7 +9,8 @@ Alloy.Collections.pages.fetch({
       lang: Ti.Locale.currentLanguage
     },
     orderBy: "menu_order ASC"
-  }
+  },
+  localOnly: !Ti.Network.online
 });
 
 function onItemClick(e) {

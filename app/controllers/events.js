@@ -23,6 +23,7 @@ Alloy.Collections.events.fetch({
       lang: Ti.Locale.currentLanguage
     }
   },
+  localOnly: !Ti.Network.online,
   success: function(collection) {
     // If only one event
     if (collection.length === 1) {

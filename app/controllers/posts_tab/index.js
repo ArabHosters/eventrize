@@ -16,6 +16,7 @@ function fetchPostsCollection(e) {
       },
       orderBy: "date DESC"
     },
+    localOnly: !Ti.Network.online,
     success: e.hide,
     error: e.hide
   });
@@ -40,6 +41,7 @@ function fetchMorePostsCollection(e) {
       },
       orderBy: "date DESC"
     },
+    localOnly: !Ti.Network.online,
     // don't reset the collection, but add to it
     add: true,
     silent: true,
