@@ -1,9 +1,9 @@
 var args = arguments[0] || {},
   rowIndexer = 0;
 
-function viewClicked(e) {
+function listItemClicked(e) {
   Alloy.createController('agenda_tab/child', {
-    $model: $.agendaCollection.get(e.source.myId)
+    $model: $.agendaCollection.get(e.section.getItemAt(e.itemIndex).properties.myId)
   }).getView().open({
     modal: true
   });
@@ -44,6 +44,20 @@ function segmentBarClicked(e) {
 
 var index = 0;
 
+function ListDataTransformer(model) {
+  var modelData = model.toJSON();
+
+  modelData.iconImage = Alloy.createWidget('ti.ux.iconfont', 'widget', {
+    width: 44,
+    height: 44,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+    color: Alloy.CFG.style.mainColor,
+    icon: modelData.icon
+  }).getView().toImage();
+
+  return modelData;
+}
+
 function dataTransformer(model) {
   var modelData = model.toJSON();
 
@@ -75,7 +89,12 @@ $.index.addEventListener(loadEvent, function init() {
       } else {
 
         // put tabs at the top or bottom
-        $.containnerScrollView[OS_IOS ? 'top' : 'bottom'] = 40;
+        if (OS_IOS) {
+          $.list.top = 45;
+          $.lineView.top = 67;
+        } else if (OS_ANDROID) {
+          $.list.bottom = 45;
+        }
 
         segmentBarClicked({
           source: $.segmentBar.children[0]

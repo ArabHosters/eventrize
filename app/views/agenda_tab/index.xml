@@ -3,16 +3,21 @@
   <Collection id="agendaDaysCollection" instance="true" src="agenda"/>
   <Tab>
     <Window onClose="$.destroy">
-      <ScrollView id="containnerScrollView">
-        <View class="lineView"/>
-        <View dataCollection="$.agendaCollection" layout="vertical">
-          <View height="Ti.UI.SIZE" myId="{id}" onClick="viewClicked">
-            <Label class="startdatePrettyLabel" text="{startdatePretty}"/>
-            <Widget class="iconLabel" icon="{icon}" src="ti.ux.iconfont"/>
-            <Label class="titleLabel" text="{title}"/>
-          </View>
-        </View>
-      </ScrollView>
+      <View id="lineView"/>
+      <ListView defaultItemTemplate="agendaTemplate" id="list" onItemclick="listItemClicked">
+        <Templates>
+          <ItemTemplate name="agendaTemplate">
+            <View height="Ti.UI.SIZE">
+              <Label bindId="startdatePrettyLabel" class="startdatePrettyLabel"/>
+              <ImageView bindId="iconImageView" class="iconImageView"/>
+              <Label bindId="titleLabel" class="titleLabel"/>
+            </View>
+          </ItemTemplate>
+        </Templates>
+        <ListSection dataCollection="$.agendaCollection" dataTransform="ListDataTransformer">
+          <ListItem iconImageView:image="{iconImage}" myId="{id}" startdatePrettyLabel:text="{startdatePretty}" titleLabel:text="{title}"/>
+        </ListSection>
+      </ListView>
 
       <View dataCollection="$.agendaDaysCollection" dataTransform="dataTransformer" id="segmentBar" onClick="segmentBarClicked">
         <Button backgroundColor="{backgroundColor}" class="segmentBarButton" dayNumber="{dayNumber}" left="{left}" rel="yahoo" right="{right}" title="{dayNumberFormated}" width="{width}"/>

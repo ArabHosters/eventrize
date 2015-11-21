@@ -8,23 +8,25 @@
 'Window' : {
   title: L('agendaWindowTitle')
 }
-'Label' : {
-  touchEnabled: false
+'ListView' : {
+  backgroundColor: 'transparent'
 }
-'#containnerScrollView' : {
-  scrollType: 'vertical'
+'ListView[platform=ios]' : {
+  separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }
-'.lineView' : {
+'ListItem' : {
+  backgroundColor: 'transparent',
+  height: 50
+}
+'ListItem[platform=ios]' : {
+  selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
+}
+'#lineView' : {
   left: Alloy.CFG.tss.agenda.index.lineView.left,
   right: Alloy.CFG.tss.agenda.index.lineView.right,
   top: 22,
   width: 1,
   backgroundColor: Alloy.CFG.style.mainColor
-}
-'.fitView' : {
-  width: Ti.UI.SIZE,
-  height: Ti.UI.SIZE,
-  touchEnabled: false
 }
 '.startdatePrettyLabel' : {
   left: Alloy.CFG.tss.agenda.index.startdatePrettyLabel.left,
@@ -33,18 +35,15 @@
   height: 66,
   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
-'.iconLabel' : {
-  left: Alloy.CFG.tss.agenda.index.iconLabel.left,
-  right: Alloy.CFG.tss.agenda.index.iconLabel.right,
+'.iconImageView' : {
   width: 44,
   height: 44,
+  left: Alloy.CFG.tss.agenda.index.iconLabel.left,
+  right: Alloy.CFG.tss.agenda.index.iconLabel.right,
   borderWidth: 1,
   borderRadius: 22,
   borderColor: Alloy.CFG.style.mainColor,
-  backgroundColor: '#ffffff',
-  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-  color: Alloy.CFG.style.mainColor,
-  touchEnabled: false
+  backgroundColor: '#ffffff'
 }
 '.titleLabel' : {
   left: Alloy.CFG.tss.agenda.index.titleLabel.left,
