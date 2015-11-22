@@ -1,11 +1,12 @@
 var args = arguments[0] || {};
 
 function shareButtonClicked(e) {
-  // share text status
+
   require('com.alcoapps.socialshare').share({
-    status: $model.title,
-    image: $model.featured_image,
-    url: $model.link,
+    status: $model.get('title') + "\n" + $model.get('link'),
+    url: $model.get('link'),
+    subject: $model.get('title'),
+    text: $model.get('content') + "\n" + $model.get('link'),
     androidDialogTitle: L('shareDialogTitle')
   });
 }
