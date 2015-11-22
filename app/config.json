@@ -3,7 +3,7 @@
     "api": {
       "service": "wp-json/wp/v2/",
       "pushNotification": "pnfw/register/",
-      "GCMSenderId": "898256744866"
+      "GCMSenderId": "589192777477"
     },
     "tabs": [
       "posts",

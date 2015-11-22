@@ -64,7 +64,7 @@ Alloy.Globals.changeLanguageButtonClicked = function() {
 };
 
 // Push notifications
-/*if (OS_ANDROID) {
+if (OS_ANDROID) {
   // set android-only options
   var pnOptions = {
     senderId: Alloy.CFG.api.GCMSenderId, // It's the same as your project id
@@ -135,4 +135,4 @@ var tiPush = require('ti-push-notification').init({
 tiPush.registerDevice({
   pnOptions: pnOptions,
   onReceive: onReceive
-});*/
+});

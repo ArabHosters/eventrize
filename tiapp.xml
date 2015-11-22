@@ -42,7 +42,10 @@
   <android
     xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest android:versionCode="1" android:versionName="1">
-      <application android:theme="@style/AppTheme"/>
+      <application android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+                      android:value="AIzaSyDtNKvzZjK8XQ966ofHI1sTdaONhaSkSjM"/>
+      </application>
     </manifest>
   </android>
   <modules>
