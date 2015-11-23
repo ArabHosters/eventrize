@@ -14,7 +14,7 @@
             </View>
           </ItemTemplate>
         </Templates>
-        <ListSection dataCollection="$.agendaCollection" dataTransform="ListDataTransformer">
+        <ListSection dataCollection="$.agendaCollection" dataTransform="listDataTransformer">
           <ListItem iconImageView:image="{iconImage}" myId="{id}" startdatePrettyLabel:text="{startdatePretty}" titleLabel:text="{title}"/>
         </ListSection>
       </ListView>

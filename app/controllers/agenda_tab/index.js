@@ -44,7 +44,7 @@ function segmentBarClicked(e) {
 
 var index = 0;
 
-function ListDataTransformer(model) {
+function listDataTransformer(model) {
   var modelData = model.toJSON();
 
   modelData.iconImage = Alloy.createWidget('ti.ux.iconfont', 'widget', {
