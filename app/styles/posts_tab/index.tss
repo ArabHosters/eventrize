@@ -45,6 +45,3 @@
     fontSize: 10
   }
 }
-'#changeLanguageButton' : {
-  title: L('changeLanguageButton')
-}

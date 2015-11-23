@@ -28,5 +28,8 @@ function onItemClick(e) {
     case 1:
       $.index.open(Alloy.createController(e.section.getItemAt(e.itemIndex).properties.controllerToOpen).getView());
       break;
+    case 2:
+      Alloy.Globals.changeLanguageButtonClicked();
+      break;
   }
 }

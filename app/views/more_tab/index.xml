@@ -1,26 +1,29 @@
 <Alloy>
-  <Collection src="pages"/>
-  <Tab>
-    <Window onClose="$.destroy">
-      <ListView defaultItemTemplate="moreTabTemplate" onItemclick="onItemClick">
-        <Templates>
-          <ItemTemplate name="moreTabTemplate">
-            <View class="templateView">
-              <ImageView bindId="thumbnailImageView" class="thumbnailImageView"/>
-              <Label bindId="titleLabel" class="titleLabel"/>
-            </View>
-          </ItemTemplate>
-        </Templates>
-        <ListSection dataCollection="pages">
-          <ListItem thumbnailImageView:image="{thumbnail}" titleLabel:text="{title}"/>
-        </ListSection>
-        <ListSection>
-          <ListItem controllerToOpen="more_tab/venue" thumbnailImageView:image="Alloy.Globals.lastActiveEvent.venueThumbnail" titleLabel:text="L('venueListItemText')"/>
-        </ListSection>
-        <FooterView platform="ios">
-          <View height="1"/>
-        </FooterView>
-      </ListView>
-    </Window>
-  </Tab>
+	<Collection src="pages"/>
+	<Tab>
+		<Window onClose="$.destroy">
+			<ListView defaultItemTemplate="moreTabTemplate" onItemclick="onItemClick">
+				<Templates>
+					<ItemTemplate name="moreTabTemplate">
+						<View class="templateView">
+							<ImageView bindId="thumbnailImageView" class="thumbnailImageView"/>
+							<Label bindId="titleLabel" class="titleLabel"/>
+						</View>
+					</ItemTemplate>
+				</Templates>
+				<ListSection dataCollection="pages">
+					<ListItem thumbnailImageView:image="{thumbnail}" titleLabel:text="{title}"/>
+				</ListSection>
+				<ListSection>
+					<ListItem controllerToOpen="more_tab/venue" thumbnailImageView:image="Alloy.Globals.lastActiveEvent.venueThumbnail" titleLabel:text="L('venueListItemText')"/>
+				</ListSection>
+				<ListSection headerTitle="">
+					<ListItem titleLabel:text="L('changeLanguageButton')"/>
+				</ListSection>
+				<FooterView platform="ios">
+					<View height="1"/>
+				</FooterView>
+			</ListView>
+		</Window>
+	</Tab>
 </Alloy>
