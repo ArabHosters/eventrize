@@ -1,14 +1,6 @@
 'Window[platform=android]' : {
   theme: 'AppTheme.TranslucentStatus.NoTitleBar'
 }
-'#featuredImageView' : {
-  height: 180
-}
-'#featuredImageView[platform=android]' : {
-  scrollingEnabled: false,
-  contentWidth: '100%',
-  scrollType: 'vertical'
-}
 'ListView[platform=ios]' : {
   separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.NONE
 }

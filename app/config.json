@@ -17,7 +17,7 @@
     },
     "style": {
       "selectEvent": {
-        "banner": "/tmp/events_top.png",
+        "banner": "/images/events_top.png",
         "statusBarStyle": "LIGHT_CONTENT"
       },
       "mainColor": "#24B3FF"
