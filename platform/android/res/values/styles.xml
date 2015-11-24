@@ -12,6 +12,7 @@
     <item name="android:colorEdgeEffect">@color/colorEdgeEffect</item>
     <!--item name="android:navigationBarColor">@color/navigationBarColor</item-->
     <item name="android:textColorPrimary">@color/textColorPrimary</item>
+	<item name="actionMenuTextColor">@color/textColorPrimary</item>
   </style>
   <style name="AppTheme.TranslucentStatus" parent="AppTheme">
     <item name="android:windowTranslucentStatus">true</item>
