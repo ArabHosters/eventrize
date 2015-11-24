@@ -8,6 +8,9 @@
 'Window' : {
   title: L('moreWindowTitle')
 }
+'ListView[platform=ios]' : {
+  style: Ti.UI.iPhone.ListViewStyle.GROUPED
+}
 'ListItem' : {
   height: 50
 }
@@ -15,10 +18,20 @@
 '.thumbnailImageView' : {
   left: Alloy.CFG.tss.more.index.thumbnailImageView.left,
   right: Alloy.CFG.tss.more.index.thumbnailImageView.right,
+  borderRadius: 3,
   width: 40,
   height: 40
 }
 '.titleLabel' : {
   left: Alloy.CFG.tss.more.index.titleLabel.left,
   right: Alloy.CFG.tss.more.index.titleLabel.right
+}
+'.settingsLabel' : {
+  text: L('settingsLabel'),
+  color: 'gray',
+  font: {
+    fontSize: 13
+  },
+  left: Alloy.CFG.tss.more.index.settingsLabel.left,
+  right: Alloy.CFG.tss.more.index.settingsLabel.right
 }

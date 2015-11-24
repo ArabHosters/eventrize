@@ -34,4 +34,5 @@
 	<string name="changeLanguageDialogMessage">هل انت تريد تغيير اللغة ؟</string>
 	<string name="arabicLanguageButton">العربية</string>
 	<string name="englishLanguageButton">الانجليزية</string>
+  <string name="settingsLabel">اعدادات</string>
 </resources>

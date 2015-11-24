@@ -34,4 +34,5 @@
 	<string name="changeLanguageDialogMessage">Are you sure that you want to change language ?</string>
 	<string name="arabicLanguageButton">Arabic</string>
 	<string name="englishLanguageButton">English</string>
+  <string name="settingsLabel">SETTINGS</string>
 </resources>

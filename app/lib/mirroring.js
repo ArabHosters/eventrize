@@ -93,6 +93,9 @@ var en = {
         },
         titleLabel: {
           left: 50
+        },
+        settingsLabel: {
+          left: 15
         }
       }
     }
