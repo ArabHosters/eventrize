@@ -20,11 +20,11 @@ exports.definition = {
         if (value.title) {
           item.title = value.title.rendered || '';
         }
-        try {
+
+        if (value.media_details.sizes.hasOwnProperty('thumbnail')) {
           item.thumbnail = value.media_details.sizes.thumbnail.source_url;
-        } catch (exp) {
-          console.warn("No thambnail there", exp);
         }
+
         item.media_type = value.media_type;
         item.source_url = value.source_url;
         item.lang = Ti.Locale.currentLanguage;
