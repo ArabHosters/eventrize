@@ -48,9 +48,11 @@ Alloy.Globals.changeLanguageButtonClicked = function() {
       require('com.shareourideas.locale').setLocale(lang);
 
       // Set moment language
+      var moment = require('alloy/moment');
       if (Ti.Locale.currentLanguage === 'ar') {
-        var moment = require('alloy/moment');
         moment.lang("ar-sa");
+      } else {
+        moment.lang("en");
       }
 
       // re-load mirroring file
