@@ -13,7 +13,8 @@
   top: 0
 }
 'ScrollView' : {
-  scrollType: 'vertical'
+  scrollType: 'vertical',
+  top:75
 }
 'ScrollView[platform=ios]' : {
   width: Ti.Platform.displayCaps.platformWidth,
@@ -21,4 +22,8 @@
 }
 '#gridDeals' : {
   top: 200
+}
+'.topLb1':{
+	text:L('topTitleonSponsers'),
+	top:15
 }
