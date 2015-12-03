@@ -3,8 +3,8 @@
   <Collection id="sponsorsGridCollection" instance="true" src="sponsors"/>
   <Tab>
     <Window onClose="$.destroy">
-      <Label class="topLb1"/>
       <ScrollView>
+        <Label class="topLb1"/>
         <ScrollableView dataCollection="$.sponsorsSliderCollection">
           <ImageView image="{featured_image}" link="{link}" onClick="openUrl"/>
         </ScrollableView>
