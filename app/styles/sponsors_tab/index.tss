@@ -10,20 +10,22 @@
 }
 'ScrollableView' : {
   height: 200,
-  top: 0
+  top: 0,
+  showPagingControl: true,
+  pagingControlColor: '#ffffff'
 }
 'ScrollView' : {
   scrollType: 'vertical',
-  top:75
+  top: 75
 }
 'ScrollView[platform=ios]' : {
   width: Ti.Platform.displayCaps.platformWidth,
   contentWidth: Ti.Platform.displayCaps.platformWidth
 }
 '#gridDeals' : {
-  top: 200
+  top: 300
 }
-'.topLb1':{
-	text:L('topTitleonSponsers'),
-	top:15
+'.topLb1' : {
+  text: L('topTitleonSponsers'),
+  top: 15
 }

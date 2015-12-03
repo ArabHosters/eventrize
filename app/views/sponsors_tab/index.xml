@@ -1,15 +1,15 @@
 <Alloy>
-	<Collection id="sponsorsSliderCollection" instance="true" src="sponsors"/>
-	<Collection id="sponsorsGridCollection" instance="true" src="sponsors"/>
-	<Tab>
-		<Window onClose="$.destroy">
-			<Label class="topLb1"/>
-			<ScrollView>
-				<ScrollableView dataCollection="$.sponsorsSliderCollection" showPagingControl="true">
-					<ImageView image="{featured_image}" link="{link}" onClick="openUrl"/>
-				</ScrollableView>
-				<Widget columns="3" id="gridDeals" src="br.com.coredigital.GridLayout"/>
-			</ScrollView>
-		</Window>
-	</Tab>
+  <Collection id="sponsorsSliderCollection" instance="true" src="sponsors"/>
+  <Collection id="sponsorsGridCollection" instance="true" src="sponsors"/>
+  <Tab>
+    <Window onClose="$.destroy">
+      <Label class="topLb1"/>
+      <ScrollView>
+        <ScrollableView dataCollection="$.sponsorsSliderCollection">
+          <ImageView image="{featured_image}" link="{link}" onClick="openUrl"/>
+        </ScrollableView>
+        <Widget columns="3" id="gridDeals" src="br.com.coredigital.GridLayout"/>
+      </ScrollView>
+    </Window>
+  </Tab>
 </Alloy>

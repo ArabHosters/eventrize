@@ -19,16 +19,17 @@ function openUrl(e) {
   }
 }
 
+// Unexpected issue, can't load this slider into focus event
+$.sponsorsSliderCollection.fetch({
+  query: {
+    statement: 'SELECT * from ' + $.sponsorsSliderCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4',
+    params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
+  }
+});
+
 var loadEvent = OS_IOS ? 'focus' : 'selected';
 $.index.addEventListener(loadEvent, function init() {
   $.index.removeEventListener(loadEvent, init);
-
-  $.sponsorsSliderCollection.fetch({
-    query: {
-      statement: 'SELECT * from ' + $.sponsorsSliderCollection.config.adapter.collection_name + ' where event_id = ? and lang = ? order by menu_order ASC limit 4',
-      params: [Alloy.Globals.lastActiveEvent.id, Ti.Locale.currentLanguage]
-    }
-  });
 
   $.sponsorsGridCollection.fetch({
     query: {
