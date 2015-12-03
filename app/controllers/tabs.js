@@ -7,13 +7,14 @@ var sortedTabs = _.clone(Alloy.CFG.tabs);
 
 // Revers tab order in rtl
 if (Ti.Locale.currentLanguage === 'ar') {
-  sortedTabs.reverse();
   if (OS_ANDROID) {
+    sortedTabs.reverse();
     $.tabs.addEventListener('open', function() {
       $.tabs.setActiveTab(Alloy.CFG.tabs.length - 1);
     });
   } else if (OS_IOS) {
-    $.tabs.activeTab = Alloy.CFG.tabs.length - 1;
+    //No need since iOS 9
+    //$.tabs.activeTab = Alloy.CFG.tabs.length - 1;
   }
 }
 
