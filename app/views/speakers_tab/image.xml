@@ -1,0 +1,7 @@
+<Alloy>
+  <View layout="vertical">
+    <ImageView id="mainImageView"/>
+    <Label id="nameLabel"/>
+    <Label id="titleLabel"/>
+  </View>
+</Alloy>

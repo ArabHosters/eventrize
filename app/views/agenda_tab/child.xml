@@ -1,24 +1,19 @@
 <Alloy>
-  <Model id="speakersModel" instance="true" src="speakers"/>
+  <Collection id="speakersColection" instance="true" src="speakers"/>
   <Window onClose="$.destroy" title="{title}">
     <View class="backgroundView" onClick="closeWindow"/>
     <View class="containerView">
       <ScrollView class="subContainerView">
-        <View class="speakerAvatarMaskView">
-          <ImageView class="speakerAvatarImageView" image="{$.speakersModel.thumbnail}"/>
-        </View>
+        <ImageView class="topMarkImageView"/>
         <Label class="titleLabel" text="{title}"/>
-        <View class="horizontalView">
-          <Label class="bySpeakerNameLabel"/>
-          <Label class="whiteLabel" text="{$.speakersModel.name}"/>
-        </View>
-        <View class="horizontalView timeView">
+        <View class="horizontalView fit timeView">
           <ImageView class="timeImageView"/>
           <Label class="whiteLabel" text="{startdatePretty}"/>
           <Label class="whiteLabel" text=" - "/>
           <Label class="whiteLabel" text="{enddatePretty}"/>
         </View>
         <Label class="contentLabel" text="{content}"/>
+        <Widget columns="3" id="gridDeals" src="br.com.coredigital.GridLayout"/>
       </ScrollView>
       <Button class="closeButton" onClick="closeWindow" platform="ios"/>
       <Button class="thankYouButton" onClick="closeWindow"/>

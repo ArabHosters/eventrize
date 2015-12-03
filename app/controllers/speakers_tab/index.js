@@ -22,3 +22,9 @@ $.index.addEventListener(loadEvent, function init() {
     }
   });
 });
+
+Alloy.Globals.speakersTab = $.index;
+$.speakersWindow.addEventListener('close', function(){
+  $.destroy();
+  Alloy.Globals.speakersTab = null;
+});

@@ -1,0 +1,19 @@
+'ImageView' : {
+  width: 44,
+  height: 44,
+  borderRadius: 22
+}
+'Label' : {
+  color: '#ffffff',
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+'#nameLabel' : {
+  font: {
+    fontSize: 16
+  }
+}
+'#titleLabel' : {
+  font: {
+    fontSize: 14
+  }
+}

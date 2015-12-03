@@ -1,3 +1,5 @@
+$.speakerModel.set($model.toJSON());
+
 function shareButtonClicked() {
 
   // share text status

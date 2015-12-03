@@ -33,30 +33,21 @@
   height: 30,
   tintColor: '#8DD5FF'
 }
-'.speakerAvatarMaskView' : {
-  backgroundImage: '/images/spkr_pop.png',
-  width: 70,
-  height: 80
+'.topMarkImageView' : {
+  image: '/images/spkr_pop.png',
+  width: 98,
+  height: 112
 }
-'.speakerAvatarImageView' : {
-  top: 6,
-  left: 6,
-  right: 6,
-  borderRadius: 30
-}
+'.speakerAvatarImageView' : {}
 '.titleLabel' : {
   font: {
-    fontSize: 18
+    fontSize: 22
   },
   color: '#ffffff'
 }
-'.bySpeakerNameLabel' : {
-  text: L('by'),
-  color: '#8DD5FF',
-  right: 3,
-  font: {
-    fontFamily: 'Georgia-Italic'
-  }
+'.nameLabel' : {
+  left: Alloy.CFG.tss.agenda.child.nameLabel.left,
+  right: Alloy.CFG.tss.agenda.child.nameLabel.right
 }
 '.timeView' : {
   top: 20
@@ -75,8 +66,9 @@
   color: '#ffffff',
   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
-'.horizontalView' : {
-  width: Ti.UI.SIZE
+'.fit' : {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
 }
 '.thankYouButton' : {
   title: L('thankYouButton'),
@@ -87,4 +79,7 @@
   right: 15,
   bottom: 15,
   left: 15
+}
+'#gridDeals' : {
+  top: 25
 }

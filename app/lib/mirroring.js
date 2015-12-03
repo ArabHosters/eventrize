@@ -77,6 +77,14 @@ var en = {
           left: 136,
           right: 10
         }
+      },
+      child: {
+        bySpeakerNameLabel: {
+          left: 0
+        },
+        nameLabel: {
+          left: 20
+        }
       }
     },
     speakers: {
