@@ -86,7 +86,7 @@ if (OS_IOS && args.eventsCount > 1) {
   var backButton = Ti.UI.createButton({
     title: L('back')
   });
-  backButton.addEventListener('click', function(e) {
+  backButton.addEventListener('click', function() {
     // Close TabGroup
     Alloy.Globals.tabGroup.close();
   });

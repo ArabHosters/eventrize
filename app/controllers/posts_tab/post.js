@@ -1,6 +1,4 @@
-var args = arguments[0] || {};
-
-function shareButtonClicked(e) {
+function shareButtonClicked() {
 
   require('com.alcoapps.socialshare').share({
     status: $model.get('title') + "\n" + $model.get('link'),

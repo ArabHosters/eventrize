@@ -1,5 +1,3 @@
-var args = arguments[0] || {};
-
 function openUrl(e) {
   if (e.source.link) {
     var dialog = Ti.UI.createAlertDialog({

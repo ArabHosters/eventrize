@@ -9,5 +9,5 @@
   "unused": true,
   "strict": false,
   "node": true,
-  "predef": ["Ti", "Alloy", "Titanium", "require", "$", "L", "OS_IOS", "OS_ANDROID", "setTimeout", "alert", "$model", "exports", "module", "_"]
+  "predef": ["Ti", "Alloy", "Titanium", "require", "$", "L", "OS_IOS", "OS_ANDROID", "setTimeout", "alert", "$model", "exports", "module", "_", "Backbone"]
 }

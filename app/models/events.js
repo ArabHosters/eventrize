@@ -24,7 +24,7 @@ exports.definition = {
     initFetchWithLocalData: false,
     parentNode: function(data) {
       var items = [];
-      _.each(data, function(value, key) {
+      _.each(data, function(value) {
         var item = {
           id: value.id,
           date: value.date,
@@ -72,7 +72,7 @@ exports.definition = {
           var agendaModel = Alloy.createModel('agenda');
 
           // Reformat data according the schema
-          session = agendaModel.parser(_.extend(_session, {
+          var session = agendaModel.parser(_.extend(_session, {
             event_id: value.id
           }));
           agendaModel.save(session);

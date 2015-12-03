@@ -1,6 +1,4 @@
-var args = arguments[0] || {};
-
-function shareButtonClicked(e) {
+function shareButtonClicked() {
 
   // share text status
   require('com.alcoapps.socialshare').share({

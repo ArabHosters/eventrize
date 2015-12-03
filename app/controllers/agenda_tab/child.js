@@ -1,5 +1,3 @@
-var args = arguments[0] || {};
-
 function closeWindow() {
   $.child.close();
 }

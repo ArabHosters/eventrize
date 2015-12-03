@@ -1,6 +1,3 @@
-var args = arguments[0] || {},
-  rowIndexer = 0;
-
 function listItemClicked(e) {
   Alloy.createController('agenda_tab/child', {
     $model: $.agendaCollection.get(e.section.getItemAt(e.itemIndex).properties.myId)
@@ -23,7 +20,7 @@ function segmentBarClicked(e) {
   } else {
 
     // Mark clicked event background #ffffff
-    _.each($.segmentBar.children, function(button, key) {
+    _.each($.segmentBar.children, function(button) {
       if (button.dayNumber === e.source.dayNumber) {
         button.backgroundColor = '#ffffff';
       } else {

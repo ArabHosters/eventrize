@@ -19,7 +19,7 @@ exports.definition = {
     initFetchWithLocalData: true,
     parentNode: function(data) {
       var items = [];
-      _.each(data, function(value, key) {
+      _.each(data, function(value) {
         var item = {
           featured_image: "",
           thumbnail: ""

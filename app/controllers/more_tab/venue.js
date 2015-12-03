@@ -1,5 +1,4 @@
-var args = arguments[0] || {},
-  Map = require('ti.map');
+var Map = require('ti.map');
 
 $.mapView.region = {
   latitude: Alloy.Globals.lastActiveEvent.latitude,
