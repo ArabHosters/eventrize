@@ -18,7 +18,7 @@ Alloy.Collections.events.fetch({
     lang: Ti.Locale.currentLanguage
   },
   sql: {
-    orderBy: "start_date DESC",
+    orderBy: "id DESC",
     where: {
       lang: Ti.Locale.currentLanguage
     }
