@@ -2,7 +2,7 @@
   title: L('shareButton')
 }
 '#shareMenuItem[platform=android]' : {
-  icon: Ti.Android.R.drawable.ic_menu_share
+  icon: '/images/share_ic.png'
 }
 '#containnerScrollView' : {
   scrollType: 'vertical'
