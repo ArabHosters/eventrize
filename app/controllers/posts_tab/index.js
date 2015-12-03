@@ -56,10 +56,26 @@ function fetchMorePostsCollection(e) {
   });
 }
 
+if (OS_IOS) {
+  var NappImageView = require('dk.napp.imageview');
+}
+
 function postsTransfomer(model) {
   var transform = model.toJSON();
 
   transform.prettyDate = require('alloy/moment')(transform.date).fromNow();
+  if (OS_IOS) {
+    var imageView = NappImageView.createImageView({
+      height: 140,
+      width: Ti.Platform.displayCaps.platformWidth,
+      image: transform.featured_image
+    });
+
+    transform.fitImage = imageView.toImage();
+  } else {
+    transform.fitImage = transform.featured_image;
+  }
+
   return transform;
 }
 

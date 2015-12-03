@@ -17,7 +17,7 @@
             </ItemTemplate>
           </Templates>
           <ListSection dataCollection="posts" dataTransform="postsTransfomer">
-            <ListItem dateLabel:text="{prettyDate}" postImage:image="{featured_image}" titleLabel:text="{title}"/>
+            <ListItem dateLabel:text="{prettyDate}" postImage:image="{fitImage}" titleLabel:text="{title}"/>
           </ListSection>
         </ListView>
       </Widget>
