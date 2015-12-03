@@ -10,6 +10,7 @@
           <View class="templateView">
             <ImageView bindId="thumbnail" class="thumbnailImageView"/>
             <Label bindId="titleLabel" class="titleLabel"/>
+            <ImageView class="arrowImageView"/>
           </View>
         </ItemTemplate>
       </Templates>

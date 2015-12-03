@@ -23,3 +23,8 @@
   left: Alloy.CFG.tss.events.titleLabel.left,
   right: Alloy.CFG.tss.events.titleLabel.right
 }
+'.arrowImageView' : {
+  left: Alloy.CFG.tss.events.arrowImageView.left,
+  right: Alloy.CFG.tss.events.arrowImageView.right,
+  image: Alloy.CFG.tss.events.arrowImageView.image
+}

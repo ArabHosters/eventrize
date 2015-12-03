@@ -17,6 +17,10 @@ function mirror(options) {
     if (key === 'right' || key === 'left') {
       optionsFixed[p[key]] = value;
     }
+
+    if (key === 'image' && value.indexOf('.ltr.') > -1) {
+      optionsFixed[key] = value.replace('.ltr.', '.rtl.');
+    }
   });
   return optionsFixed;
 }
@@ -34,6 +38,10 @@ var en = {
       },
       titleLabel: {
         left: 100
+      },
+      arrowImageView: {
+        right: 10,
+        image: '/images/arrow.ltr.png'
       }
     },
     posts: {
