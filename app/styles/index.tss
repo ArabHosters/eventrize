@@ -1,4 +1,4 @@
-'Window[platform=ios]' : {
+'Window' : {
   backgroundImage: '/images/loading_bg.png'
 }
 'Window[platform=android]' : {
@@ -12,10 +12,6 @@
   scrollingEnabled: false,
   scrollType: 'vertical',
   contentWidth: '100%'
-}
-'#bgImageView' : {
-  image: '/images/loading_bg.png',
-  width: Ti.UI.FILL
 }
 '#loadingImageView' : {
   images: [
