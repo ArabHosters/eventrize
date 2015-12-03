@@ -58,6 +58,7 @@
     <module platform="iphone" version="1.1.1">dk.napp.imageview</module>
     <module platform="iphone" version="0.2">com.shareourideas.locale</module>
     <module platform="android" version="0.1">com.shareourideas.locale</module>
+    <module platform="iphone" version="1.2.8">dk.napp.appearance</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>
