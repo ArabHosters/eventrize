@@ -50,8 +50,8 @@
   </android>
   <modules>
     <module platform="android" version="0.6">com.rkam.swiperefreshlayout</module>
-    <module platform="iphone" version="1.8.2">dk.napp.social</module>
-    <module platform="iphone" version="2.5.0">ti.map</module>
+    <module platform="iphone" version="1.8.4">dk.napp.social</module>
+    <module platform="iphone" version="2.5.2">ti.map</module>
     <module platform="android" version="2.3.6">ti.map</module>
     <module platform="commonjs" version="0.1.2">ti-push-notification</module>
     <module platform="android" version="1.3">nl.vanvianen.android.gcm</module>

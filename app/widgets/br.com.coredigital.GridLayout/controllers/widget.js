@@ -2,10 +2,16 @@
 	$.gridLayout.applyProperties(_.pick(args, ["visible", "height", "top", "bottom", "left", "right", "width", "backgroundColor"]));
 
 	var totalColumns = parseInt(args.columns) || 2;
-	var gap = parseInt(args.gap) || 0;
+	var gap = parseInt(args.gap) || 3;
 	var totalItens = 0;
 
 	var widthScreen = OS_ANDROID ? px2dpi(Ti.Platform.displayCaps.platformWidth) : Ti.Platform.displayCaps.platformWidth;
+
+	if (typeof args.width === 'string' && args.width.indexOf('%') > -1){
+		widthScreen = parseInt((widthScreen / 100) * parseInt(args.width));
+	} else if (args.hasOwnProperty('width')) {
+		widthScreen = args.width;
+	}
 
 	var widthView = (widthScreen - gap * (totalColumns + 1)) / totalColumns;
 	var heightView = (widthScreen - gap * (totalColumns + 1)) / totalColumns;

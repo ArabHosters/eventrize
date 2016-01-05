@@ -23,7 +23,9 @@
   contentWidth: Ti.Platform.displayCaps.platformWidth
 }
 '#gridDeals' : {
-  top: 200
+  top: 200,
+  gap: 0,
+  columns: 3
 }
 '.topLb1' : {
   text: L('topTitleonSponsers'),

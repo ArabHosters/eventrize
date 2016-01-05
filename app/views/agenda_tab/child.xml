@@ -13,7 +13,7 @@
           <Label class="whiteLabel" text="{enddatePretty}"/>
         </View>
         <Label class="contentLabel" text="{content}"/>
-        <Widget columns="3" id="gridDeals" src="br.com.coredigital.GridLayout"/>
+        <Widget id="gridDeals" src="br.com.coredigital.GridLayout"/>
       </ScrollView>
       <Button class="closeButton" onClick="closeWindow" platform="ios"/>
       <Button class="thankYouButton" onClick="closeWindow"/>

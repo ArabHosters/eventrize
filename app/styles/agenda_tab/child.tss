@@ -81,5 +81,7 @@
   left: 15
 }
 '#gridDeals' : {
-  top: 25
+  top: 25,
+  gap: 0,
+  columns: 3
 }

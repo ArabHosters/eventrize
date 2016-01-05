@@ -38,10 +38,10 @@
   "os:mobileweb": {},
   "os:windows": {},
   "dependencies": {
-    "nl.fokkezb.pullToRefresh": "2.2.1",
-    "nl.fokkezb.infiniteScroll": "2.0.0",
-    "ti.ux.iconfont": "1.0",
-    "com.criteriastudio.RemoteImageView": "1.0",
-    "br.com.coredigital.GridLayout": "1.0"
+    "nl.fokkezb.pullToRefresh": "*",
+    "nl.fokkezb.infiniteScroll": "*",
+    "ti.ux.iconfont": "*",
+    "com.criteriastudio.RemoteImageView": "*",
+    "br.com.coredigital.GridLayout": "*"
   }
 }
