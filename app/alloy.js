@@ -139,11 +139,13 @@ tiPush.registerDevice({
   onReceive: onReceive
 });
 
-// To color the ScrollableView pageControl
-var NappAppearance = require('dk.napp.appearance');
-NappAppearance.setGlobalStyling({
-  pageControl: {
-    currentPageIndicatorTintColor: Alloy.CFG.style.mainColor,
-    pageIndicatorTintColor: 'gray'
-  }
-});
+if (OS_IOS) {
+  // To color the ScrollableView pageControl
+  var NappAppearance = require('dk.napp.appearance');
+  NappAppearance.setGlobalStyling({
+    pageControl: {
+      currentPageIndicatorTintColor: Alloy.CFG.style.mainColor,
+      pageIndicatorTintColor: 'gray'
+    }
+  });
+}
