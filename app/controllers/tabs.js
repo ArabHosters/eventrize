@@ -5,19 +5,6 @@ Alloy.Globals.lastActiveEvent = args.eventModelJSON;
 
 var sortedTabs = _.clone(Alloy.CFG.tabs);
 
-// Revers tab order in rtl
-if (Ti.Locale.currentLanguage === 'ar') {
-  if (OS_ANDROID) {
-    sortedTabs.reverse();
-    $.tabs.addEventListener('open', function() {
-      $.tabs.setActiveTab(Alloy.CFG.tabs.length - 1);
-    });
-  } else if (OS_IOS) {
-    //No need since iOS 9
-    //$.tabs.activeTab = Alloy.CFG.tabs.length - 1;
-  }
-}
-
 // Load tabs depend on configs
 _.each(sortedTabs, function(tabName) {
   var controllerName = tabName + '_tab/index';
