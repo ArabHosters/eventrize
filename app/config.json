@@ -24,13 +24,13 @@
     }
   },
   "env:development": {
-    "baseurl": "http://dev.eventrize.com/eventrize/"
+    "baseurl": "http://dev.example.com/"
   },
   "env:test": {
-    "baseurl": "http://dev.eventrize.com/eventrize/"
+    "baseurl": "http://dev.example.com/"
   },
   "env:production": {
-    "baseurl": "http://dev.eventrize.com/eventrize/"
+    "baseurl": "http://dev.example.com/"
   },
   "os:android": {},
   "os:blackberry": {},
